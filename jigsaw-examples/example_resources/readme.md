@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * modmain has a Main class which is started in run.sh
 
 ### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
-![Example's Module Dependency Graph](/example_resources/moduledependencies.png)
+![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows resources handling in Java 9 Jigsaw modules
 see [ResourceEncapsulation](http://openjdk.java.net/projects/jigsaw/spec/issues/#ResourceEncapsulation)

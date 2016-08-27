@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * No Main class, JUnit is started instead in the run scripts.
 
 ### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
-![Example's Module Dependency Graph](/example_test/moduledependencies.png)
+![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
 TODO
