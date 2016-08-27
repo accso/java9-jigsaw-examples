@@ -1,6 +1,5 @@
 # Java 9 Jigsaw modules example suite
-# Example example_naming-modules
-
+## Example example_naming-modules
 
 ### Info
 Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.

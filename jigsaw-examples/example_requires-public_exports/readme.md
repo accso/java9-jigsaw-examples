@@ -1,5 +1,5 @@
 # Java 9 Jigsaw modules example suite
-# Example example_requires-public_exports
+## Example example_requires-public_exports
 
 ### Info
 Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
@@ -13,9 +13,9 @@ see https://github.com/accso/java9-jigsaw-examples
 * modmain* have a Main class which is started in run.sh
 
 ### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
-![Example's Module Dependency Graph](/moduledependencies.png)
+![Example's Module Dependency Graph](/example_requires-public_exports/moduledependencies.png)
 
-![Example's Module Dependency Graph](/moduledependencies-with-facade.png)
+![Example's Module Dependency Graph](/example_requires-public_exports/moduledependencies-with-facade.png)
 
 ### Example shows ...
 TODO
