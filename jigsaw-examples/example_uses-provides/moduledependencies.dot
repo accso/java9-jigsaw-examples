@@ -1,0 +1,15 @@
+# Created by depvis.JigsawDepVisualizer on Sat Aug 27 13:54:36 CEST 2016
+digraph Java9_Dependency_Visualizer {
+modserviceimplementation1[fontname="Consolas",shape="ellipse",label="modserviceimplementation1"];
+modservicedefinition[fontname="Consolas",shape="ellipse",label="modservicedefinition"];
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modserviceimplementation2[fontname="Consolas",shape="ellipse",label="modserviceimplementation2"];
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modserviceimplementation1 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modserviceimplementation1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modserviceimplementation2 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modserviceimplementation2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+}

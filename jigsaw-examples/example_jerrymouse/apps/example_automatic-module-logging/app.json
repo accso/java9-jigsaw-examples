@@ -1,0 +1,5 @@
+{
+  "rootModule": "modmain",
+  "bootClass":  "pkgmain.Main",
+  "bootMethod": "main"
+}

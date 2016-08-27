@@ -1,0 +1,3 @@
+module modjava {
+	exports pkgmain;
+}

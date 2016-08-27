@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/modmain/pkgmainhidden/HiddenMain.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH"/>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgmainhidden.HiddenMain"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmain"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib -addmods modmain -m modmain/pkgmainhidden.HiddenMain"/>
+</launchConfiguration>
