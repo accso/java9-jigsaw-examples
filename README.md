@@ -28,9 +28,9 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 3. Script createvis.sh in each example creates a GraphViz visualiation, see https://github.com/accso/java9-jigsaw-depvis
 4. Eclipse project files are included. Per convention: one module == one Eclipse project. 
    Putting them all in one workspace will _not_ work, because their names, i.e. Eclipse project names, do overlap which is not allowed in one workspace.
-5. Source files are in `example_.../src`.
-6. Compiled .class files go to `example_.../mods`. That's the module-source-path.
-7. JAR files go to `example_.../mlib`. That's the module-path.
+5. Source files are in `example_.../src`. That's the module-source-path.
+6. Compiled .class files go to `example_.../mods`. 
+7. JAR files go to `example_.../mlib`. That's the module-path when run.
 8. Third-party JAR files are in `example_.../amlib`. That's also the module-path, in this case containing automatic modules.
 9. A few examples do compile "old-style" without modules. Results to `example_.../classes`.
 10. If a modules is patches, then the .class files for the patch are in `example_.../patches`. Corresponding JAR files are in `example_.../patchlib`.
