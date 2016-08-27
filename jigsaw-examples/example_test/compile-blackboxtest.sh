@@ -1,5 +1,10 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p patches
+mkdir -p mlib
+mkdir -p patchlib 
+
 echo "javac -d mods --module-path amlib\;mlib -modulesourcepath src \$(find src -name \"*.java\" | grep -v modtest.whitebox)"
 $JAVA_HOME/bin/javac -d mods --module-path amlib\;mlib -modulesourcepath src $(find src -name "*.java" | grep -v modtest.whitebox)
 

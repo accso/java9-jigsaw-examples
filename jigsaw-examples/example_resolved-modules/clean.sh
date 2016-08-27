@@ -6,4 +6,4 @@ rm -rf jimage/*
 
 mkdir -p mods
 mkdir -p mlib
-
+mkdir -p jimage

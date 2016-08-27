@@ -1,5 +1,10 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p mlib
+mkdir -p classes
+mkdir -p cplib 
+
 #  create "old" jars to use on the class path
 pushd src > /dev/null 2>&1
 

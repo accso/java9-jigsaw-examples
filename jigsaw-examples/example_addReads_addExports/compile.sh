@@ -1,5 +1,8 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p mlib
+ 
 # compile modc
 echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src/modc -name \"*.java\")"
 $JAVA_HOME/bin/javac -d mods \

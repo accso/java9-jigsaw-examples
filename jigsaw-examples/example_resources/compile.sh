@@ -1,5 +1,8 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p mlib 
+
 echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src -name \"*.java\")"
 $JAVA_HOME/bin/javac -d mods --module-path mlib -modulesourcepath src $(find src -name "*.java")
 

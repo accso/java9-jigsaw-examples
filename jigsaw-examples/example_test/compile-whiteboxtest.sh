@@ -1,5 +1,10 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p patches
+mkdir -p mlib
+mkdir -p patchlib 
+
 # Compile whitebox test (and in the sourcepath, no module-info.java *MUST* be contained - otherwise compile error)
 echo "javac --add-reads modfib=junit -Xmodule:modfib --module-path amlib\;mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
 $JAVA_HOME/bin/javac --add-reads modfib=junit -Xmodule:modfib --module-path amlib\;mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java

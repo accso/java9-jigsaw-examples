@@ -1,5 +1,10 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p mlib
+mkdir -p classes
+mkdir -p cplib 
+
 echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src -name \"*.java\"| grep -v cp)"
 $JAVA_HOME/bin/javac -d mods --module-path mlib -modulesourcepath src $(find src -name "*.java"| grep -v cp)
 

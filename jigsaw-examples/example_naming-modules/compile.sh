@@ -1,5 +1,9 @@
 . ../env.sh
 
+mkdir -p mods
+mkdir -p mlib
+mkdir -p classes
+
 # compile all directories which have a module-info.java (any but automatic*)
 
 pushd src > /dev/null 2>&1

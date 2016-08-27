@@ -1,8 +1,4 @@
 /jigsaw-examples/start_eclipse4.6-java9.bat
 /jigsaw-examples/*/.metadata
 /jigsaw-examples/*/mlib/*.jar
-/jigsaw-examples/*/mods/*
-/jigsaw-examples/*/classes/*
-/jigsaw-examples/*/patches/*
-/jigsaw-examples/*/patchlib/*
 /jigsaw-examples/*/src/*/target
