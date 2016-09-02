@@ -16,13 +16,17 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-Example for Whitebox Testing, using a separate module for the whitebox tests and "exports to" (static and dynamic)
+
+Example for Whitebox Testing, using a separate module for the whitebox tests and "exports to" (static and dynamic) to give test classes access to the module internal code.
 - all.sh only runs the example with static exports to.
-- to run it with dynamic exports, 
-  1) in modfib, copy module-info-without-exports-to.java.mv to module-info .java (or remove exports... to in the module-info.java)
+- to run it with exports during startup, 
+  1) in modfib, copy module-info-without-exports-to.java.mv to module-info .java (or just remove exports... to in the module-info.java)
   2) run all-with-addExports.sh instead if all.sh
-END TODO
+  
+Disadvantages:
+* exports to in the module-info means a static export (of internal classes) to the test code. 
+* Using the --add-export option in the compile and run scripts leads to bad maintainability (the compile and run scripts need to be maintained in addition to the code)
+
 
 ### See also 
-Example example_test
+Example [example_test](../example-test)

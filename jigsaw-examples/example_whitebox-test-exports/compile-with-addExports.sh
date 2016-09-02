@@ -1,7 +1,7 @@
 . ../env.sh
 
 # An example for compiling with addExports argument.
-# Mind that the arguments do not work in any order! The --add-exports option did not work when put behind -d...
+# Mind that the arguments do not work in arbitrary order! The --add-exports option did not work when put behind -d Option!
 echo "javac --add-exports modfib/pkgfib.internal=modtest.whitebox -d mods --module-path amlib\;mlib -modulesourcepath src \$(find src -name \"*.java\")"
 $JAVA_HOME/bin/javac \
     --add-exports modfib/pkgfib.internal=modtest.whitebox \
