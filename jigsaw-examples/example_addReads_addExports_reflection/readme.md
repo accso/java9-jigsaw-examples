@@ -16,8 +16,6 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-
 - addReads via reflection
 
 modmain/Main adds a read relationship to modb dynamically via 
@@ -30,7 +28,8 @@ For that, modmain/Main asks the (exported!) pkgb.BHelper to do
 this addExports. Adding cannot be done in modmain/Main directly, 
 as the reflection method is caller-sensitive!
 
-Note that for getting all compiled, modmain/Main needs access 
-to the exported BHelper. Same thing during runtime.
+Note that for successful compilation, modmain/Main needs access 
+to the exported BHelper. Therefore the option --add-exports is needed.
+Same thing during runtime.
 
-END TODO
+
