@@ -1,8 +1,8 @@
-# Java 9 Jigsaw modules example suite
+﻿# Java 9 Jigsaw modules example suite
 ## Example example_unnamed-module
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and R�diger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -10,12 +10,13 @@ see https://github.com/accso/java9-jigsaw-examples
 
 ### Modules in this example
 * modb, modmain, and also classes for the unnamed module (cpb, cpmain)
-* modmain has a Main class which is started in run.sh
+* modmain and cpmain each contain a Main class which are started in run.sh
 
 ### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-- Unnamed modules 
-END TODO
+The examples illustrates the accessibility rules for the unamed module (i.e. classpath). The main class in modmain can not access classes from the unamed module, whereas the main
+class in cpmain has access to all classes, both from the named modules (if the corresponding packages are exported) and from the unnamed module.
+
+The script run.sh starts both main classes, from modmain and from cpmain.
