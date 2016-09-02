@@ -1,5 +1,10 @@
 . ../env.sh
 
+# Patch the module during startup, using a) exploded classes, b) a jar containing the patch.
+#
+# --patch-module modb=... does the patch (same option no matter if expoded classes or jar)
+
+
 # Patch modb with classes
 echo ">> Start modmain/pkgmain.Main with patch classes from patches/modb"
 $JAVA_HOME/bin/java --patch-module modb=patches/modb --module-path mlib -m modmain/pkgmain.Main | myecho
