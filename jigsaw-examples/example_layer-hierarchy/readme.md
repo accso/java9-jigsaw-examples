@@ -9,7 +9,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ## What is this example about?
 
 ### Layers in this example
-The layer hierarchy as defined in `layers_triple_hierarchy.json` defines the following layer structure:
+The layer hierarchy as persisted in `layers_triple_hierarchy.json` defines the following layer structure:
 * layer `toplayer` on level top
   * layer `middlelayer_1` (parent is `toplayer`) on level middle
     * layer `bottomlayer_1a` (parent is `middlelayer_1`) on level bottom
@@ -37,9 +37,9 @@ All other modules are put automatically to a Jigsaw layer based on their naming 
 ### Example shows ...
 The example shows how a layer hierarchy can be built up (see `mod.main/pkgmain.LayerBuilder` and `mod.layers/pkglayer.*.java`)
 - For that, we use a tree of layers. See mod.layers for our tree data structure. Each of the tree nodes has a name, a level and a reference to a Jigsaw layer.
-- The layer tree hiearchy is read from a JSON file.
+- The layer tree hierarchy is read from a JSON file.
 - Each name of a layer tree node must be unique.
-- Modules (mod.u\*, mod.x\*, mod.y\*, mod.z\*) are added to the layers (see section "Modules ...").
+- Modules (`mod.u*`, `mod.x*`, `mod.y*`, `mod.z*`) are added to the layers (see section "Modules ...").
 
 The example shows also how modules in different layers can interact with each other (see section "Modules ...").
 
