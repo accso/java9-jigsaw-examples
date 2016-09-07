@@ -10,13 +10,13 @@ see https://github.com/accso/java9-jigsaw-examples
 
 ### Layers in this example
 The layer hierarchy as persisted in `layers_triple_hierarchy.json` defines the following layer structure:
-* layer `toplayer` on level top
-  * layer `middlelayer_1` (parent is `toplayer`) on level middle
-    * layer `bottomlayer_1a` (parent is `middlelayer_1`) on level bottom
-    * layer `bottomlayer_1b` (parent is `middlelayer_1`) on level bottom
-  * layer middlelayer_2` (parent is toplayer) on level middle
-    * layer `bottomlayer_2a` (parent is `middlelayer_2`) on level bottom
-    * layer `bottomlayer_2b` (parent is `middlelayer_2`) on level bottom
+* layer `toplayer` on level top (parent is the boot layer)
+  * layer `middlelayer_1` on level middle (parent is `toplayer`) 
+    * layer `bottomlayer_1a` on level bottom (parent is `middlelayer_1`) 
+    * layer `bottomlayer_1b` on level bottom (parent is `middlelayer_1`)
+  * layer middlelayer_2` on level middle (parent is toplayer)
+    * layer `bottomlayer_2a` on level bottom (parent is `middlelayer_2`)
+    * layer `bottomlayer_2b` on level bottom (parent is `middlelayer_2`)
 
 ### Modules in this example
 * `mod.layer` contains a layer tree data structure (built up when reading a JSON file like `layers_triple_hierarchy.json`)
@@ -35,12 +35,12 @@ All other modules are put automatically to a Jigsaw layer based on their naming 
 * `mod.u_bottom_middle_top` (in layer top) is a module, which could theoretically end up in all layers but is already resolved in top layer.
 
 ### Example shows ...
-The example shows how a layer hierarchy can be built up (see `mod.main/pkgmain.LayerBuilder` and `mod.layers/pkglayer.*.java`)
+1. The example shows how a layer hierarchy can be built up (see `mod.main/pkgmain.LayerBuilder` and `mod.layers/pkglayer.*.java`, in the Jigsaw boot layer)
 - For that, we use a tree of layers. See mod.layers for our tree data structure. Each of the tree nodes has a name, a level and a reference to a Jigsaw layer.
 - The layer tree hierarchy is read from a JSON file.
 - Each name of a layer tree node must be unique.
 - Modules (`mod.u*`, `mod.x*`, `mod.y*`, `mod.z*`) are added to the layers (see section "Modules ...").
 
-The example shows also how modules in different layers can interact with each other (see section "Modules ...").
+2. The example shows also how modules in different layers can interact with each other via derivation and delegation (see section "Modules ...").
 
-Finally, the examples shows how the class `mod.main/pkgmain.ModuleCaller` (in the Jigsaw boot layer) can call any other class in any other module in the layer hierarchy via reflection.
+3. Finally, the examples shows how one can call any other class in any other module in the layer hierarchy via reflection (see `mod.main/pkgmain.ModuleCaller`, in the Jigsaw boot layer).
