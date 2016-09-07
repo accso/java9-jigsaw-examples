@@ -38,7 +38,7 @@ The example shows how a layer hierarchy can be built up (see `mod.main/pkgmain.L
 - For that, we use a tree of layers. See mod.layers for our tree data structure. Each of the tree nodes has a name, a level and a reference to a Jigsaw layer.
 - The layer tree hiearchy is read from a JSON file.
 - Each name of a layer tree node must be unique.
-- Modules (mod.u*, mod.x\*, mod.y\*, mod.z\*) are added to the layers (see section "Modules ...").
+- Modules (mod.u\*, mod.x\*, mod.y\*, mod.z\*) are added to the layers (see section "Modules ...").
 
 The example shows also how modules in different layers can interact with each other (see section "Modules ...").
 
