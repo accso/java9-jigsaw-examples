@@ -25,7 +25,7 @@ The layer hierarchy as defined in `layers_triple_hierarchy.json` defines the fol
 All other modules are put automatically to a Jigsaw layer based on their naming convention (module name's suffix matches layer level). See `modmain/pkgmain.LayerBuilder.java`:
 * `mod.x_bottom` (in layer bottom), `mod.x_middle` (in layer middle), `mod.x_top` (in layer top) all have the same package and same class. 
   * Split package problem does not occur. 
-  * Note that these mod.x\* modules need to be compiled separately (see compile.sh) as the automatic module javax.json has unfortunately an automatic reads relationship to each of them (so that the split package problem prevents successfuly compile). TODO: Add jigsaw-dev mailing thread link here
+  * Note that these `mod.x*` modules need to be compiled separately (see compile.sh) as the automatic module `javax.json` (see `amlib`) has unfortunately an automatic reads relationship to each of them (so that the split package problem prevents successfuly compile). See [thread in jigsaw-dev mailinglist here](http://mail.openjdk.java.net/pipermail/jigsaw-dev/2016-September/009290.html)
 * `mod.y_bottom` (in layer bottom), `mod.y_middle` (in layer middle), `mod.y_top` (in layer top) use different packages. 
   * A class in bottom is derived from one in middle which is derived from top.
 * `mod.z_bottom` (in layer bottom), `mod.z_middle` (in layer middle), `mod.z_top` (in layer top) use different packages. 
