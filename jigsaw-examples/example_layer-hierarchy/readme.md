@@ -36,9 +36,9 @@ All other modules are put automatically to a Jigsaw layer based on their naming 
 
 ### Example shows ...
 1. The example shows how a layer hierarchy can be built up (see `mod.main/pkgmain.LayerBuilder` and `mod.layers/pkglayer.*.java`, in the Jigsaw boot layer)
-  * For that, we use a tree of layers. See mod.layers for our tree data structure. Each of the tree nodes has a name, a level and a reference to a Jigsaw layer.
-  * The layer tree hierarchy is read from a JSON file.
-  * Each name of a layer tree node must be unique.
-  * Modules (`mod.u*`, `mod.x*`, `mod.y*`, `mod.z*`) are added to the layers (see section "Modules ...").
+  * For that hierarcy, we use a tree of layers in our own tree/composite-pattern data structure (see `mod.layer`). Each of the tree nodes has a name, a level and keeps the reference to a Jigsaw layer.
+  * This layer tree hierarchy is read from a JSON file.
+  * Each name of a layer tree node must be globally unique.
+  * Modules (`mod.u*`, `mod.x*`, `mod.y*`, `mod.z*`) are added to the layers (see section "Modules ..." above).
 2. The example shows also how modules in different layers can interact with each other via derivation and delegation (see section "Modules ...").
 3. Finally, the examples shows how one can call any other class in any other module in the layer hierarchy via reflection (see `mod.main/pkgmain.ModuleCaller`, in the Jigsaw boot layer).
