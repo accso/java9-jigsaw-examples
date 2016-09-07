@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/javax.json-1.0.4.jar" sourcepath="lib/javax.json-1.0.4-sources.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/mod.main/lib/javax.json-1.0.4-javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/mod.layer"/>
+	<classpathentry kind="output" path="target"/>
+</classpath>

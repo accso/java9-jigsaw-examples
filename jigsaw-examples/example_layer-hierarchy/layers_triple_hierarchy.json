@@ -1,0 +1,24 @@
+{
+   "layers": {
+   	    "name": "toplayer", 
+   	    "level": "top",
+		"layerList": [
+			{
+				"name": "middlelayer_1", 
+				"level": "middle",
+				"layerList": [ 
+					{ "name": "bottomlayer_1a", "level": "bottom" },
+					{ "name": "bottomlayer_1b", "level": "bottom" }
+				]
+			},
+			{
+				"name": "middlelayer_2", 
+				"level": "middle",
+				"layerList": [ 
+					{ "name": "bottomlayer_2a", "level": "bottom" },
+					{ "name": "bottomlayer_2b", "level": "bottom" }
+				]
+			} 
+		]
+	}
+}
