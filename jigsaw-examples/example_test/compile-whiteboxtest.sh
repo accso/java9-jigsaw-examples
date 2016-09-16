@@ -10,10 +10,16 @@ mkdir -p patchlib
 # These options are necessay: 
 #   -Xmodule:modfib        Compile as if the classes were part of modfib
 #   -d patches/modfib      Compile output to directory patches/modfib
-#   --add-reads            is needed during compile time  because WhiteBoxTest is a junit test, and therefore a reads dependeny is needed ti junit. 
+#   --add-reads            is needed during compile time  because WhiteBoxTest is a junit test, and therefore a reads dependency is needed to junit.
+#   --add-modules          is needed during compile time  because WhiteBoxTest is a junit test, and therefore junit is needed.
 
 echo "javac --add-reads modfib=junit -Xmodule:modfib --module-path amlib\;mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
-$JAVA_HOME/bin/javac --add-reads modfib=junit -Xmodule:modfib --module-path amlib\;mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java
+$JAVA_HOME/bin/javac -d patches/modfib \
+    -Xmodule:modfib \
+    --add-reads modfib=junit \
+    --add-modules junit \
+    --module-path amlib\;mlib \
+    src/modtest.whitebox/pkgfib/WhiteBoxTest.java
 
 pushd patches > /dev/null 2>&1 
 for dir in */; 
