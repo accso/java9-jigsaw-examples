@@ -1,3 +1,3 @@
 module modfacade {
-    requires public modb;
+    requires transitive modb;
 }

@@ -1,18 +1,18 @@
-# Created by depvis.JigsawDepVisualizer on Sat Aug 27 13:54:33 CEST 2016
+# Created by depvis.JigsawDepVisualizer on Wed Sep 28 19:08:39 CEST 2016
 digraph Java9_Dependency_Visualizer {
-modmainbar[fontname="Consolas",shape="ellipse",label="modmainbar"];
-modsplitbar1[fontname="Consolas",shape="ellipse",label="modsplitbar1"];
-java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modsplitbar2[fontname="Consolas",shape="ellipse",label="modsplitbar2"];
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modsplitbar1[fontname="Consolas",shape="ellipse",label="modsplitbar1"];
+modmainbar[fontname="Consolas",shape="ellipse",label="modmainbar"];
+modsplitbar2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modsplitbar1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmainbar -> modsplitbar1[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmainbar -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modsplitbar1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modsplitbar2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_splitpackage
-Sat Aug 27 13:54:33 CEST 2016"
+Wed Sep 28 19:08:39 CEST 2016"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

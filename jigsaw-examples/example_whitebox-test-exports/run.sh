@@ -7,6 +7,6 @@
 
 $JAVA_HOME/bin/java \
      --module-path mlib\;amlib \
-     -addmods ALL-MODULE-PATH \
+     --add-modules ALL-MODULE-PATH \
      -m junit/org.junit.runner.JUnitCore  \
      pkgfibtest.WhiteBoxTest

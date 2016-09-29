@@ -12,7 +12,7 @@ module moda {
     exports pkga1;
     exports pkga2 to modmain;  // nur an modmain
 
-    exports dynamic pkga3;     // nur zur Laufzeit
+    exports private pkga3;     // nur zur Laufzeit
                                // siehe Reflection
 
 }

@@ -5,8 +5,8 @@ mkdir -p patches
 mkdir -p mlib
 mkdir -p patchlib
 
-echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src -name \"*.java\"|grep -v modb-patch)"
-$JAVA_HOME/bin/javac -d mods --module-path mlib -modulesourcepath src $(find src -name "*.java"|grep -v modb-patch)
+echo "javac -d mods --module-path mlib --module-source-path src \$(find src -name \"*.java\"|grep -v modb-patch)"
+$JAVA_HOME/bin/javac -d mods --module-path mlib --module-source-path src $(find src -name "*.java"|grep -v modb-patch)
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

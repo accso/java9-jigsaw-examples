@@ -3,8 +3,8 @@
 mkdir -p mods
 mkdir -p mlib 
 
-echo "javac -d mods --module-path amlib\;mlib -modulesourcepath src \$(find src -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods --module-path amlib\;mlib -modulesourcepath src $(find src -name "*.java")
+echo "javac -d mods --module-path amlib\;mlib --module-source-path src \$(find src -name \"*.java\")"
+$JAVA_HOME/bin/javac -d mods --module-path amlib\;mlib --module-source-path src $(find src -name "*.java")
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

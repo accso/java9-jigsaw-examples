@@ -25,7 +25,7 @@ EOFAPPJSON
     echo " "
 }
 
-APPSERVER_TARGET=/j/src/example_jerrymouse/apps
+APPSERVER_TARGET=$(pwd)/apps
 
 pushd .. >/dev/null 2>&1 
 for dir in example_*/; 

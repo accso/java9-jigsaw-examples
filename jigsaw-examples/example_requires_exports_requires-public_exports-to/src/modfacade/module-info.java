@@ -1,3 +1,3 @@
 module modfacade {
-    requires public moda;       // transitive, makes modc (via moda) readable
+    requires transitive moda;       // transitive, makes modc (via moda) readable
 }

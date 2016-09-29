@@ -3,8 +3,8 @@
 mkdir -p mods
 mkdir -p mlib 
 
-echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods --module-path mlib -modulesourcepath src $(find src -name "*.java")
+echo "javac -d mods --module-path mlib --module-source-path src \$(find src -name \"*.java\")"
+$JAVA_HOME/bin/javac -d mods --module-path mlib --module-source-path src $(find src -name "*.java")
 
 # copy properties to mods dir (so that they are found for the JAR creation)
 pushd src > /dev/null 2>&1

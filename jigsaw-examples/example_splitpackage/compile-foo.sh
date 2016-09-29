@@ -4,8 +4,8 @@ mkdir -p mods
 mkdir -p mlib 
 
 # does not compile
-echo "javac -d mods --module-path mlib -modulesourcepath src \$(find src/*foo* -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods --module-path mlib -modulesourcepath src $(find src/*foo* -name "*.java")
+echo "javac -d mods --module-path mlib --module-source-path src \$(find src/*foo* -name \"*.java\")"
+$JAVA_HOME/bin/javac -d mods --module-path mlib --module-source-path src $(find src/*foo* -name "*.java")
 
 # as it does not compile anyway, the creation of the JAR file will not work
 #pushd mods > /dev/null 2>&1
