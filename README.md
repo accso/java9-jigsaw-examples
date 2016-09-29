@@ -41,5 +41,18 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] Update to newest JDK9 beta (b134 as the time of writing)
 - [ ] Do a bit of renaming and refactoring of module names. (modmain had been moda before, so that's why most modules are called modb, modc, ...)
 
+### Latest Changes
+#### Migration to b136
+Some CLI options changed:
+-modulesourcepath  -->  --module-source-path
+-addmods           -->  --add-modules
+-mp                -->  --module-path
+
+- [ ] "exports dynamic" is not supported anymore. It is substituted by "exports private ", but here the semantic is different. See http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-September/000390.html
+- [ ] The algorthm to determine the name of an automatic module changed: Trailing digtis are removed. See http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-September/000393.html 
+      This causes some effects, e.g. when using slf4j-jdk14-1.7.12 as an automatic module, its name is slf4j-jdk (see example_automatic-module-logging)
+- [ ] The keyword  "requires public" in the module-info is now "requires transitive"
+
+
 ### Related projects
 DepVis, see https://github.com/accso/java9-jigsaw-depvis : Visualization tool for Jigsaw modules
