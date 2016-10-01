@@ -18,9 +18,9 @@ $JAVA_HOME/bin/java --module-path mlib -m modc/pkgc.CMain | myecho
 
 echo ------------------------------------------------------------------
 
-echo "Running with root-module modb plus -addmods modc"
-echo "   java --module-path mlib -addmods modc -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib -addmods modc -m modb/pkgb.BMain | myecho
+echo "Running with root-module modb plus --add-modules modc"
+echo "   java --module-path mlib --add-modules modc -m modb/pkgb.BMain"
+$JAVA_HOME/bin/java --module-path mlib --add-modules modc -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
@@ -31,8 +31,8 @@ $JAVA_HOME/bin/java --module-path mlib\;amlib -m modb/pkgb.BMain | myecho
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus limitmods"
-echo "   java --module-path mlib -limitmods modb -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib -limitmods modb -m modb/pkgb.BMain | myecho
+echo "   java --module-path mlib --limit-modules modb -m modb/pkgb.BMain"
+$JAVA_HOME/bin/java --module-path mlib --limit-modules modb -m modb/pkgb.BMain | myecho
 
 
 echo ------------------------------------------------------------------
