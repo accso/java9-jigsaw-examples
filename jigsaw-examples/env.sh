@@ -1,15 +1,11 @@
 # Environment settings
 
 # configure paths here
-# JAVA_HOME=/a/JDK/jdk1.9.0_ea-b127-x64_20160721_build5308
-# JAVA_HOME=/a/JDK/jdk1.9.0_ea-b132-x64_20160822_build5414
-# JAVA_HOME=/a/JDK/jdk1.9.0_ea-b134-x64_20160902_build5456
-# JAVA_HOME=/a/JDK/jdk1.9.0_ea-b138-x64_20160929_build5546
-JAVA_HOME=/a/JDK/jdk1.9.0_ea-b144-x64_20161111_build5709
-GRAPHVIZ_HOME=/a/GraphViz/graphviz-2.38  
-DEPVIS_HOME=j:/github-java9-jigsaw-depvis/depvis
+JAVA_HOME=TODO/path/to/java/home/goes/here
+GRAPHVIZ_HOME=TODO/path/to/graphviz2.38/home/goes/here
+DEPVIS_HOME=TODO/path/to/depvis/goes/here
 # \; on Windows (even when in bash), : on Un*x
-PATH_SEPARATOR=\;
+PATH_SEPARATOR=TODO
 
 # ---------------------------------------------------------
 # no need to change anything beyond this line
