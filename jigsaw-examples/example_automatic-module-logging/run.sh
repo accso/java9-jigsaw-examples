@@ -14,4 +14,4 @@ $JAVA_HOME/bin/java --module-path mlib\;ifamlib\;amlib --add-modules slf4j.jdk -
 
 # --------------------------------------------------------------------------
 # Add both implementations -> run time error ("split package") as both modules do export org.slf4j.impl
-# $JAVA_HOME/bin/java --module-path mlib\;amlib -addmods slf4j.simple\,slf4j.jdk14  -m modmain/pkgmain.Main  | myecho
+# $JAVA_HOME/bin/java --module-path mlib\;amlib --add-modules slf4j.simple\,slf4j.jdk14  -m modmain/pkgmain.Main  | myecho

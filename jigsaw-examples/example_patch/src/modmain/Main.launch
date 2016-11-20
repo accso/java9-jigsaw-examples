@@ -10,5 +10,5 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgmain.Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmain"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib -addmods modmain -m modmain/pkgmain.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib --add-modules modmain -m modmain/pkgmain.Main"/>
 </launchConfiguration>

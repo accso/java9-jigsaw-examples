@@ -24,7 +24,7 @@ Does not compile! A module must not requires 2 or more modules, which have/expor
 Case 2) 
 * modsplitbar1 and modsplitbar2 do both contain a package called pkgbar.
 * modmainbar requires modsplitbar1
-* During runtime, -addmods is used to load also modsplitbar2
+* During runtime, --add-modules is used to load also modsplitbar2
 Shows a runtime exception: In one classloader, 2 or more modules must not be loaded, which have/export the same package.
 
 ### TODOs

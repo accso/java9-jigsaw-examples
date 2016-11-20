@@ -11,5 +11,5 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgmainbehindfacade.MainBehindFacade"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmainbehindfacade"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib  -addmods modmainbehindfacade -m modmainbehindfacade/pkgmainbehindfacade.MainBehindFacade"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib  --add-modules modmainbehindfacade -m modmainbehindfacade/pkgmainbehindfacade.MainBehindFacade"/>
 </launchConfiguration>

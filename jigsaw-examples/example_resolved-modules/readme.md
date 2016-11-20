@@ -27,7 +27,7 @@ Die Main-Methode in jedem Module gibt die Module im Boot-Layer aus:
 - moda/pkga.AMain: Der Boot-Layer enthaelt java., jdk. und moda
 - modb/pkgB.BMain: Der Boot-Layer enthaelt java., jdk., moda, modb
 - modc/pkgC.CMain: Der Boot-Layer enthaelt java., jdk., modc
-- modb/pkgb.BMain mit -addmods modc: Der Boot-Layer enthaelt java., jdk., moda, modb, modc
+- modb/pkgb.BMain mit --add-modules modc: Der Boot-Layer enthaelt java., jdk., moda, modb, modc
 
 Obwohl nur java.base required wird, werden einige java.*-Module geladen (java.rmi, java.scripting, java.logging, ...)
 

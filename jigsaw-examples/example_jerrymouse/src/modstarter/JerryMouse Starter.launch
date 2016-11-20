@@ -10,5 +10,5 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgstarter.Starter"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modstarter"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib\;../../amlib -addmods modstarter -m modstarter/pkgstarter.Starter j:/src/example_jerrymouse"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib\;../../amlib --add-modules modstarter -m modstarter/pkgstarter.Starter j:/src/example_jerrymouse"/>
 </launchConfiguration>

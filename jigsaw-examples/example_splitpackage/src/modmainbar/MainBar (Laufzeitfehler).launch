@@ -10,5 +10,5 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgmainbar.Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmainbar"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib  -addmods modmainbar,modsplitbar2 -m modmainbar/pkgmainbar.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-mp ../../mlib  --add-modules modmainbar,modsplitbar2 -m modmainbar/pkgmainbar.Main"/>
 </launchConfiguration>
