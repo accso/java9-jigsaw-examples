@@ -38,14 +38,14 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 ### TODOs, LOP, Backlog, Ideas, ...
 No software is ready, ever ;-) So here are some ideas left (any other feedback very welcome!):
 
-- [ ] Update to newest JDK9 beta (b134 as the time of writing)
 - [ ] Do a bit of renaming and refactoring of module names. (modmain had been moda before, so that's why most modules are called modb, modc, ...)
+- [ ] add new example on annotation and deprecation of modules
+- [ ] example for open modules
 
 ### Latest Changes
 #### Migration to b144
-- "open modules" and "opens" instead of "exports dynamic" and "weak modules"
+- "opens" instead of "exports dynamic" and "weak modules"
 - "requires transitive" instead of "requires public"
-- added new example on annotation and deprecation of modules
 
 ### Related projects
 DepVis, see https://github.com/accso/java9-jigsaw-depvis : Visualization tool for Jigsaw modules
