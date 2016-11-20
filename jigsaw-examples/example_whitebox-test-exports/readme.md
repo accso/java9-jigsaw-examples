@@ -2,7 +2,7 @@
 ## Example example_whitebox-test-exports
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -26,7 +26,6 @@ Example for Whitebox Testing, using a separate module for the whitebox tests and
 Disadvantages:
 * exports to in the module-info means a static export (of internal classes) to the test code. 
 * Using the --add-export option in the compile and run scripts leads to bad maintainability (the compile and run scripts need to be maintained in addition to the code)
-
 
 ### See also 
 Example [example_test](../example-test)

@@ -1,3 +1,0 @@
-module modmain {
-    requires moda;
-}

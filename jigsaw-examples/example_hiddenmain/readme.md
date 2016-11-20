@@ -2,7 +2,7 @@
 ## Example example_hiddenmain
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,14 +16,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
+- Can a Java application start with a non-exported main method?
+- Run starts two examples: One starts the main methode in an exported package, second calls a main method in a non-exported package
 
-- hiddenmain: Kann man eine Java-Anwendung mit einer nicht-exportierten Main-Methode starten? 
-
-Run startet zwei Beispiele:
-- einmal eine Main-Methode in einem exportierten Package, 
-- einmal eine Main-Methode in einem nicht-exportierten Package.
-
-Beide Aufrufe sind moeglich.
-
-END TODO
+Both calls are possible.

@@ -2,7 +2,7 @@
 ## Example example_requires_exports-to
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,6 +16,4 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-- Nutzung von requires und exports-to
-END TODO
+- Usage of requires and exports-to

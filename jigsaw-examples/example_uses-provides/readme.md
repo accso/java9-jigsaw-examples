@@ -2,7 +2,7 @@
 ## Example example_uses-provides
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,6 +16,5 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-- Nutzung von uses und provides
-END TODO
+- Usage of uses und provides
+

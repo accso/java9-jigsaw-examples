@@ -2,7 +2,7 @@
 ## Example example_derived_private-package-protected
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -17,10 +17,4 @@ see https://github.com/accso/java9-jigsaw-examples
 
 ### Example shows ...
 TODO
-
-- Durchreichen von Exceptions
-
-- Exceptions und RuntimeExceptions
-- sichtbar (exportiert) oder nicht
-- chaining von nicht-exportierten Exceptions und RuntimeExceptions
 END TODO

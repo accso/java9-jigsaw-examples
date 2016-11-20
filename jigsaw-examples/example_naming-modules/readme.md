@@ -2,7 +2,7 @@
 ## Example example_naming-modules
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -13,7 +13,5 @@ see https://github.com/accso/java9-jigsaw-examples
 * modmain has a Main class which is started in run.sh
 
 ### Example shows ...
-TODO
 - Naming convention for modules
-Note: No Eclipse support for this example, just clean/compile/run via scripts
-END TODO
+- Note: No Eclipse support for this example, just clean/compile/run via scripts

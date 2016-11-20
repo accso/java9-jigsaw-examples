@@ -2,7 +2,7 @@
 ## Example example_exceptions
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,11 +16,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-
-- Durchreichen von Exceptions
-
-- Exceptions und RuntimeExceptions
-- sichtbar (exportiert) oder nicht
-- chaining von nicht-exportierten Exceptions und RuntimeExceptions
-END TODO
+- Handling of exception and transferring them from one module to another.
+- Both Exceptions and RuntimeExceptions are used.
+- Both cases of exported and non-exported exceptions are shown.
+- Chaining of non-exported Exceptions and RuntimeExceptions is shown.

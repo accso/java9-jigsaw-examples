@@ -2,7 +2,7 @@
 ## Example example_interface-callback
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes)
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,14 +16,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-
-- Aufruf von Callback-Schnittstellen
-
-Modul modcallee definiert ein Callback-Interface ICallback, das beim Methodenaufruf von Callee.doIt() mitgegeben wird. 
-In der Methode Callee.doIt() wird das Callback-Interface aufgerufen.
-
-Modul modcallbackhandler implementiert ICallback
-
-Modul modmain bringt Callee und Implementierung zusammen. Callee kann die Implementierung von ICallback aufrufen
-END TODO
+- Calling a callback interface
+- Module modcallee defines a callback interface ICallback, which is returned when calling Callee.doIt(). 
+- Module modcallbackhandler does implement the interface ICallback
+- Module modmain brings Callee and implementation together: Callee can call the implementation of ICallback

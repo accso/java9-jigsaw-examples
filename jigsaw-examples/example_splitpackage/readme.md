@@ -2,7 +2,7 @@
 ## Example example_splitpackage
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -16,21 +16,16 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-TODO
-
-Fall 1)
-modsplitfoo1 und modsplitfoo2 haben beide das Package pkgfoo 
-modmainfoo requires modsplitfoo1 und modsplitfoo2
--> Kompiliert nicht: ein Modul darf kein requires auf zwei Module besitzen, die das gleiche Package exportieren
+Case 1)
+* modsplitfoo1 adn modsplitfoo2 do both contain a package called pkgfoo.
+* modmainfoo requires modsplitfoo1 und modsplitfoo2
+Does not compile! A module must not requires 2 or more modules, which have/export the same package
 
 Fall 2) 
-modsplitbar1 und modsplitbar2 haben beide das Package pkgbar
-modmainbar requires modsplitbar1
-Mit -addmods with modsplitbar2 dazugeladen
--> Laufzeitfehler: in einem Classloader duerfen keine zwei Module geladen werden, die das gleiche Package besitzen
-
-
-END TODO
+* modsplitbar1 and modsplitbar2 do both contain a package called pkgbar.
+* modmainbar requires modsplitbar1
+* During runtime, -addmods is used to load also modsplitbar2
+Shows a runtime exception: In one classloader, 2 or more modules must not be loaded, which have/export the same package.
 
 ### TODOs
-- [ ] Funktioniert Fall 2, wenn der Classloader fuer modsplitbar1 und modsplitbar2 unterschiedlich sind?
+- [ ] Does case 2 work, if the classloader for modsplitbar1 and modsplitbar2 is different (i.e. what about layers)?

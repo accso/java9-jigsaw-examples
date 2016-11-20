@@ -2,7 +2,7 @@
 ## Example example_addReads_addExports_reflection
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -18,9 +18,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ### Example shows ...
 - addReads via reflection
 
-modmain/Main adds a read relationship to modb dynamically via 
-reflection
-
+modmain/Main adds a read relationship to modb dynamically via reflection
 - addExports via reflection
 
 modb/pkgbinternal is also exported to modmain via reflection. 
@@ -31,5 +29,3 @@ as the reflection method is caller-sensitive!
 Note that for successful compilation, modmain/Main needs access 
 to the exported BHelper. Therefore the option --add-exports is needed.
 Same thing during runtime.
-
-

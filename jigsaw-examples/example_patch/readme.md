@@ -2,7 +2,7 @@
 ## Example example_patch
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -24,4 +24,3 @@ It is possible to patch a module (during compile- and runtime). Use cases e.g.:
 To patch a module, the patching code is compiled resp. started "as if" it were part of a module. The classes of the patch are added to the module (here modb), 
 resp. overwrite existing classes inside the module if the module already contains a class with the same name.
 See scripts compile-patch, resp. run-patch for details on the options to use.
-

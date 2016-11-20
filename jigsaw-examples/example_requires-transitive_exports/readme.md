@@ -1,8 +1,8 @@
 # Java 9 Jigsaw modules example suite
-## Example example_requires-public_exports
+## Example example_requires-transitive_exports
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -20,7 +20,5 @@ with facade modules:
 ![Example's Module Dependency Graph](moduledependencies-with-facade.png)
 
 ### Example shows ...
-TODO
-- Nutzung von requires-public und exports
-- Zweites Main-Modul hinter Facade zeigt, dass requires-public transitiv ist
-END TODO
+- Usage of requires-transitive and exports
+- Second Main module behind facade shows, that requires-transitive is, well, transitive

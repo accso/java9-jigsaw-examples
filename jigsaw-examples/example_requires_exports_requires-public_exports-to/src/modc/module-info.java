@@ -1,3 +1,0 @@
-module modc {
-    exports pkgc;
-}
