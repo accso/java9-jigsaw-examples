@@ -21,7 +21,7 @@ Case 1)
 * modmainfoo requires modsplitfoo1 und modsplitfoo2
 Does not compile! A module must not requires 2 or more modules, which have/export the same package
 
-Fall 2) 
+Case 2) 
 * modsplitbar1 and modsplitbar2 do both contain a package called pkgbar.
 * modmainbar requires modsplitbar1
 * During runtime, -addmods is used to load also modsplitbar2
