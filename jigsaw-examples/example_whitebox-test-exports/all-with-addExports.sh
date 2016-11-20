@@ -1,7 +1,7 @@
-cat readme.txt
+cat readme.md 
 
 sh ./clean.sh
-sh ./compile-with-addExports.sh
+sh ./compile-with-add-exports.sh
 
 echo ------------------------------------------------------------------
-sh ./run-with-addExports.sh
+sh ./run-with-add-exports.sh
