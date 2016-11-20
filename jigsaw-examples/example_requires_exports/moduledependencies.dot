@@ -1,4 +1,4 @@
-# Created by depvis.JigsawDepVisualizer on Wed Sep 28 19:08:34 CEST 2016
+# Created by depvis.JigsawDepVisualizer on Sun Nov 20 16:41:59 CET 2016
 digraph Java9_Dependency_Visualizer {
 modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modb[fontname="Consolas",shape="ellipse",label="modb"];
@@ -6,7 +6,7 @@ java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
 modmain -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modb -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }

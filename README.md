@@ -1,7 +1,7 @@
 ﻿# Java 9 Jigsaw modules example suite
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and Rüdiger Grammes.
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes](https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
@@ -11,7 +11,7 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 
 ### Setup
 1. Clone this repo.
-2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b138 ( September  2016) on Windows 10, x64.
+2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b144 (November 2016) on Windows 10, x64.
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
 5. To generate the graphviz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
@@ -42,17 +42,10 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] Do a bit of renaming and refactoring of module names. (modmain had been moda before, so that's why most modules are called modb, modc, ...)
 
 ### Latest Changes
-#### Migration to b138
-Some CLI options changed:
--modulesourcepath  -->  --module-source-path
--addmods           -->  --add-modules
--mp                -->  --module-path
-
-- [ ] "exports dynamic" is not supported anymore. It is substituted by "exports private ", but here the semantic is different. See http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-September/000390.html
-- [ ] The algorthm to determine the name of an automatic module changed: Trailing digtis are removed. See http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-September/000393.html 
-      This causes some effects, e.g. when using slf4j-jdk14-1.7.12 as an automatic module, its name is slf4j-jdk (see example_automatic-module-logging)
-- [ ] The keyword  "requires public" in the module-info is now "requires transitive"
-
+#### Migration to b144
+- "open modules" and "opens" instead of "exports dynamic" and "weak modules"
+- "requires transitive" instead of "requires public"
+- added new example on annotation and deprecation of modules
 
 ### Related projects
 DepVis, see https://github.com/accso/java9-jigsaw-depvis : Visualization tool for Jigsaw modules

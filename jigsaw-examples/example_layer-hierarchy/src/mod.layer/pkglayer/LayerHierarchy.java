@@ -4,6 +4,7 @@ import java.lang.reflect.Layer;
 import java.lang.reflect.Module;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 // helper class which holds the layer hierarchy tree, constructs its root (i.e. the boot layer) and has some more utility collections
@@ -34,8 +35,10 @@ public class LayerHierarchy {
         
         AbstractLayerRef parentRef = lRef.parent;
         if (parentRef != null) {
-            java.lang.reflect.Layer parentLayer = lRef.getLayer().parent().orElseGet(null);        
-            System.out.println("Parent '" + parentRef.name + "'on level '" + parentRef.level + "' (" + parentLayer.toString() + ")");
+            List<java.lang.reflect.Layer> parentLayers = lRef.getLayer().parents();
+            for (java.lang.reflect.Layer parentLayer: parentLayers) {
+            	System.out.println("Parent '" + parentRef.name + "'on level '" + parentRef.level + "' (" + parentLayer.toString() + ")");
+            }
         }
 
         if (lRef.getLayer().modules().isEmpty()) {

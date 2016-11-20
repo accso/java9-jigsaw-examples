@@ -9,8 +9,9 @@ $JAVA_HOME/bin/javac -d mods \
     --module-path mlib --module-source-path src $(find src/modb -name "*.java")
 
 # compile modmain (add-export of modb/pkgb -> modmain)
-echo "javac -d mods --add-exports modb/pkgb=modmain --module-path mlib -modulesourcepath src \$(find src/modmain -name \"*.java\")"
+echo "javac -d mods --add-modules modb --add-exports modb/pkgb=modmain --module-path mlib -modulesourcepath src \$(find src/modmain -name \"*.java\")"
 $JAVA_HOME/bin/javac -d mods \
+    --add-modules modb \
     --add-exports modb/pkgb=modmain \
     --module-path mlib --module-source-path src $(find src/modmain -name "*.java")
 

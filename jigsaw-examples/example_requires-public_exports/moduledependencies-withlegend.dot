@@ -1,4 +1,4 @@
-# Created by depvis.JigsawDepVisualizer on Wed Sep 28 19:08:32 CEST 2016
+# Created by depvis.JigsawDepVisualizer on Sun Nov 20 16:42:15 CET 2016
 digraph Java9_Dependency_Visualizer {
 modb[fontname="Consolas",shape="ellipse",label="modb"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
@@ -14,12 +14,12 @@ rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_requires-public_exports
-Wed Sep 28 19:08:32 CEST 2016"
+Sun Nov 20 16:42:15 CET 2016"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>
     <tr><td align="right" port="i2">requires (mandated)</td></tr>
-    <tr><td align="right" port="i3">requires public</td></tr>
+    <tr><td align="right" port="i3">requires transitive</td></tr>
     <tr><td align="right" port="i4">exports to</td></tr>
     </table>>,fontname="Consolas"]
   key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">

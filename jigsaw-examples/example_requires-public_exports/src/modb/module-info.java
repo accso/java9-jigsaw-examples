@@ -1,5 +1,5 @@
 module modb {
-    requires public modc;
+    requires transitive modc;
 
     exports pkgb;
 }

@@ -1,18 +1,18 @@
-# Created by depvis.JigsawDepVisualizer on Wed Sep 28 19:08:35 CEST 2016
+# Created by depvis.JigsawDepVisualizer on Sun Nov 20 16:42:10 CET 2016
 digraph Java9_Dependency_Visualizer {
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
-modb1[fontname="Consolas",shape="ellipse",label="modb1"];
-modb2[fontname="Consolas",shape="ellipse",label="modb2"];
-java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
-modmain -> modb1[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmain -> modb2[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modb2 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modb2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modb2[fontname="Consolas",shape="ellipse",label="modb2"];
+modb1[fontname="Consolas",shape="ellipse",label="modb1"];
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modc -> modb2[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
 modc -> modb1[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
+modb2 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modb2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modb1 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modb1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modb1[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> modb2[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }
