@@ -1,0 +1,3 @@
+module modmainbehindfacade {
+    requires modfacade;
+}
