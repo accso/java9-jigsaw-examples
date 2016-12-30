@@ -1,4 +1,4 @@
-# Created by depvis.JigsawDepVisualizer on Sun Nov 20 17:43:26 CET 2016
+# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:17:08 CET 2016
 digraph Java9_Dependency_Visualizer {
 modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
@@ -7,7 +7,7 @@ rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_hiddenmain
-Sun Nov 20 17:43:26 CET 2016"
+Fri Dec 30 11:17:08 CET 2016"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

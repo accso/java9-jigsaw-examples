@@ -11,7 +11,7 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 
 ### Setup
 1. Clone this repo.
-2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b144 (November 2016) on Windows 10, x64.
+2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b148 (December 2016) on Windows 10, x64.
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
 5. To generate the graphviz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
@@ -43,6 +43,8 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for open modules
 
 ### Latest Changes
+#### Migration to b148
+- no changes necessary, everything seems still to work as in b144
 #### Migration to b144
 - "opens" instead of "exports dynamic" and "weak modules"
 - "requires transitive" instead of "requires public"
