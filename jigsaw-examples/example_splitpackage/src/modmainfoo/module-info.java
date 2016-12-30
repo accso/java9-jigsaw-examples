@@ -2,6 +2,6 @@ module modmainfoo { // does not compile (as required modsplitfoo1, modsplitfoo2 
     requires modsplitfoo1;
     requires modsplitfoo2;
 
-    // needed so that we can all the Main class via reflection (like e.g. in an "appserver")
-    exports pkgmainfoo;
+	// allow reflective access, e.g. in the jerry mouse appserver
+	opens pkgmainfoo;
 }

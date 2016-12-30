@@ -39,7 +39,7 @@ public class Starter {
 
         System.out.println("[JerryMouse] Scanning for apps in " + appPath.toString());
 
-        ExecutorService executer = Executors.newCachedThreadPool();
+        ExecutorService executor = Executors.newSingleThreadExecutor(); // only one thread as otherwise logging output is cluttered and not sorted
         List<Future<?>> runningApps = new ArrayList<Future<?>>();
         try {
             try (DirectoryStream<Path> stream = Files.newDirectoryStream(appPath, file -> Files.isDirectory(file))) {
@@ -98,8 +98,8 @@ public class Starter {
                             try {
                                 // run the static method Boot.run() of the root module, done via reflection
                                 //   (is executed in an ExecutorTask)
-                                Class<?> bootClass = layer.findLoader(rootModuleName).loadClass(bootClassName);
-                                Method bootMethod = bootClass.getMethod(bootMethodName, String[].class);
+                                Class<?> bootClass  = layer.findLoader(rootModuleName).loadClass(bootClassName);
+                                Method   bootMethod = bootClass.getMethod(bootMethodName, String[].class);
 
                                 // addReads needed in order to be able to read the module
                                 Starter.class.getModule().addReads(bootClass.getModule());
@@ -109,7 +109,7 @@ public class Starter {
                                 String[] params = null;
 
                                 // start the application
-                                Future<?> appTask = executer.submit(() -> {
+                                Future<?> appTask = executor.submit(() -> {
                                     try {
                                         bootMethod.invoke(null, (Object) params);
                                     } 
@@ -142,7 +142,7 @@ public class Starter {
         } 
         finally {
             System.out.println("\n[JerryMouse] All apps completed. Shutting down.");
-            executer.shutdown();
+            executor.shutdown();
         }
     }
 }
