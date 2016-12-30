@@ -43,8 +43,10 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for open modules
 
 ### Latest Changes
+
 #### Migration to b148
 - no changes necessary, everything seems still to work as in b144
+
 #### Migration to b144
 - "opens" instead of "exports dynamic" and "weak modules"
 - "requires transitive" instead of "requires public"
