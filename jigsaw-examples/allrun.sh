@@ -7,7 +7,7 @@ run() {
         for runscript in run*.sh 
         do
             echo "Running ${MODDIR}: ${runscript}"
-            sh ${runscript}
+            . ${runscript}
         done
     fi
     popd >/dev/null 2>&1 
