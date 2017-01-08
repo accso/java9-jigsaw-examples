@@ -47,15 +47,17 @@ $JAVA_HOME/bin/java --module-path mlib --limit-modules java.compact1,modb -m mod
 echo ------------------------------------------------------------------
 
 # /x/ doesn't work on module path, replace with x:
-JAVA_HOME_WIN=`echo $JAVA_HOME | sed -r s/^\\\/\([a-z]\)/\\\1:/`
+JAVA_HOME_OS=$JAVA_HOME
+# /x/ doesn't work on module path on windows, replace with x:
+(echo $OSTYPE | grep -i win >/dev/null) && JAVA_HOME_OS=$(echo $JAVA_HOME | sed -r s/^\\\/\([a-z]\)/\\\1:/)
 echo "Linking with root module modb"
-echo "   jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb"
+echo "   jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_OS/jmods --add-modules modb --output jimage/modb"
 if [ -d ./jimage ]
 then
   # otherwise error: directory does already exist...
   rm -rf ./jimage
 fi
-$JAVA_HOME/bin/jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb | myecho
+$JAVA_HOME/bin/jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_OS/jmods --add-modules modb --output jimage/modb | myecho
 
 echo "Running the linked runtime image with root module modb"
 echo "./jimage/modb/bin/java -m modb/pkgb.BMain"
