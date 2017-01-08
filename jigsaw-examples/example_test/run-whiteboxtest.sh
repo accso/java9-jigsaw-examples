@@ -16,7 +16,7 @@
 
 $JAVA_HOME/bin/java \
      --patch-module modfib=patches/modfib \
-     --module-path mlib\;amlib \
+     --module-path mlib${PATH_SEPARATOR}amlib \
      --add-reads modfib=junit \
      --add-modules ALL-MODULE-PATH \
      -m junit/org.junit.runner.JUnitCore  \

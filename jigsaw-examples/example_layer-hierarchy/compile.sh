@@ -11,13 +11,13 @@ cp -f src/mod.main/lib/javax.json-1.0.4.jar amlib/
 #    hence causing this stupid compile problem)
 for modx in mod.x_bottom mod.x_middle mod.x_top
 do
-   echo "javac -d mods --module-path mlib\;amlib --module-source-path src \$(find src/${modx} -name \"*.java\")"
-   $JAVA_HOME/bin/javac -d mods --module-path mlib\;amlib --module-source-path src $(find src/${modx} -name "*.java")
+   echo "javac -d mods --module-path mlib${PATH_SEPARATOR}amlib --module-source-path src \$(find src/${modx} -name \"*.java\")"
+   $JAVA_HOME/bin/javac -d mods --module-path mlib${PATH_SEPARATOR}amlib --module-source-path src $(find src/${modx} -name "*.java")
 done
 
 # Compile the rest
-echo "javac -d mods --module-path mlib\;amlib --module-source-path src \$(find src -name \"*.java\" | grep -v mod.x)"
-$JAVA_HOME/bin/javac -d mods --module-path mlib\;amlib --module-source-path src $(find src -name "*.java" | grep -v mod.x)
+echo "javac -d mods --module-path mlib${PATH_SEPARATOR}amlib --module-source-path src \$(find src -name \"*.java\" | grep -v mod.x)"
+$JAVA_HOME/bin/javac -d mods --module-path mlib${PATH_SEPARATOR}amlib --module-source-path src $(find src -name "*.java" | grep -v mod.x)
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

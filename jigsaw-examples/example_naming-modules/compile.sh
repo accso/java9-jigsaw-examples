@@ -34,7 +34,7 @@ do
     $JAVA_HOME/bin/javac -d ../classes/${dir} $(find ${dir} -name "*.java")
 
     # has version?
-    hasversion=`echo ${dir} | grep version`
+    hasversion=$(echo ${dir} | grep version)
     if [ "${hasversion}"=="" ] 
     then
        echo "jar --create --file=../mlib/${dir}.jar -C ../classes/${dir} ."

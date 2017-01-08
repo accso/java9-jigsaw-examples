@@ -25,8 +25,8 @@ $JAVA_HOME/bin/java --module-path mlib --add-modules modc -m modb/pkgb.BMain | m
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus automatic module javax.json"
-echo "   java --module-path mlib\;amlib -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib\;amlib -m modb/pkgb.BMain | myecho
+echo "   java --module-path mlib${PATH_SEPARATOR}amlib -m modb/pkgb.BMain"
+$JAVA_HOME/bin/java --module-path mlib${PATH_SEPARATOR}amlib -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
@@ -49,13 +49,13 @@ echo ------------------------------------------------------------------
 # /x/ doesn't work on module path, replace with x:
 JAVA_HOME_WIN=`echo $JAVA_HOME | sed -r s/^\\\/\([a-z]\)/\\\1:/`
 echo "Linking with root module modb"
-echo "   jlink --module-path mlib\;$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb"
+echo "   jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb"
 if [ -d ./jimage ]
 then
   # otherwise error: directory does already exist...
   rm -rf ./jimage
 fi
-$JAVA_HOME/bin/jlink --module-path mlib\;$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb | myecho
+$JAVA_HOME/bin/jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_WIN/jmods --add-modules modb --output jimage/modb | myecho
 
 echo "Running the linked runtime image with root module modb"
 echo "./jimage/modb/bin/java -m modb/pkgb.BMain"

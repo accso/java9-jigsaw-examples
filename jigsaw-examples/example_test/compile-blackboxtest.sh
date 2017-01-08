@@ -5,8 +5,8 @@ mkdir -p patches
 mkdir -p mlib
 mkdir -p patchlib 
 
-echo "javac -d mods --module-path amlib\;mlib --module-source-path src \$(find src -name \"*.java\" | grep -v modtest.whitebox)"
-$JAVA_HOME/bin/javac -d mods --module-path amlib\;mlib --module-source-path src $(find src -name "*.java" | grep -v modtest.whitebox)
+echo "javac -d mods --module-path amlib${PATH_SEPARATOR}mlib --module-source-path src \$(find src -name \"*.java\" | grep -v modtest.whitebox)"
+$JAVA_HOME/bin/javac -d mods --module-path amlib${PATH_SEPARATOR}mlib --module-source-path src $(find src -name "*.java" | grep -v modtest.whitebox)
 
 pushd mods > /dev/null 2>&1
 for dir in */; 
