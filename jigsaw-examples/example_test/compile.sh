@@ -3,6 +3,6 @@ mkdir -p patches
 mkdir -p mlib
 mkdir -p patchlib 
 
-sh ./compile-blackboxtest.sh
+. ./compile-blackboxtest.sh
 
-sh ./compile-whiteboxtest.sh 
+. ./compile-whiteboxtest.sh 
