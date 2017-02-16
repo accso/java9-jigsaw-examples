@@ -9,8 +9,8 @@ mkdir -p classes
 pushd src > /dev/null 2>&1
 for dir in `ls . | grep -v automatic`
 do
-    echo "javac -d ../mods --module-path ../mlib --module-source-path . \$(find ${dir} -name \"*.java\")"
-    $JAVA_HOME/bin/javac -d ../mods --module-path ../mlib --module-source-path . $(find ${dir} -name "*.java")
+    echo "javac -Xlint -d ../mods --module-path ../mlib --module-source-path . \$(find ${dir} -name \"*.java\")"
+    $JAVA_HOME/bin/javac -Xlint -d ../mods --module-path ../mlib --module-source-path . $(find ${dir} -name "*.java")
 done
 popd >/dev/null 2>&1
 
@@ -30,8 +30,8 @@ popd >/dev/null 2>&1
 pushd src > /dev/null 2>&1
 for dir in automatic*;
 do
-    echo "javac -d ../classes/${dir} \$(find ${dir} -name \"*.java\")"
-    $JAVA_HOME/bin/javac -d ../classes/${dir} $(find ${dir} -name "*.java")
+    echo "javac -Xlint -d ../classes/${dir} \$(find ${dir} -name \"*.java\")"
+    $JAVA_HOME/bin/javac -Xlint -d ../classes/${dir} $(find ${dir} -name "*.java")
 
     # has version?
     hasversion=$(echo ${dir} | grep version)

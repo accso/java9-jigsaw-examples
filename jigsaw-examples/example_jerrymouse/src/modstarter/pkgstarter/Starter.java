@@ -84,7 +84,7 @@ public class Starter {
                     else {
                         try {
                             // Create Configuration based on the root module
-                            Configuration cf = Layer.boot().configuration().resolveRequires
+                            Configuration cf = Layer.boot().configuration().resolve
                                     (ModuleFinder.of(), finder, Set.of(rootModuleName));
 
                             // Create new Jigsaw Layer with configuration and ClassLoader

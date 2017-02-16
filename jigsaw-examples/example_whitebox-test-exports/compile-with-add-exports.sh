@@ -2,8 +2,8 @@
 
 # An example for compiling with --add-exports argument.
 # Mind that the arguments do not work in arbitrary order! The --add-exports option did not work when put behind -d Option!
-echo "javac --add-exports modfib/pkgfib.internal=modtest.whitebox -d mods --module-path amlib${PATH_SEPARATOR}mlib --module-source-path src \$(find src -name \"*.java\")"
-$JAVA_HOME/bin/javac \
+echo "javac -Xlint --add-exports modfib/pkgfib.internal=modtest.whitebox -d mods --module-path amlib${PATH_SEPARATOR}mlib --module-source-path src \$(find src -name \"*.java\")"
+$JAVA_HOME/bin/javac -Xlint \
     --add-exports modfib/pkgfib.internal=modtest.whitebox \
     -d mods \
     --module-path amlib${PATH_SEPARATOR}mlib \

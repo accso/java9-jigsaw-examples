@@ -4,8 +4,8 @@ mkdir -p mods
 mkdir -p mlib
 
 # compile modmain: (add-read from modb -> modc , and add-export of modb/pkgb -> modmain)
-echo "javac -d mods --module-path mlib --module-source-path src $(find src/modmain -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods \
+echo "javac -Xlint -d mods --module-path mlib --module-source-path src $(find src/modmain -name \"*.java\")"
+$JAVA_HOME/bin/javac -Xlint -d mods \
     --module-path mlib \
     --add-exports java.base/jdk.internal.misc=modmain \
     --module-source-path src $(find src/modmain -name "*.java")

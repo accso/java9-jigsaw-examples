@@ -128,7 +128,7 @@ public class LayerBuilder {
 
         // Create configuration
         Configuration cf = parentLayer.configuration()
-                             .resolveRequires(ModuleFinder.of(), moduleFinder, allFilteredModuleNames);
+                             .resolve(ModuleFinder.of(), moduleFinder, allFilteredModuleNames);
         
         // ... and create a new Jigsaw Layer with this configuration
         java.lang.reflect.Layer layer = parentLayer.defineModulesWithOneLoader(cf, ClassLoader.getSystemClassLoader());

@@ -37,12 +37,12 @@ $JAVA_HOME/bin/java --module-path mlib --limit-modules modb -m modb/pkgb.BMain |
 
 echo ------------------------------------------------------------------
 
-echo "Running with root-module modb plus limitmods on module java.compact1"
+echo "Running with root-module modb plus limitmods on module java.logging and java.scripting (formerly java.compact1)"
 echo "- Note that modb must be added to limitmods otherwise moda cannot be resolved"
 echo "  (adding only moda would work too, but would be inconventient when modb has"
 echo "   many requires)"
-echo "   java --module-path mlib -limitmods java.compact1,modb -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib --limit-modules java.compact1,modb -m modb/pkgb.BMain | myecho
+echo "   java --module-path mlib -limitmods java.logging,java.scripting,modb -m modb/pkgb.BMain"
+$JAVA_HOME/bin/java --module-path mlib --limit-modules java.logging,java.scripting,modb -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 

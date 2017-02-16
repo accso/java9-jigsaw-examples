@@ -5,8 +5,8 @@ mkdir -p mlib
 mkdir -p classes
 mkdir -p cplib 
 
-echo "javac -d mods --module-path mlib --module-source-path src \$(find src -name \"*.java\"| grep -v cp)"
-$JAVA_HOME/bin/javac -d mods --module-path mlib --module-source-path src $(find src -name "*.java"| grep -v cp)
+echo "javac -Xlint -d mods --module-path mlib --module-source-path src \$(find src -name \"*.java\"| grep -v cp)"
+$JAVA_HOME/bin/javac -Xlint -d mods --module-path mlib --module-source-path src $(find src -name "*.java"| grep -v cp)
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

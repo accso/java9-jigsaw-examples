@@ -4,8 +4,8 @@
 #
 # -Xmodule:modb: Compile as if the classes were part of modb.
 # -d patches/modb: Compile output to directory patches/modb
-echo "javac -Xmodule:modb --module-path mods -d patches/modb src/modb-patch/pkgb/B.java"
-$JAVA_HOME/bin/javac -Xmodule:modb --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
+echo "javac -Xlint -Xmodule:modb --module-path mods -d patches/modb src/modb-patch/pkgb/B.java"
+$JAVA_HOME/bin/javac -Xlint -Xmodule:modb --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
 
 pushd patches > /dev/null 2>&1 
 for dir in */; 

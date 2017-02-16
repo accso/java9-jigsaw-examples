@@ -17,16 +17,16 @@ public class B {
 
     // access resources in modb
     public String getTextFromProperties() throws IOException {
-    	String resourceFileName = "resources.properties";		// now we get modc's resources.properties
+    	String resourceFileName = "resources.properties";		// now we get modb's resources.properties
     	
 		final Properties properties = new Properties();
 		try (final InputStream stream = B.class.getModule().getResourceAsStream(resourceFileName)) {
 		    properties.load(stream);
 		}
-		return properties.getProperty("text", "not found");
+		return properties.getProperty("text", "modb's resources properties not found in modb");
     }
 
-    // access resources in modc!
+    // access resources in modc
     public String getTextFromMODCsProperties() throws IOException {
     	String resourceFileName = "resources.properties";		// now we get modc's resources.properties
 
@@ -34,6 +34,12 @@ public class B {
 		try (final InputStream stream = C.class.getModule().getResourceAsStream(resourceFileName)) {
 		    properties.load(stream);
 		}
-		return properties.getProperty("text", "not found");
+		String propertyFromMODC = properties.getProperty("text");
+		if (propertyFromMODC == null) {
+		    return "modc's resources properties not found in modb";
+		}
+		else {
+		    return propertyFromMODC + " - but retrieved from modb!";
+		}
     }
 }

@@ -4,13 +4,13 @@ mkdir -p mods
 mkdir -p mlib
 
 # compile modb
-echo "javac -d mods --module-path mlib --module-source-path src \$(find src/modb -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods \
+echo "javac -Xlint -d mods --module-path mlib --module-source-path src \$(find src/modb -name \"*.java\")"
+$JAVA_HOME/bin/javac -Xlint -d mods \
     --module-path mlib --module-source-path src $(find src/modb -name "*.java")
 
 # compile modmain (add-export of modb/pkgb -> modmain)
-echo "javac -d mods --add-modules modb --add-exports modb/pkgb=modmain --module-path mlib --module-source-path src \$(find src/modmain -name \"*.java\")"
-$JAVA_HOME/bin/javac -d mods \
+echo "javac -Xlint -d mods --add-modules modb --add-exports modb/pkgb=modmain --module-path mlib --module-source-path src \$(find src/modmain -name \"*.java\")"
+$JAVA_HOME/bin/javac -Xlint -d mods \
     --add-modules modb \
     --add-exports modb/pkgb=modmain \
     --module-path mlib --module-source-path src $(find src/modmain -name "*.java")

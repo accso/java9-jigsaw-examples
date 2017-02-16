@@ -13,8 +13,8 @@ mkdir -p patchlib
 #   --add-reads            is needed during compile time  because WhiteBoxTest is a junit test, and therefore a reads dependency is needed to junit.
 #   --add-modules          is needed during compile time  because WhiteBoxTest is a junit test, and therefore junit is needed.
 
-echo "javac --add-reads modfib=junit -Xmodule:modfib --module-path amlib${PATH_SEPARATOR}mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
-$JAVA_HOME/bin/javac -d patches/modfib \
+echo "javac -Xlint --add-reads modfib=junit -Xmodule:modfib --module-path amlib${PATH_SEPARATOR}mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
+$JAVA_HOME/bin/javac -Xlint -d patches/modfib \
     -Xmodule:modfib \
     --add-reads modfib=junit \
     --add-modules junit \
