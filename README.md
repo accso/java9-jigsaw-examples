@@ -13,14 +13,14 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 1. Clone this repo.
 2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b162 (as of end of March 2017) on Windows 10, x64.
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
-4. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
-5. To generate the graphviz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
-6. Edit file `env.sh` to configure `JAVA_HOME` and `GRAPHVIZ_HOME` and DEPVIS_HOME (see TODO markers)
-7. Also edit file `env.sh` to configure the path separator. If run on Windows, use \; (a blackslash quoting a ;)
-   If run on *nix, use a : (a colon).
-8. Call one of the scripts on the top level, i.e. one of 
+4. Install [Maven 3.3.9](https://maven.apache.org/download.cgi). Note that this is needed for example_maven_blackbox and example_maven_whitebox only.
+5. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
+6. To generate the graphviz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
+7. Edit file `env.sh` to configure `JAVA_HOME` and `GRAPHVIZ_HOME` and `MAVEN_HOME` and `DEPVIS_HOME` (see TODO markers)
+8. Also edit file `env.sh` to configure the path separator. If run on Windows, use \; (a blackslash quoting a ;). If you run all stuff on *nix, use a colon : .
+9. Call one of the scripts on the top level, i.e. one of 
    `allclean.sh`, `allcompile.sh`, `allcreatevis.sh` and `allrun.sh` (or `all.sh` for all in one step).
-9. Alternatively, cd to one of the examples and call one of the scripts there (again `all.sh` for all in one step).
+10. Alternatively, cd to one of the examples and call one of the scripts there (again `all.sh` for all in one step).
 
 ### Overall conventions
 1. Scripts in top level directory all*.sh call the corresponding scripts recursively
