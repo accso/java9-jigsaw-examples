@@ -45,7 +45,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 ### Latest Changes
 
 #### Migration to b162
-- changes in API (java.lang.reflect.Module is now java.lang.Module, java.lang.reflect.Layer heisst nun java.lang.ModuleLayer)
+- changes in API (java.lang.reflect.Module is now java.lang.Module, java.lang.reflect.Layer is now java.lang.ModuleLayer)
 
 #### Migration to b156
 - changes in API (Configuration.resolve instead of Configuration.resolveRequires)
