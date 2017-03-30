@@ -1,17 +1,17 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:18:15 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:09:14 CEST 2017
 digraph Java9_Dependency_Visualizer {
-moda[fontname="Consolas",shape="ellipse",label="moda"];
-modb[fontname="Consolas",shape="ellipse",label="modb"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modb[fontname="Consolas",shape="ellipse",label="modb"];
 modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+moda[fontname="Consolas",shape="ellipse",label="moda"];
+modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[moda]"]
 moda -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 moda -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 moda -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 moda -> modmain[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
-modmain -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[moda]"]
-modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }

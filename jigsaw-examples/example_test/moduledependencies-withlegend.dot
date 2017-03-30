@@ -1,21 +1,21 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:18:52 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:12:11 CEST 2017
 digraph Java9_Dependency_Visualizer {
 hamcrest_core[fontname="Consolas",shape="hexagon",label="hamcrest.core"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modtest_blackbox[fontname="Consolas",shape="ellipse",label="modtest.blackbox"];
 modfib[fontname="Consolas",shape="ellipse",label="modfib"];
 junit[fontname="Consolas",shape="hexagon",label="junit"];
+modtest_blackbox[fontname="Consolas",shape="ellipse",label="modtest.blackbox"];
 hamcrest_core -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modfib -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+junit -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modtest_blackbox -> modfib[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modtest_blackbox -> junit[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modtest_blackbox -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modfib -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-junit -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_requires_test
-Fri Dec 30 11:18:52 CET 2016"
+Thu Mar 30 16:12:11 CEST 2017"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

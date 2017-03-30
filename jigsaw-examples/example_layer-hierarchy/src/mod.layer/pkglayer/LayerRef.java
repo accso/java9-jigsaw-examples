@@ -1,6 +1,6 @@
 package pkglayer;
 
-import java.lang.reflect.Layer;
+import java.lang.ModuleLayer;
 
 // leaf node in the layer hierarchy tree
 
@@ -9,7 +9,7 @@ public class LayerRef extends AbstractLayerRef {
         super(parent, name, level);
     }
 
-    public LayerRef(final LayerGroup parent, final String name, final String level, final Layer layer) {
+    public LayerRef(final LayerGroup parent, final String name, final String level, final ModuleLayer layer) {
         super(parent, name, level, layer);
     }
 

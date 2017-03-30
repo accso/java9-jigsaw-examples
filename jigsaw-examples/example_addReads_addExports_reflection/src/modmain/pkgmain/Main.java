@@ -1,9 +1,9 @@
 package pkgmain;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Layer;
 import java.lang.reflect.Method;
-import java.lang.reflect.Module;
+import java.lang.ModuleLayer;
+import java.lang.Module;
 import java.util.Optional;
 
 import pkgb.BHelper;
@@ -14,7 +14,7 @@ public class Main {
         Module modmain = Main.class.getModule();
 
         // find module modb
-        Optional<Module> optMod = Layer.boot().findModule("modb");
+        Optional<Module> optMod = ModuleLayer.boot().findModule("modb");
         if (optMod.orElseGet(null) == null) {
             throw new RuntimeException("Main: Could not find modb");
         }

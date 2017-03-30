@@ -1,6 +1,6 @@
 package pkgb;
 
-import java.lang.reflect.Module;
+import java.lang.Module;
 
 // this class is called from modmain/Main to add an exports of modb/pkgb to modmain
 

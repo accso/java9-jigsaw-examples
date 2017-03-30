@@ -88,7 +88,7 @@ public class LayerBuilder {
 
     // now create the Jigsaw layers and add their modules (based on the naming convention of the module name's suffix)
     
-    void createJigsawLayers(final LayerGroup root, final java.lang.reflect.Layer bootLayer, final String modulePath) {
+    void createJigsawLayers(final LayerGroup root, final java.lang.ModuleLayer bootLayer, final String modulePath) {
         Path modPath = Paths.get(modulePath).toAbsolutePath().normalize();
         
         ModuleFinder moduleFinder = ModuleFinder.of(modPath);
@@ -102,7 +102,7 @@ public class LayerBuilder {
         }
     }
 
-    private void createJigsawLayers(final AbstractLayerRef lRef, final java.lang.reflect.Layer parentLayer, 
+    private void createJigsawLayers(final AbstractLayerRef lRef, final java.lang.ModuleLayer parentLayer, 
             final ModuleFinder moduleFinder, final Set<ModuleReference> allModules) 
     {
         createJigsawLayerAndAddModules(lRef, parentLayer, moduleFinder, allModules);
@@ -115,7 +115,7 @@ public class LayerBuilder {
         }
     }
 
-    private void createJigsawLayerAndAddModules(final AbstractLayerRef lRef, final java.lang.reflect.Layer parentLayer, 
+    private void createJigsawLayerAndAddModules(final AbstractLayerRef lRef, final java.lang.ModuleLayer parentLayer, 
             final ModuleFinder moduleFinder, final Set<ModuleReference> allModules) 
     {
         // add layers via naming convention (module's name suffix must match layer's level)
@@ -131,7 +131,7 @@ public class LayerBuilder {
                              .resolve(ModuleFinder.of(), moduleFinder, allFilteredModuleNames);
         
         // ... and create a new Jigsaw Layer with this configuration
-        java.lang.reflect.Layer layer = parentLayer.defineModulesWithOneLoader(cf, ClassLoader.getSystemClassLoader());
+        java.lang.ModuleLayer layer = parentLayer.defineModulesWithOneLoader(cf, ClassLoader.getSystemClassLoader());
         
         lRef.setLayer(layer);
     }

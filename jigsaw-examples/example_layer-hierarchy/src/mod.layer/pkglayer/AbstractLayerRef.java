@@ -1,6 +1,6 @@
 package pkglayer;
 
-import java.lang.reflect.Layer;
+import java.lang.ModuleLayer;
 
 // abstract node in the hierarchy tree (composite pattern)
 
@@ -20,21 +20,21 @@ public abstract class AbstractLayerRef {
         this.level  = level;
     }
 
-    AbstractLayerRef(final LayerGroup parent, final String name, final String level, final Layer layer) {
+    AbstractLayerRef(final LayerGroup parent, final String name, final String level, final ModuleLayer layer) {
         this(parent, name, level);
         setLayer(layer);
     }
 
     // ---------------------------------------------------------------------------------------------------------------------
     
-    private java.lang.reflect.Layer layer;       // reference to a Jigsaw layer
+    private java.lang.ModuleLayer layer;       // reference to a Jigsaw layer
     
-    public void setLayer(final Layer layer) {
+    public void setLayer(final ModuleLayer layer) {
         this.layer = layer;
         LayerHierarchy.mapLayer2AbstractLayerRef.put(this.layer, this);
     }
     
-    public Layer getLayer() {
+    public ModuleLayer getLayer() {
         return layer;
     }
 

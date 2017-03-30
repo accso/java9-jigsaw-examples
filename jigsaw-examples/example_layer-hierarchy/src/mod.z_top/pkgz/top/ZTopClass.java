@@ -1,12 +1,12 @@
 package pkgz.top;
 
-import java.lang.reflect.Layer;
+import java.lang.ModuleLayer;
 
 import pkglayer.LayerHierarchy;
 
 public class ZTopClass {
     public String doIt() {
-        Layer myLayer = this.getClass().getModule().getLayer();
+        ModuleLayer myLayer = this.getClass().getModule().getLayer();
         String layerName  = LayerHierarchy.getLayerName(myLayer);
         String layerLevel = LayerHierarchy.getLayerLevel(myLayer);
 

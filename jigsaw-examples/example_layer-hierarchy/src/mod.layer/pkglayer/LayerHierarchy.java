@@ -1,7 +1,7 @@
 package pkglayer;
 
-import java.lang.reflect.Layer;
-import java.lang.reflect.Module;
+import java.lang.ModuleLayer;
+import java.lang.Module;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -13,12 +13,12 @@ public class LayerHierarchy {
     // global map of all layer names -> AbstractLayerRef
     static final Map<String, AbstractLayerRef> mapName2AbstractLayerRef  = new HashMap<String, AbstractLayerRef>();
     // global map of all layers -> AbstractLayerRef
-    static final Map<Layer, AbstractLayerRef>  mapLayer2AbstractLayerRef = new HashMap<Layer, AbstractLayerRef>();
+    static final Map<ModuleLayer, AbstractLayerRef>  mapLayer2AbstractLayerRef = new HashMap<ModuleLayer, AbstractLayerRef>();
 
-    public static String getLayerName(final Layer layer) {
+    public static String getLayerName(final ModuleLayer layer) {
         return mapLayer2AbstractLayerRef.get(layer).name;
     }
-    public static String getLayerLevel(final Layer layer) {
+    public static String getLayerLevel(final ModuleLayer layer) {
         return mapLayer2AbstractLayerRef.get(layer).level;
     }
 
@@ -26,7 +26,7 @@ public class LayerHierarchy {
 
     public static final String BOOT = "boot";
     public static final String ROOT = "root";
-    public static LayerGroup root = new LayerGroup(null, BOOT, ROOT, 0, Layer.boot());
+    public static LayerGroup root = new LayerGroup(null, BOOT, ROOT, 0, ModuleLayer.boot());
 
     // ---------------------------------------------------------------------------------
 
@@ -35,8 +35,8 @@ public class LayerHierarchy {
         
         AbstractLayerRef parentRef = lRef.parent;
         if (parentRef != null) {
-            List<java.lang.reflect.Layer> parentLayers = lRef.getLayer().parents();
-            for (java.lang.reflect.Layer parentLayer: parentLayers) {
+            List<java.lang.ModuleLayer> parentLayers = lRef.getLayer().parents();
+            for (java.lang.ModuleLayer parentLayer: parentLayers) {
             	System.out.println("Parent '" + parentRef.name + "'on level '" + parentRef.level + "' (" + parentLayer.toString() + ")");
             }
         }

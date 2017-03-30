@@ -1,15 +1,15 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:16:49 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:03:50 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
-java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modb[fontname="Consolas",shape="ellipse",label="modb"];
-modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_addReads_addExports_reflection
-Fri Dec 30 11:16:49 CET 2016"
+Thu Mar 30 16:03:50 CEST 2017"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

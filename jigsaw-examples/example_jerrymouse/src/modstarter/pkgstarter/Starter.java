@@ -6,9 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.lang.module.*;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Layer;
 import java.lang.reflect.Method;
-import java.lang.reflect.Module;
+import java.lang.ModuleLayer;
+import java.lang.Module;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -84,11 +84,11 @@ public class Starter {
                     else {
                         try {
                             // Create Configuration based on the root module
-                            Configuration cf = Layer.boot().configuration().resolve
+                            Configuration cf = ModuleLayer.boot().configuration().resolve
                                     (ModuleFinder.of(), finder, Set.of(rootModuleName));
 
                             // Create new Jigsaw Layer with configuration and ClassLoader
-                            Layer layer = Layer.boot().defineModulesWithOneLoader(cf, ClassLoader.getSystemClassLoader());
+                            ModuleLayer layer = ModuleLayer.boot().defineModulesWithOneLoader(cf, ClassLoader.getSystemClassLoader());
 
                             System.out.println("[JerryMouse|"+appName+"] Created layer containing the following modules:");
                             for (Module module : layer.modules()) {

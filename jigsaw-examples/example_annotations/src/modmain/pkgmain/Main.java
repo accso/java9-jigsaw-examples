@@ -2,13 +2,13 @@ package pkgmain;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Layer;
-import java.lang.reflect.Module;
+import java.lang.ModuleLayer;
+import java.lang.Module;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Module modb = Layer.boot().findModule("modb").get();
-        Module modc = Layer.boot().findModule("modc").get();
+        Module modb = ModuleLayer.boot().findModule("modb").get();
+        Module modc = ModuleLayer.boot().findModule("modc").get();
         
         System.out.println("Annotations of modb");
         for (Annotation annotation: modb.getAnnotations()) {

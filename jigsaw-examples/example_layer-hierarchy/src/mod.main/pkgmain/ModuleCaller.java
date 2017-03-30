@@ -1,9 +1,9 @@
 package pkgmain;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Layer;
 import java.lang.reflect.Method;
-import java.lang.reflect.Module;
+import java.lang.ModuleLayer;
+import java.lang.Module;
 import java.util.Comparator;
 
 import pkglayer.AbstractLayerRef;
@@ -38,7 +38,7 @@ public class ModuleCaller {
             final String modNamePrefix, final String pkgName, final String clazzNamePrefix, 
             final boolean useLayerInClazzName, final String methodName) 
     {
-        Layer layer = lRef.getLayer();
+        ModuleLayer layer = lRef.getLayer();
         layer.modules()
              .stream()
              .filter(mod -> mod.getName().startsWith(modNamePrefix))

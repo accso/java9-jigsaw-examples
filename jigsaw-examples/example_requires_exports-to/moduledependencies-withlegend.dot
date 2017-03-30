@@ -1,25 +1,25 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:18:20 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:09:00 CEST 2017
 digraph Java9_Dependency_Visualizer {
 modb1[fontname="Consolas",shape="ellipse",label="modb1"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modb2[fontname="Consolas",shape="ellipse",label="modb2"];
 modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modb2[fontname="Consolas",shape="ellipse",label="modb2"];
 modb1 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modb1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modb2 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modb2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmain -> modb1[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> modb2[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modc -> modb2[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
 modc -> modb1[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
+modb2 -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modb2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_requires_exports-to
-Fri Dec 30 11:18:21 CET 2016"
+Thu Mar 30 16:09:00 CEST 2017"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

@@ -1,25 +1,25 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:18:15 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:09:15 CEST 2017
 digraph Java9_Dependency_Visualizer {
-moda[fontname="Consolas",shape="ellipse",label="moda"];
-modb[fontname="Consolas",shape="ellipse",label="modb"];
 modc[fontname="Consolas",shape="ellipse",label="modc"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
-modmainbehindfacade[fontname="Consolas",shape="ellipse",label="modmainbehindfacade"];
 modfacade[fontname="Consolas",shape="ellipse",label="modfacade"];
-moda -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-moda -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-moda -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-moda -> modmain[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
-modmain -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[moda]"]
-modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modmainbehindfacade -> modfacade[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmainbehindfacade -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modmainbehindfacade -> moda[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modfacade]"]
+moda[fontname="Consolas",shape="ellipse",label="moda"];
+modmainbehindfacade[fontname="Consolas",shape="ellipse",label="modmainbehindfacade"];
+modb[fontname="Consolas",shape="ellipse",label="modb"];
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modfacade -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modfacade -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modfacade -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[moda]"]
+modmainbehindfacade -> modfacade[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmainbehindfacade -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmainbehindfacade -> moda[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modfacade]"]
+modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[moda]"]
+moda -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+moda -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+moda -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+moda -> modmain[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
 }

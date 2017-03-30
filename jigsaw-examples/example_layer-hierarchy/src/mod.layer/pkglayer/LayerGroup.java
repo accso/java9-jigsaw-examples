@@ -1,6 +1,6 @@
 package pkglayer;
 
-import java.lang.reflect.Layer;
+import java.lang.ModuleLayer;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +15,7 @@ public class LayerGroup extends AbstractLayerRef {
         this.levelCnt = levelCnt;
     }
     
-    public LayerGroup(final LayerGroup parent, final String name, final String level, final int levelCnt, final Layer layer) {
+    public LayerGroup(final LayerGroup parent, final String name, final String level, final int levelCnt, final ModuleLayer layer) {
         super(parent, name, level, layer);
         this.levelCnt = levelCnt;
     }

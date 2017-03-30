@@ -17,15 +17,15 @@ see https://github.com/accso/java9-jigsaw-examples
 
 ### Example shows ...
 Case 1)
-* modsplitfoo1 adn modsplitfoo2 do both contain a package called pkgfoo.
+* modsplitfoo1 and modsplitfoo2 do both contain a package called pkgfoo.
 * modmainfoo requires modsplitfoo1 und modsplitfoo2
 Does not compile! A module must not requires 2 or more modules, which have/export the same package
 
 Case 2) 
-* modsplitbar1 and modsplitbar2 do both contain a package called pkgbar.
+* modsplitbar1 and modsplitbar2 do both contain a package called pkgbar (not exported).
 * modmainbar requires modsplitbar1
 * During runtime, --add-modules is used to load also modsplitbar2
-Shows a runtime exception: In one classloader, 2 or more modules must not be loaded, which have/export the same package.
+Shows a runtime exception: In one classloader, two or more modules must not be loaded, which have/export the same package.
 
 ### TODOs
 - [ ] Does case 2 work, if the classloader for modsplitbar1 and modsplitbar2 is different (i.e. what about layers)?

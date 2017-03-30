@@ -1,15 +1,15 @@
-# Created by depvis.JigsawDepVisualizer on Fri Dec 30 11:19:08 CET 2016
+# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:12:49 CEST 2017
 digraph Java9_Dependency_Visualizer {
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modservicedefinition[fontname="Consolas",shape="ellipse",label="modservicedefinition"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modserviceimplementation2[fontname="Consolas",shape="ellipse",label="modserviceimplementation2"];
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modserviceimplementation1[fontname="Consolas",shape="ellipse",label="modserviceimplementation1"];
-modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modserviceimplementation2 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modserviceimplementation2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmain -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modserviceimplementation2 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modserviceimplementation2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modserviceimplementation1 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modserviceimplementation1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }
