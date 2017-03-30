@@ -1,4 +1,6 @@
 . ../env.sh
 
 mvn --version
-mvn -X install
+# debug mode:
+# mvn -X install
+mvn install
