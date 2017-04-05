@@ -5,4 +5,8 @@ mkdir -p patchlib
 
 . ./compile-blackboxtest.sh
 
-. ./compile-whiteboxtest.sh 
+# without options file
+# . ./compile-whiteboxtest.sh 
+
+# with options file
+. ./compile-whiteboxtest_with-optionsfile.sh
