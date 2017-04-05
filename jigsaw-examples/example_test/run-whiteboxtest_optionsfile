@@ -1,0 +1,3 @@
+--add-reads modfib=junit
+--add-modules ALL-MODULE-PATH
+-m junit/org.junit.runner.JUnitCore
