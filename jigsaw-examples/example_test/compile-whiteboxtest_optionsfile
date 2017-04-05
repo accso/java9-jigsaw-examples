@@ -2,4 +2,3 @@
 -Xmodule:modfib
 --add-reads modfib=junit
 --add-modules junit
---module-path amlib${PATH_SEPARATOR}mlib
