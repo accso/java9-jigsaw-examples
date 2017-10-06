@@ -1,4 +1,4 @@
 -Xlint -d patches/modfib
--Xmodule:modfib
+--patch-module modfib=src
 --add-reads modfib=junit
 --add-modules junit

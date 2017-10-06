@@ -11,7 +11,7 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 
 ### Setup
 1. Clone this repo.
-2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build b162 (as of end of March 2017) on Windows 10, x64.
+2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with J9 build 181 on Windows 10, x64.
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. Install [Maven 3.3.9](https://maven.apache.org/download.cgi). Note that this is needed for example_maven_blackbox and example_maven_whitebox only.
 5. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
@@ -43,6 +43,9 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for open modules
 
 ### Latest Changes
+
+### Migration to b181 (Release)
+- --patch-module replaces -Xmodule for javac
 
 #### Migration to b162
 - changes in API (java.lang.reflect.Module is now java.lang.Module, java.lang.reflect.Layer is now java.lang.ModuleLayer)

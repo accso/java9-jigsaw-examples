@@ -8,14 +8,14 @@ mkdir -p patchlib
 # Compile whitebox test (in the sourcepath, no module-info.java *MUST* be contained - otherwise compile error)
 #
 # These options are necessay: 
-#   -Xmodule:modfib        Compile as if the classes were part of modfib
+#   --patch-module modfib=src  Compile as if the source files were part of modfib
 #   -d patches/modfib      Compile output to directory patches/modfib
 #   --add-reads            is needed during compile time  because WhiteBoxTest is a junit test, and therefore a reads dependency is needed to junit.
 #   --add-modules          is needed during compile time  because WhiteBoxTest is a junit test, and therefore junit is needed.
 
-echo "javac -Xlint --add-reads modfib=junit -Xmodule:modfib --module-path amlib${PATH_SEPARATOR}mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
+echo "javac -Xlint --patch-module modfib=src --add-reads modfib=junit --module-path amlib${PATH_SEPARATOR}mlib -d patches/modfib src/modtest.whitebox/pkgfib/WhiteBoxTest.java"
 $JAVA_HOME/bin/javac -Xlint -d patches/modfib \
-    -Xmodule:modfib \
+    --patch-module modfib=src \
     --add-reads modfib=junit \
     --add-modules junit \
     --module-path amlib${PATH_SEPARATOR}mlib \
