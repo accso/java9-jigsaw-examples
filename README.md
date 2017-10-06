@@ -44,8 +44,10 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 
 ### Latest Changes
 
-### Migration to b181 (Release)
+#### Migration to b181 (Release)
 - --patch-module replaces -Xmodule for javac
+- Upgrade maven-compiler-plugin to 3.6.2
+- Adapted to new automatic module name algorithm
 
 #### Migration to b162
 - changes in API (java.lang.reflect.Module is now java.lang.Module, java.lang.reflect.Layer is now java.lang.ModuleLayer)
