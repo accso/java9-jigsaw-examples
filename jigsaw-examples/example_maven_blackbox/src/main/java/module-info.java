@@ -1,5 +1,5 @@
 module modmain {
-    requires commons.lang;
+    requires commons.lang3;
 
 	// allow reflective access, e.g. in the jerry mouse appserver
 	opens pkgmain;

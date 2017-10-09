@@ -9,7 +9,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ## What is this example about?
 
 ### Modules in this example
-* modmain, commons.lang (automatic)
+* modmain, commons.lang3 (automatic)
 * modmain has a Main class which is started in run.sh
 
 ### Example shows ...
