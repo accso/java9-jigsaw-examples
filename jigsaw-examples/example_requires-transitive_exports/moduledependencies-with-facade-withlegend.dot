@@ -1,28 +1,28 @@
-# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:08:34 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:35 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modc[fontname="Consolas",shape="ellipse",label="modc"];
-java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modb[fontname="Consolas",shape="ellipse",label="modb"];
 modfacade[fontname="Consolas",shape="ellipse",label="modfacade"];
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modb[fontname="Consolas",shape="ellipse",label="modb"];
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modc[fontname="Consolas",shape="ellipse",label="modc"];
 modmainbehindfacade[fontname="Consolas",shape="ellipse",label="modmainbehindfacade"];
-modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modb -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain[fontname="Consolas",shape="ellipse",label="modmain"];
 modfacade -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modfacade -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modfacade -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modb]"]
-modmain -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modb]"]
 modmainbehindfacade -> modfacade[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmainbehindfacade -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmainbehindfacade -> modb[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modfacade]"]
+modmain -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modc[color="#00ff00",fontname="Consolas",fontcolor="#00ff00",weight="4",label="[modb]"]
+modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modb -> modc[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_requires-transitive_exports, with facade
-Thu Mar 30 16:08:35 CEST 2017"
+Tue Oct 10 15:14:35 CEST 2017"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

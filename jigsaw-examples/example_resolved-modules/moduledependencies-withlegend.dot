@@ -1,20 +1,20 @@
-# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:09:25 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:36 CEST 2017
 digraph Java9_Dependency_Visualizer {
 modc[fontname="Consolas",shape="ellipse",label="modc"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modb[fontname="Consolas",shape="ellipse",label="modb"];
-moda[fontname="Consolas",shape="ellipse",label="moda"];
 javax_json[fontname="Consolas",shape="hexagon",label="javax.json"];
+moda[fontname="Consolas",shape="ellipse",label="moda"];
+modb[fontname="Consolas",shape="ellipse",label="modb"];
 modc -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+javax_json -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+moda -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modb -> moda[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-moda -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-javax_json -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 rankdir=LR
 node [shape=plaintext]
 subgraph cluster_01 { 
   label = "Java 9, Jigsaw, example_resolved-modules
-Thu Mar 30 16:09:25 CEST 2017"
+Tue Oct 10 15:14:37 CEST 2017"
   fontname="Consolas"
   key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
     <tr><td align="right" port="i1">requires</td></tr>

@@ -1,4 +1,4 @@
-# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:13:02 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:43 CEST 2017
 digraph Java9_Dependency_Visualizer {
 modtest_whitebox[fontname="Consolas",shape="ellipse",label="modtest.whitebox"];
 modfib[fontname="Consolas",shape="ellipse",label="modfib"];
@@ -8,8 +8,8 @@ hamcrest_core[fontname="Consolas",shape="hexagon",label="hamcrest.core"];
 modtest_whitebox -> modfib[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modtest_whitebox -> junit[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modtest_whitebox -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-hamcrest_core -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+junit -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modfib -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modfib -> modtest_whitebox[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
-junit -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+hamcrest_core -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }

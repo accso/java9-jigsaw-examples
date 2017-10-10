@@ -1,14 +1,14 @@
-# Created by depvis.JigsawDepVisualizer on Thu Mar 30 16:06:19 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:27 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modcallee[fontname="Consolas",shape="ellipse",label="modcallee"];
-java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modcallee[fontname="Consolas",shape="ellipse",label="modcallee"];
 modcallbackhandler[fontname="Consolas",shape="ellipse",label="modcallbackhandler"];
-modcallee -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modmain -> modcallee[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> modcallbackhandler[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modcallbackhandler -> modcallee[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modcallbackhandler -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modcallbackhandler -> modmain[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
+modcallee -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }
