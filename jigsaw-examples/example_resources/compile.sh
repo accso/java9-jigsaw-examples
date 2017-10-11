@@ -7,12 +7,22 @@ echo "javac -Xlint -d mods --module-path mlib --module-source-path src \$(find s
 $JAVA_HOME/bin/javac -Xlint -d mods --module-path mlib --module-source-path src $(find src -name "*.java")
 
 # copy properties to mods dir (so that they are found for the JAR creation)
+#pushd src > /dev/null 2>&1
+#for dir in */; 
+#do
+#  find ${dir} -name '*.properties' | grep -v '/target/' | xargs -i cp -v {} ../mods/${dir}
+#done
+#popd >/dev/null 2>&1
+
 pushd src > /dev/null 2>&1
 for dir in */; 
 do
-  find ${dir} -name '*.properties' | grep -v '/bin/' | xargs -i cp -v {} ../mods/${dir}
+  pushd ${dir} > /dev/null 2>&1
+  find . -name '*.properties' | grep -v '/target/' | xargs -i cp --parents -v {} ../../mods/${dir}
+  popd > /dev/null 2>&1
 done
 popd >/dev/null 2>&1
+
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

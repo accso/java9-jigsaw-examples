@@ -12,7 +12,7 @@ public class C {
     // access resources in modc!
     public String getTextFromProperties() throws IOException {
 		final Properties properties = new Properties();
-		try (final InputStream stream = this.getClass().getResourceAsStream("/resources.properties")) {
+		try (final InputStream stream = this.getClass().getResourceAsStream("/resources.modc/resources.properties")) {
 		    properties.load(stream);
 		}
 				
