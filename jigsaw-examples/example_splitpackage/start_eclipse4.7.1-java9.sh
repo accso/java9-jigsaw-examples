@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #
 # Start script for Eclipse 4.7.1a with Java 9
 #
