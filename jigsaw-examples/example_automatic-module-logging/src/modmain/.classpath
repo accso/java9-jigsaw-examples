@@ -11,7 +11,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="J:/github-java9-jigsaw-examples/jigsaw-examples/example_automatic-module-logging/ifamlib/slf4j-api-1.7.12.jar">
+	<classpathentry kind="lib" path="../amlib-api/slf4j-api-1.7.12.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
