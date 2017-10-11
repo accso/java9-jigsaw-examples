@@ -9,9 +9,8 @@
 
 ../env.sh
 
-export JAVA_OPTS="${HTTP_PROXY} -Duser.home=$USER_HOME"
+export JAVA_OPTS="${HTTP_PROXY} -Duser.home=${USER_HOME}"
 
-export ECLIPSE_HOME="/a/Eclipse/eclipse4.7.1a-oxygen_1a-RC1-win32-x86_64_mitJ9"
 export ECLIPSE="${ECLIPSE_HOME}/eclipse"
 export ECLIPSE_OPT="-showlocation -vmargs -Xms128M -Xmx512M -XX:+AggressiveOpts -Xverify:none -Duser.home=${HOME}"
 export ECLIPSE_WORKSPACE=.
