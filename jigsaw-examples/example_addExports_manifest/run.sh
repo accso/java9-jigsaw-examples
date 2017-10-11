@@ -4,3 +4,4 @@
 #     -m modmain/pkgmain.Main | myecho
 
 $JAVA_HOME/bin/java -jar mlib/modmain.jar
+
