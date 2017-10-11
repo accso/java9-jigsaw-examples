@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path=""/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="J:/src/example_automatic-module-logging/amlib/slf4j-api-1.7.12.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/modb"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/modb">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="J:/github-java9-jigsaw-examples/jigsaw-examples/example_automatic-module-logging/ifamlib/slf4j-api-1.7.12.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target"/>
 </classpath>
