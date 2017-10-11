@@ -5,7 +5,7 @@
 #    ./start_eclipse4.7.1-java9.sh
 #
 
-../env.sh
+. ../env.sh
 
 export JAVA_OPTS="${HTTP_PROXY} -Duser.home=${USER_HOME}"
 
