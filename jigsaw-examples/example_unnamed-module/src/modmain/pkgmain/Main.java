@@ -12,6 +12,6 @@ public class Main {
         // Does not compile because from unnamed module:
         // BasCP myBasCP = new BasCP();
  
-        System.out.println(  "BasMod: " + myBasMod.doIt());		
+        System.out.println("BasMod: " + myBasMod.doIt());		
     }
 }
