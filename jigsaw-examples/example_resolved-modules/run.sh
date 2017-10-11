@@ -34,7 +34,6 @@ echo "Running with root-module modb plus limitmods"
 echo "   java --module-path mlib --limit-modules modb -m modb/pkgb.BMain"
 $JAVA_HOME/bin/java --module-path mlib --limit-modules modb -m modb/pkgb.BMain | myecho
 
-
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus limitmods on module java.logging and java.scripting (formerly java.compact1)"
