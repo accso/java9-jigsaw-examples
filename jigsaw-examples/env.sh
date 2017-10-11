@@ -5,6 +5,7 @@ JAVA_HOME=TODO/path/to/java9-jdk/goes/here
 GRAPHVIZ_HOME=TODO/path/to/graphviz2.38/goes/here
 MAVEN_HOME=TODO/path/to/Maven3.5.0/goes/here
 DEPVIS_HOME=TODO/path/to/depvis/goes/here
+ECLIPSE_HOME=TODO/path/to/eclipse4.7.1.a/goes/here
 
 # \; on Windows (even when in bash), : on Un*x
 PATH_SEPARATOR=TODO
