@@ -6,11 +6,11 @@ import java.lang.Module;
 
 // TODO: this can only be done if its package is exported already?! or how otherwise?
 
-public class BHelper {
+public class BExportHelper {
     public final static void addExports(String pkgName, Module targetModule) {
-        Module myModule = BHelper.class.getModule();
+        Module myModule = BExportHelper.class.getModule();
         
-        System.out.println("BHelper: add exports of " + pkgName + " to " + targetModule.getName());
+        System.out.println("BExportHelper: add exports of " + pkgName + " to " + targetModule.getName());
 
         // addExports of package pkgName to targetModule
         //    Note that this is caller-sensitive, needs to be done in this module

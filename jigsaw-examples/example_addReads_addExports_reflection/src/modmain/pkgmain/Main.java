@@ -6,7 +6,7 @@ import java.lang.ModuleLayer;
 import java.lang.Module;
 import java.util.Optional;
 
-import pkgb.BHelper;
+import pkgb.BExportHelper;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -26,8 +26,8 @@ public class Main {
         modmain.addReads(modb);
         
         // addExports modb/pkgb=modmain
-        //    note that this is caller-sensitive, needs to be done in modb
-        BHelper.addExports("pkgbinternal", modmain);
+        //    note that this is caller-sensitive, needs to be done in a class from module modb
+        BExportHelper.addExports("pkgbinternal", modmain);
 
         // get an instance of pkgb.B and call its doIt() method
         Class<?> myinternalBClass = Class.forName("pkgbinternal.InternalB");

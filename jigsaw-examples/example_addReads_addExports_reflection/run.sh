@@ -1,7 +1,7 @@
 . ../env.sh
 
-# note: not done here (but via reflection in modmain): --add-reads modmain=modb 
-# note: not done here (but via reflection in modb)   : --add-exports modb/pkgbinternal=modmain
+# note: not done here (but via api in modmain, see Main.java#26) as a replacement for --add-reads modmain=modb 
+# note: not done here (but via api in modmain, see Main.java#30) as a replacement for --add-exports modb/pkgbinternal=modmain
 
 $JAVA_HOME/bin/java --module-path mlib \
      --add-modules modb \
