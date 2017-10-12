@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = { ElementType.MODULE, ElementType.TYPE }) // module only
 public @interface ReallyCoolModule {
-
+	String wowReason() default "no reason given";
 }
