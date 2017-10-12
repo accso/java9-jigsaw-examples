@@ -4,8 +4,6 @@
 #
 # --patch-module modb=src: Compile as if the source files were part of modb.
 # -d patches/modb: Compile output to directory patches/modb
-# echo "javac -Xlint -Xmodule:modb --module-path mods -d patches/modb src/modb-patch/pkgb/B.java"
-
 
 echo $JAVA_HOME/bin/javac -Xlint --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
 $JAVA_HOME/bin/javac -Xlint --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
