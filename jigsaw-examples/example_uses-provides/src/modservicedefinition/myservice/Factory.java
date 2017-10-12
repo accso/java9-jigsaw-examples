@@ -16,6 +16,9 @@ public class Factory {
         	service = iter.next();
         	System.out.println("Found " + service.getName());
         }
+        
+        // simply return the last implementation found in the ServiceLoader,
+        //    no fancy choose algorithm necessary here ...
         return service;
     }
 }
