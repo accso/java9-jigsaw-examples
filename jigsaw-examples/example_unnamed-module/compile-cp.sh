@@ -2,13 +2,13 @@
 
 mkdir -p mods
 mkdir -p mlib
-mkdir -p classes
-mkdir -p cplib 
+mkdir -p classes/cpb
+mkdir -p cplib
 
-#  create "old" jars to use on the class path
+#  create non-modular jars to be put onto the classpath
 pushd src > /dev/null 2>&1
 
-# Compile in correct order
+# Attention: compile needs to be done in correct order
 for dir in cpb cpmain;
 do
    echo "javac -Xlint -cp ../mlib/*${PATH_SEPARATOR}../classes/cpb  -d ../classes/${dir}  \$(find ${dir} -name \"*.java\")"

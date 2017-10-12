@@ -16,6 +16,3 @@ do
     $JAVA_HOME/bin/jar --create --file=../mlib/${MODDIR}.jar -C ${MODDIR} .
 done
 popd >/dev/null 2>&1
-
-
-
