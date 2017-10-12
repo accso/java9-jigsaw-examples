@@ -23,10 +23,11 @@ public class Main {
 
         DataFactory myDataFactory = new DataFactory();
 
-        System.out.println("Main: " + mymain.toString() + ", Factory.createData(): "         + 
-                                myDataFactory.createData().getName());
+        System.out.println("Main: " + mymain.toString() + ", Factory.createData(): " + 
+                myDataFactory.createData().getName());
         System.out.println("Main: " + mymain.toString() + ", Factory.createInternalDataAsData(): " + 
-                                myDataFactory.createInternalData1().getName());
+                myDataFactory.createInternalData1().getName());
+
 // *does* compile though return type of 'DataFactory.createInternalData2()' is not visible here
         System.out.println("Main: " + mymain.toString() + ", Factory.createInternalData2(): " + 
                 myDataFactory.createInternalData2());

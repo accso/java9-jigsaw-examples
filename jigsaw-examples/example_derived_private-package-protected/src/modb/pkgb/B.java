@@ -16,11 +16,11 @@ public class B extends InternalBSuperClass {
     }
 
     protected String doIt_protected() {
-        return "from B, but only protected";			// can be called, does only from derived class
+        return "from B, but only protected";			// can be called only from derived class
     }
 
     String doIt_package() {
-        return "from B, but only package";				// can be called, does only class in same package (i.e. only in same module, see example_splitpackages)
+        return "from B, but only package";				// can be called only class in same package (i.e. only in same module, see example_splitpackages)
     }
 
     @SuppressWarnings("unused")
