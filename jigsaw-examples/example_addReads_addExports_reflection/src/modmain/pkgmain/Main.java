@@ -20,15 +20,22 @@ public class Main {
         }
         Module modb = optMod.get();
 
+        // -----------------------------------------------
         // addReads modmain=modb
         //    note that this is caller-sensitive, needs to be done in modmain, i.e. here
         System.out.println("Main: add reads of " + modmain.getName() + " to " + modb.getName());
         modmain.addReads(modb);
         
+        // -----------------------------------------------
         // addExports modb/pkgb=modmain
         //    note that this is caller-sensitive, needs to be done in a class from module modb
         BExportHelper.addExports("pkgbinternal", modmain);
 
+        // The following line is caller-sensitive, must be called from modb and hence produces a RuntimeException here in modmain
+        //        java.lang.IllegalCallerException: module modmain != module modb
+        // BExportHelper.class.getModule().addExports("pkgbinternal", modmain);
+        
+        // -----------------------------------------------
         // get an instance of pkgb.B and call its doIt() method
         Class<?> myinternalBClass = Class.forName("pkgbinternal.InternalB");
         Constructor<?> con = myinternalBClass.getDeclaredConstructor();
