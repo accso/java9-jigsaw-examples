@@ -27,22 +27,16 @@ popd >/dev/null 2>&1
 
 # compile automatic* to non-modular JAR-file
 
-pushd src > /dev/null 2>&1
-for dir in automatic*;
+counter=0
+for dir in automatic-whatever automatic-whateverX-47.11 automatic-whateverX48.12 automatic-whateverX49-13
 do
+    pushd src > /dev/null 2>&1
     echo "javac -Xlint -d ../classes/${dir} \$(find ${dir} -name \"*.java\")"
     $JAVA_HOME/bin/javac -Xlint -d ../classes/${dir} $(find ${dir} -name "*.java")
 
-    # has version?
-    hasversion=$(echo ${dir} | grep version)
-    if [ "${hasversion}"=="" ] 
-    then
-       echo "jar --create --file=../mlib/${dir}.jar -C ../classes/${dir} ."
-       $JAVA_HOME/bin/jar --create --file=../mlib/${dir}.jar -C ../classes/${dir} .
-    else
-       version=`echo ${dir} | sed s/'automatic.'//g | sed s/'version'//g`
-       echo "jar --create --file=../mlib/${dir}-${version}.jar -C ../classes/${dir} ."
-       $JAVA_HOME/bin/jar --create --file=../mlib/${dir}-${version}.jar -C ../classes/${dir} . 
-    fi
+    echo "jar --create --file=../mlib/${dir}.jar -C ../classes/${dir} ."
+    counter=$((counter+1))
+    $JAVA_HOME/bin/jar --create --file=../amlib${counter}/${dir}.jar -C ../classes/${dir} .
+    
+    popd >/dev/null 2>&1 
 done
-popd >/dev/null 2>&1 
