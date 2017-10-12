@@ -5,7 +5,7 @@ do
     pushd ${dir} > /dev/null 2>&1
     for JAR in `ls *.jar`
     do
-        echo "JAR-file: ${JAR}"
+        echo "JAR-file: ${JAR} in ${dir}"
         
         # get name of JAR-file
         MOD=`basename ${JAR} | sed s/'.jar'//g | sed s/'-'/'.'/g | cut -d '.' -f 1-2`

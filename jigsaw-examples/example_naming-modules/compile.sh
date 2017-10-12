@@ -25,7 +25,7 @@ popd >/dev/null 2>&1
 
 # ---------------------------------------------------
 
-# compile automatic* to non-modular JAR-file
+# compile automatic* to non-modular JAR-file (into separate amlib* directories)
 
 counter=0
 for dir in automatic-whatever automatic-whateverX-47.11 automatic-whateverX48.12 automatic-whateverX49-13
@@ -34,7 +34,7 @@ do
     echo "javac -Xlint -d ../classes/${dir} \$(find ${dir} -name \"*.java\")"
     $JAVA_HOME/bin/javac -Xlint -d ../classes/${dir} $(find ${dir} -name "*.java")
 
-    echo "jar --create --file=../mlib/${dir}.jar -C ../classes/${dir} ."
+    echo "jar --create --file=../amlib${counter}/${dir}.jar -C ../classes/${dir} ."
     counter=$((counter+1))
     $JAVA_HOME/bin/jar --create --file=../amlib${counter}/${dir}.jar -C ../classes/${dir} .
     
