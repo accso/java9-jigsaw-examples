@@ -6,5 +6,7 @@ public class Main {
     public static void main(String[] args) {
     	SharedSecrets secrets = new SharedSecrets();
         System.out.println("Do you want to know a secret: " + secrets);
+
+        System.out.println(new pkgainternal.A().doIt());
     }
 }
