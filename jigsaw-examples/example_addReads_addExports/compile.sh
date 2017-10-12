@@ -9,6 +9,7 @@ $JAVA_HOME/bin/javac -Xlint -d mods \
     --module-path mlib --module-source-path src $(find src/modc -name "*.java")
       
 # compile modb (add-read from modb -> modc)
+# Note that the --add-reads options are not necessary for compile (but they *are* necessary for running): --add-modules implicitely enforces --add-reads
 echo "javac -Xlint -d mods --add-modules modc --add-reads modb=modc --add-exports modc/pkgc=modb --module-path mlib --module-source-path src $(find src/modb -name \"*.java\")"
 $JAVA_HOME/bin/javac -Xlint -d mods \
     --add-modules modc \
@@ -18,9 +19,11 @@ $JAVA_HOME/bin/javac -Xlint -d mods \
     --module-source-path src $(find src/modb -name "*.java")
 
 # compile modmain: (add-read from modb -> modc , and add-export of modb/pkgb -> modmain)
+# Note that the --add-reads options are not necessary for compile (but they *are* necessary for running): --add-modules implicitely enforces --add-reads
 echo "javac -Xlint -d mods --add-modules modb,modc --add-reads modb=modc --add-exports modb/pkgb=modmain --add-exports modc/pkgc=modb --module-path mlib --module-source-path src $(find src/modmain -name \"*.java\")"
 $JAVA_HOME/bin/javac -Xlint -d mods \
     --add-modules modb,modc \
+    --add-reads modmain=modb \
     --add-reads modb=modc \
     --add-exports modb/pkgb=modmain \
     --add-exports modc/pkgc=modb \

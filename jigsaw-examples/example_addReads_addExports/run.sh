@@ -2,8 +2,8 @@
 
 $JAVA_HOME/bin/java --module-path mlib  \
      --add-modules modb,modc            \
-     --add-reads   modb=modc            \
-     --add-exports modc/pkgc=modb       \
      --add-reads   modmain=modb         \
+     --add-reads   modb=modc            \
      --add-exports modb/pkgb=modmain    \
+     --add-exports modc/pkgc=modb       \
      -m modmain/pkgmain.Main | myecho
