@@ -16,7 +16,8 @@ see https://github.com/accso/java9-jigsaw-examples
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
-The examples illustrates the accessibility rules for the unamed module (i.e. classpath). The main class in modmain can not access classes from the unamed module, whereas the main
-class in cpmain has access to all classes, both from the named modules (if the corresponding packages are exported) and from the unnamed module.
+The examples illustrates the accessibility rules access to and from the classpath (i.e. in the unnamed module).
+The Main class in modmain cannot access classes from the unnamed module (does not compile),
+whereas the Main class in cpmain can access to all classes, both from the named modules (but only if the corresponding packages are exported) and from the unnamed module.
 
 The script run.sh starts both main classes, from modmain and from cpmain.
