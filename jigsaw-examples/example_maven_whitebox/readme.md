@@ -9,9 +9,9 @@ see https://github.com/accso/java9-jigsaw-examples
 ## What is this example about?
 
 ### Modules in this example
-* modmain, commons.lang (automatic)
-* modmain has a Main class which is started in run.sh
+* modmain, and the automatic commons.lang3
+* modmain has a Main class which is started in `run.sh`
 
 ### Example shows ...
 - Compilation, test compilation and execution with Maven
-- Whitebox test which patches modmain with classes in src/test/java
+- Whitebox test via patching the module modmain with classes in `src/test/`java
