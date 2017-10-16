@@ -1,8 +1,8 @@
-﻿# Java 9 Jigsaw modules example suite
+﻿ # Java 9 Jigsaw modules example suite
 ## Example example_jerrymouse
 
 ### Info
-Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes] (https://github.com/rgrammes) 
+Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes](https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
 
