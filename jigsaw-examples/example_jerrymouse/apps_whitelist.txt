@@ -1,0 +1,1 @@
+example_requires-transitive_exports example_requires_exports-to example_derived_private-package-protected

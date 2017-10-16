@@ -67,7 +67,7 @@ public class Starter {
                         bootMethodName = obj.getJsonString("bootMethod").getString();
                     } 
                     catch (FileNotFoundException fex) {
-                        System.err.println("[JerryMouse|" +appName+ "] Error: " + appJSONFile + " not found for application " + appName + ". Using defaults.");
+                        System.out.println("[JerryMouse|" +appName+ "] Error: " + appJSONFile + " not found for application " + appName + ". Using defaults.");
                         continue;
                     }
 
@@ -79,7 +79,7 @@ public class Starter {
 
                     Optional<ModuleReference> result = finder.find(rootModuleName);
                     if (! result.isPresent()) {
-                        System.err.println("[JerryMouse|"+appName+"] Error: Root module " + rootModuleName + " not found.");
+                        System.out.println("[JerryMouse|"+appName+"] Error: Root module " + rootModuleName + " not found.");
                     }
                     else {
                         try {
@@ -99,45 +99,49 @@ public class Starter {
                                 // run the static method Boot.run() of the root module, done via reflection
                                 //   (is executed in an ExecutorTask)
                                 Class<?> bootClass  = layer.findLoader(rootModuleName).loadClass(bootClassName);
-                                Method   bootMethod = bootClass.getMethod(bootMethodName, String[].class);
 
                                 // addReads needed in order to be able to read the module
                                 Starter.class.getModule().addReads(bootClass.getModule());
-
+                                
+                                // start the application
                                 System.out.println("[JerryMouse|"+appName+"] Calling boot method (" + rootModuleName +"/"+ bootClassName 
                                         + "." + bootMethodName +") in background.");
                                 String[] params = null;
-
-                                // start the application
+                                Method   bootMethod = bootClass.getMethod(bootMethodName, String[].class);
                                 Future<?> appTask = executor.submit(() -> {
                                     try {
                                         bootMethod.invoke(null, (Object) params);
                                     } 
                                     catch (Exception ex) {
-                                        System.err.println("[JerryMouse|"+appName+"] Error: Caught exception:");
-                                        ex.printStackTrace(System.err);
+                                        System.out.println("[JerryMouse|"+appName+"] Error: Caught exception:");
+                                        ex.printStackTrace(System.out);
                                     }
                                 });
                                 runningApps.add(appTask);
                             } 
                             catch (ClassNotFoundException ex) {
-                                System.err.println("[JerryMouse|"+appName+"] Error: Class " + bootClassName + " not found in default package for root module " + rootModuleName);
+                                System.out.println("[JerryMouse|"+appName+"] Error: Class " + bootClassName + " not found in default package for root module " + rootModuleName);
+                                ex.printStackTrace(System.out);
                             } 
                             catch (NoSuchMethodException ex) {
-                                System.err.println("[JerryMouse|"+appName+"] Error: Could not find method " + bootMethodName + " in class " + bootClassName + ".");
+                                System.out.println("[JerryMouse|"+appName+"] Error: Could not call method " + bootMethodName + " in class " + bootClassName + ".");
+                                ex.printStackTrace(System.out);
                             }
                         }
                         catch (Exception ex) {
-                            System.err.println("[JerryMouse|"+appName+"] Error: Caught exception:");
-                            ex.printStackTrace(System.err);
+                            System.out.println("[JerryMouse|"+appName+"] Error: Caught exception:");
+                            ex.printStackTrace(System.out);
                         }
                     } 
                 }
+                
+                System.out.flush();
             }
 
             // wait for all tasks to complete
             for (Future<?> task: runningApps) {
                 task.get();
+                System.out.flush();
             }
         } 
         finally {
