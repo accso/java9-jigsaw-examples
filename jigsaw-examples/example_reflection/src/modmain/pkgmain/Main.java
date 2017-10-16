@@ -22,21 +22,21 @@ public class Main {
         B myb = new B();
 
 // public method: normal call possible
-        System.out.println("Main: " + mymain.toString() + ", B: " + myb.doIt("direct call 1"));
+        System.out.println("1. Main: " + mymain.toString() + ", B: " + myb.doIt("direct call"));
 
 // public method: call via reflection possible
         m = myb.getClass().getMethod("doIt", String.class);
-        System.out.println("Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection 2"));
+        System.out.println("2. Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection"));
 
 // private method: call via reflection possible (even though B.doItPrivate() is private)
         m = myb.getClass().getDeclaredMethod("doItPrivate", String.class);
         m.setAccessible(true);
-        System.out.println("Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection 3"));
+        System.out.println("3. Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection"));
 
 // private static method: call via reflection possible  (even though B.doItPrivateStatic() is private)
         m = myb.getClass().getDeclaredMethod("doItPrivateStatic", String.class);
         m.setAccessible(true);
-        System.out.println("Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection 4"));
+        System.out.println("4. Main: " + mymain.toString() + ", B: " + m.invoke(myb, "call via reflection"));
 
 
 // ----------------------------------------------------------------------------------------------------
@@ -46,11 +46,11 @@ public class Main {
         B1 myb1 = new B1();
 
 // public method: normal call possible
-        System.out.println("Main: " + mymain.toString() + ", B1: " + myb1.doIt("direct call 5"));
+        System.out.println("5. Main: " + mymain.toString() + ", B1: " + myb1.doIt("direct call"));
 
 // public method: call via reflection possible
         m = myb1.getClass().getMethod("doIt", String.class);
-        System.out.println("Main: " + mymain.toString() + ", B1: " + m.invoke(myb1, "call via reflection 6"));
+        System.out.println("6. Main: " + mymain.toString() + ", B1: " + m.invoke(myb1, "call via reflection"));
 
 // private method: call via reflection not possible
 // compiles but does not run because pkgb1 is not open to modmain:
@@ -58,7 +58,7 @@ public class Main {
 //      module modb does not "opens pkgb1" to module modmain
         m = myb1.getClass().getDeclaredMethod("doItPrivate", String.class);
         // m.setAccessible(true);
-        // System.out.println("Main: " + mymain.toString() + ", InternalB: " + m.invoke(myb1, "call via reflection 7"));
+        // System.out.println("7. Main: " + mymain.toString() + ", InternalB: " + m.invoke(myb1, "call via reflection"));
         
 // ----------------------------------------------------------------------------------------------------
 
@@ -70,21 +70,21 @@ public class Main {
         Object myinternalB = con.newInstance();
 
 // public method: normal call - not possible as not even visible, i.e. does not compile
-        // System.out.println("Main: " + mymain.toString() + ", InternalB: " + myinternalB.doIt("direct call 8"));
+        // System.out.println("8. Main: " + mymain.toString() + ", InternalB: " + myinternalB.doIt("direct call"));
 
 // public method: call via reflection not possible
         m = myinternalB.getClass().getMethod("doIt", String.class);
         m.setAccessible(true);
-        System.out.println("Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection 9"));
+        System.out.println("9. Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection"));
 
 // private method: call via reflection not possible
         m = myinternalB.getClass().getDeclaredMethod("doItPrivate", String.class);
         m.setAccessible(true);
-        System.out.println("Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection 10"));
+        System.out.println("10. Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection"));
 
 // private static method: call via reflection not possible
         m = myinternalB.getClass().getDeclaredMethod("doItPrivateStatic", String.class);
         m.setAccessible(true);
-        System.out.println("Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection 11"));
+        System.out.println("11. Main: " + mymain.toString() + ", InternalB: " + m.invoke(myinternalB, "call via reflection"));
     }
 }

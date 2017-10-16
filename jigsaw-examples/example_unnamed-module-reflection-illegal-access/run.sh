@@ -85,8 +85,8 @@ echo " "
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #
-# Run main class, which does reflective access to a class from module modb (a package which has not existed before Java9)
-# Only variant #20 will work, while variants #16,#17,#18, and #19    will show this exception:
+# Run main class, which does reflective access to a class from module modb (whose packages had not existed before Java9)
+# Only variant #20 will work, while variants #16,#17,#18, and #19 will show this exception:
 #     java.lang.reflect.InaccessibleObjectException: Unable to make public pkgbinternal.BFromModuleButInternal() accessible: module modb does not "exports pkgbinternal" to unnamed module
 #
 
