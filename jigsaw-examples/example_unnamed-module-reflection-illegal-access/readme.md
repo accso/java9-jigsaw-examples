@@ -27,5 +27,5 @@ Four classes on the classpath, i.e. in the unnamed module, access other classes 
 
 See all 20 different variants of how to use the `--illegal-access=...` command line option or the `--add-opens` option in the run script `run.sh`.
 
-Note that the kill switch only works for classes which had been available before Java9, i.e. were part of Java8. See also explanation [here](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR624).
+*Note that the kill switch **only works for classes which had been available before Java9**, i.e. were part of Java8. See also explanation [here](https://docs.oracle.com/javase/9/tools/java.htm#JSWOR624).*
 
