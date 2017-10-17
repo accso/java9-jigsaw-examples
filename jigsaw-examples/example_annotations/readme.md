@@ -20,8 +20,5 @@ see [ModuleAnnotations](http://openjdk.java.net/projects/jigsaw/spec/issues/#Mod
 
 - modmain looks up modules modb and modc and prints their annotations available at runtime
 - modb has a deprecated annotation in the module-info.java. 
-- modc defines two annotations with ElementType module, one available at runtime, one only
+- modc defines threee annotations with ElementType module, one available at runtime, two only
     available at compile time
-
-TODO: manage to use the annotations defined in modc. Currently using them leads to symbol not
-    found errors
