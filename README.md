@@ -44,6 +44,19 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 
 ### Latest Changes
 
+#### Upgrade to DepVis 0.3
+Now with print and visualization output like printing uses and provides, printing concealed packages, showing opens and opens-to etc. See [DepVis Readme](https://github.com/accso/java9-jigsaw-depvis) for details
+
+#### New and enhanced examples
+- `example_unnamed-module-reflection-illegal-access` is new, shows the usage of the "kill switch"
+- `example_requires-static` is new, shows the usage of the "requires static"
+
+#### Enhanced examples
+- `example_resources` is fixed, now works as expected
+- Various other cleanups, refactorings, corrections all over the place
+- `example_jerry-mouse` limits its apps to a whitelist and only uses them, if they work
+- All examples which can be used as an app in `example_jerry-mouse`: Its `modmain` is now an "open module" (instead of "opens pkgmain")
+
 #### Migration to b181 (Release)
 - --patch-module replaces -Xmodule for javac
 - Upgrade maven-compiler-plugin to 3.6.2
