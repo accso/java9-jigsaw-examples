@@ -1,8 +1,6 @@
-module modmain {
+open module modmain { 	// allow reflective access, currently used in the example_jerry-mouse
     requires commons.lang3;
 
-	// allow reflective access, e.g. in the jerry mouse appserver
-	opens pkgmain;
-	// static access (for blackbox test)
-	exports pkgmain;
+	// allow static access (for blackbox testing)
+	exports pkgmain to modmaintest;
 }

@@ -1,6 +1,3 @@
-module modmainbehindfacade {
+open module modmainbehindfacade { 	// allow reflective access, currently used in the example_jerry-mouse
     requires modfacade;
-
-	// allow reflective access, e.g. in the jerry mouse appserver
-	opens pkgmainbehindfacade;
 }

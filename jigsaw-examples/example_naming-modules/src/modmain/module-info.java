@@ -1,4 +1,2 @@
-module modmain {
-	// allow reflective access, e.g. in the jerry mouse appserver
-	opens pkgmain;
+open module modmain { 	// allow reflective access, currently used in the example_jerry-mouse
 }
