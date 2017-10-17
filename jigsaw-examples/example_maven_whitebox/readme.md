@@ -20,6 +20,6 @@ The maven compile and surefire plugin now use the patch options to compile and r
 It finds out that the patch options are needed because there is no `module-info.java` in `src/main/test`. It then parses the module name from the `module-info.java` in `src/main/java`.
 
 ### Maven plugins
-- maven-compiler-plugin Version >= 3.6.2 is needed (only this version uses the new patch-Options)
-- Mind that maven-compiler-plugin Version = 3.6.2 currently has a bug ("syntax error") when there are comments in the `module-info.java`
+- A maven-compiler-plugin (version >= 3.6.2) is needed (only this version uses the new patch-Options)
+- Note that the maven-compiler-plugin (version 3.6.2) currently has a bug ("syntax error") when there are comments in the `module-info.java`
 - The current surefire-plugin does not yet support modules. It runs tests in classpath mode.
