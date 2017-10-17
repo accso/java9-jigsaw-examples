@@ -1,11 +1,12 @@
-# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:23 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 17 12:27:23 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
-slf4j_api[fontname="Consolas",shape="ellipse",label="slf4j.api"];
-modb[fontname="Consolas",shape="ellipse",label="modb"];
+slf4j_api[fontname="Consolas",shape="hexagon",label="slf4j.api"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modmain[fontname="Consolas",shape="octagon",label="modmain"];
+modb[fontname="Consolas",shape="ellipse",label="modb"];
 slf4j_jdk14[fontname="Consolas",shape="hexagon",label="slf4j.jdk14"];
 slf4j_simple[fontname="Consolas",shape="hexagon",label="slf4j.simple"];
+slf4j_api -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmain -> slf4j_api[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]

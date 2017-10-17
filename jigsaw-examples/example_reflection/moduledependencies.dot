@@ -1,10 +1,11 @@
-# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:29 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 17 12:29:20 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modmain[fontname="Consolas",shape="octagon",label="modmain"];
 modb[fontname="Consolas",shape="ellipse",label="modb"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
 modmain -> modb[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modb -> modmain[fontname="Consolas",fontcolor="#ff0000",color="#ff0000",weight="2"]
+modb -> modmain[fontname="Consolas",fontcolor="#ffc800",color="#ffc800",weight="2"]
 }

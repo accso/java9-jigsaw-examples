@@ -1,15 +1,15 @@
-# Created by depvis.JigsawDepVisualizer on Tue Oct 10 15:14:41 CEST 2017
+# Created by depvis.JigsawDepVisualizer on Tue Oct 17 12:31:05 CEST 2017
 digraph Java9_Dependency_Visualizer {
-modmain[fontname="Consolas",shape="ellipse",label="modmain"];
+modservice_impl_com[fontname="Consolas",shape="ellipse",label="modservice.impl.com"];
 modservicedefinition[fontname="Consolas",shape="ellipse",label="modservicedefinition"];
 java_base[fontname="Consolas",shape="ellipse",label="java.base"];
-modserviceimplementation2[fontname="Consolas",shape="ellipse",label="modserviceimplementation2"];
-modserviceimplementation1[fontname="Consolas",shape="ellipse",label="modserviceimplementation1"];
+modservice_impl_net[fontname="Consolas",shape="ellipse",label="modservice.impl.net"];
+modmain[fontname="Consolas",shape="octagon",label="modmain"];
+modservice_impl_com -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modservice_impl_com -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservice_impl_net -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modservice_impl_net -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 modmain -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
 modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modserviceimplementation2 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modserviceimplementation2 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modserviceimplementation1 -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
-modserviceimplementation1 -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
-modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
 }

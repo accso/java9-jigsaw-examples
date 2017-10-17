@@ -1,11 +1,11 @@
-createvis() {
+depvisvis() {
     MODDIR=${dir%*/}
     pushd ${MODDIR} > /dev/null 2>&1
-    if [ -f ./createvis.sh ] 
+    if [ -f ./depvis-vis.sh ] 
     then 
         echo "###################################################################################################################################"
-        echo "Creating graph visualization for ${MODDIR}"
-        sh ./createvis.sh
+        echo "Creating DepVis visualization output for ${MODDIR}"
+        sh ./depvis-vis.sh
     fi
     popd >/dev/null 2>&1 
     echo " "
@@ -13,5 +13,5 @@ createvis() {
 
 for dir in example_*/; 
 do
-    createvis
+    depvisvis
 done
