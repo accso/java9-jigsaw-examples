@@ -19,6 +19,8 @@ see https://github.com/accso/java9-jigsaw-examples
 The maven compile and surefire plugin now use the patch options to compile and run test classes as part of the module to be tested. For an example using the patch options explicitly, see [here](https://github.com/accso/java9-jigsaw-examples/tree/master/jigsaw-examples/example_test)
 It finds out that the patch options are needed because there is no `module-info.java` in `src/main/test`. It then parses the module name from the `module-info.java` in `src/main/java`.
 
+Note: No Eclipse support for this example, just clean/compile/run via scripts
+
 ### Maven plugins
 - A maven-compiler-plugin (version >= 3.6.2) is needed (only this version uses the new patch-Options)
 - Note that the maven-compiler-plugin (version 3.6.2) currently has a bug ("syntax error") when there are comments in the `module-info.java`

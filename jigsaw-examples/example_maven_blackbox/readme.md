@@ -18,6 +18,8 @@ see https://github.com/accso/java9-jigsaw-examples
 
 The maven compile and surefire plugins recognize the test classes as an own module here, because there is a `module-info.java`
 
+Note: No Eclipse support for this example, just clean/compile/run via scripts
+
 ### Maven plugins
 - maven-compiler-plugin Version >= 3.6.1 is needed 
 - The current surefire-plugin does not yet support modules. It runs tests in classpath mode.
