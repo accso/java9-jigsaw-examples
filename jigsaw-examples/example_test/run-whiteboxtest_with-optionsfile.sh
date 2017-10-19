@@ -15,7 +15,7 @@
 #  pkgfib.WhiteBoxTest  Test class pkgfib.WhiteBoxTest which is then started by JUnitCore
 
 # using an options file
-$JAVA_HOME/bin/java \
+$JAVA_HOME/bin/java $JAVA_OPTIONS \
      --patch-module modfib=patches/modfib \
      --module-path mlib${PATH_SEPARATOR}amlib \
      @run-whiteboxtest_optionsfile \

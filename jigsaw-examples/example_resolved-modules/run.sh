@@ -2,37 +2,37 @@
 
 echo "Running with root-module moda"
 echo "   java --module-path mlib -m moda/pkga.AMain"
-$JAVA_HOME/bin/java --module-path mlib -m moda/pkga.AMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib -m moda/pkga.AMain | myecho
 
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb"
 echo "   java --module-path mlib -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib -m modb/pkgb.BMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modc"
 echo "   java --module-path mlib -m modc/pkgc.CMain"
-$JAVA_HOME/bin/java --module-path mlib -m modc/pkgc.CMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib -m modc/pkgc.CMain | myecho
 
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus --add-modules modc"
 echo "   java --module-path mlib --add-modules modc -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib --add-modules modc -m modb/pkgb.BMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib --add-modules modc -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus automatic module javax.json"
 echo "   java --module-path mlib${PATH_SEPARATOR}amlib -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib${PATH_SEPARATOR}amlib -m modb/pkgb.BMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib${PATH_SEPARATOR}amlib -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
 echo "Running with root-module modb plus limitmods"
 echo "   java --module-path mlib --limit-modules modb -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib --limit-modules modb -m modb/pkgb.BMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib --limit-modules modb -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ echo "- Note that modb must be added to limitmods otherwise moda cannot be resol
 echo "  (adding only moda would work too, but would be inconventient when modb has"
 echo "   many requires)"
 echo "   java --module-path mlib -limitmods java.logging,java.scripting,modb -m modb/pkgb.BMain"
-$JAVA_HOME/bin/java --module-path mlib --limit-modules java.logging,java.scripting,modb -m modb/pkgb.BMain | myecho
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib --limit-modules java.logging,java.scripting,modb -m modb/pkgb.BMain | myecho
 
 echo ------------------------------------------------------------------
 
@@ -59,5 +59,5 @@ fi
 $JAVA_HOME/bin/jlink --module-path mlib${PATH_SEPARATOR}$JAVA_HOME_OS/jmods --add-modules modb --output jimage/modb | myecho
 
 echo "Running the linked runtime image with root module modb"
-echo "./jimage/modb/bin/java -m modb/pkgb.BMain"
-./jimage/modb/bin/java -m modb/pkgb.BMain | myecho
+echo "./jimage/modb/bin/java $JAVA_OPTIONS -m modb/pkgb.BMain"
+./jimage/modb/bin/java $JAVA_OPTIONS -m modb/pkgb.BMain | myecho

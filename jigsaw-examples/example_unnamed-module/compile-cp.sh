@@ -11,11 +11,11 @@ pushd src > /dev/null 2>&1
 # Attention: compile needs to be done in correct order
 for dir in cpb cpmain;
 do
-   echo "javac -Xlint -cp ../mlib/*${PATH_SEPARATOR}../classes/cpb  -d ../classes/${dir}  \$(find ${dir} -name \"*.java\")"
-   $JAVA_HOME/bin/javac -Xlint -cp ../mlib/*${PATH_SEPARATOR}../classes/cpb  -d ../classes/${dir}  $(find ${dir} -name "*.java")
+   echo "javac $JAVAC_OPTIONS  -cp ../mlib/*${PATH_SEPARATOR}../classes/cpb  -d ../classes/${dir}  \$(find ${dir} -name \"*.java\")"
+   $JAVA_HOME/bin/javac $JAVAC_OPTIONS  -cp ../mlib/*${PATH_SEPARATOR}../classes/cpb  -d ../classes/${dir}  $(find ${dir} -name "*.java")
 
-   echo "jar --create --file=../cplib/${dir}.jar -C ../classes/${dir} ."
-   $JAVA_HOME/bin/jar --create --file=../cplib/${dir}.jar -C ../classes/${dir} .
+   echo "jar $JAR_OPTIONS --create --file=../cplib/${dir}.jar -C ../classes/${dir} ."
+   $JAVA_HOME/bin/jar $JAR_OPTIONS --create --file=../cplib/${dir}.jar -C ../classes/${dir} .
 done
 popd >/dev/null 2>&1
 

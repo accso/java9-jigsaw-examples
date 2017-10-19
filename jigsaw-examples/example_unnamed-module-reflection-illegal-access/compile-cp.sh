@@ -8,13 +8,13 @@ mkdir -p cplib
 #  create non-modular jars to be put onto the classpath
 pushd src > /dev/null 2>&1
 
-echo "javac -Xlint -cp ../mlib/*${PATH_SEPARATOR}  -d ../classes/cpmain  \$(find cpmain -name \"*.java\")"
-$JAVA_HOME/bin/javac -Xlint \
+echo "javac $JAVAC_OPTIONS  -cp ../mlib/*${PATH_SEPARATOR}  -d ../classes/cpmain  \$(find cpmain -name \"*.java\")"
+$JAVA_HOME/bin/javac $JAVAC_OPTIONS  \
       -cp ../mlib/*${PATH_SEPARATOR} \
       -d ../classes/cpmain  $(find cpmain -name "*.java")
 
-echo "jar --create --file=../cplib/cpmain.jar -C ../classes/cpmain ."
-$JAVA_HOME/bin/jar --create --file=../cplib/cpmain.jar -C ../classes/cpmain .
+echo "jar $JAR_OPTIONS --create --file=../cplib/cpmain.jar -C ../classes/cpmain ."
+$JAVA_HOME/bin/jar $JAR_OPTIONS --create --file=../cplib/cpmain.jar -C ../classes/cpmain .
 
 popd >/dev/null 2>&1
 

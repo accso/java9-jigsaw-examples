@@ -1,6 +1,6 @@
 . ../env.sh
 
-$JAVA_HOME/bin/java --module-path mlib  \
+$JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib  \
      --add-modules modb,modc            \
      --add-reads   modmain=modb         \
      --add-reads   modb=modc            \

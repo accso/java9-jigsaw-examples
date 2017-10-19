@@ -14,7 +14,7 @@
 # Program arguments:
 #  pkgfib.WhiteBoxTest  Test class pkgfib.WhiteBoxTest which is then started by JUnitCore
 
-$JAVA_HOME/bin/java \
+$JAVA_HOME/bin/java $JAVA_OPTIONS \
      --patch-module modfib=patches/modfib \
      --module-path mlib${PATH_SEPARATOR}amlib \
      --add-reads modfib=junit \

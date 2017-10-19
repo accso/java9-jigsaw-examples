@@ -11,7 +11,7 @@ do
         MOD=`basename ${JAR} | sed s/'.jar'//g | sed s/'-'/'.'/g | cut -d '.' -f 1-2`
     
         echo "java --module-path . -m ${MOD}/pkgmain.Main"
-        $JAVA_HOME/bin/java --module-path . -m ${MOD}/pkgmain.Main | myecho
+        $JAVA_HOME/bin/java $JAVA_OPTIONS --module-path . -m ${MOD}/pkgmain.Main | myecho
     
         echo " "
     done
