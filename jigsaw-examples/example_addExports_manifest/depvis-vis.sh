@@ -9,7 +9,6 @@ DOT_OUTPUTFILENAME_LEGEND=${DOT_OUTPUTFILENAME}-withlegend
 
 # run the module dependency visualizer (producing a GraphViz dot file)
 echo "Running JigsawDepVisualizer to produce ${DOT_OUTPUTFILENAME}.dot and ${DOT_OUTPUTFILENAME_LEGEND}.dot"
-echo "$JAVA_HOME/bin/java --module-path ${DEPVIS_HOME}/mlib${PATH_SEPARATOR}${DEPVIS_HOME}/amlib -m depvis/depvis.JigsawDepVisualizer ${PROPS_FILENAME}"
 $JAVA_HOME/bin/java --module-path ${DEPVIS_HOME}/mlib${PATH_SEPARATOR}${DEPVIS_HOME}/amlib -m depvis/depvis.JigsawDepVisualizer ${PROPS_FILENAME}
 
 # ... and then run GraphViz to render to a image file
