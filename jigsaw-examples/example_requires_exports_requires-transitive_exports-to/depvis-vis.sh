@@ -7,7 +7,7 @@ function createvis() {
 
     # run the module dependency visualizer (producing a GraphViz dot file)
     echo "Running JigsawDepVisualizer to produce ${DOT_OUTPUTFILENAME}.dot and ${DOT_OUTPUTFILENAME_LEGEND}.dot"
-    $JAVA_HOME/bin/java --module-path ${DEPVIS_HOME}/mlib${PATH_SEPARATOR}${DEPVIS_HOME}/amlib -m depvis/depvis.JigsawDepVisualizer ${1}
+    $JAVA_HOME/bin/java --module-path ${DEPVIS_HOME}/mlib${PATH_SEPARATOR}${DEPVIS_HOME}/amlib --module depvis/depvis.JigsawDepVisualizer ${1}
 	
     # ... and then run GraphViz to render to a image file
     IMAGE_OUTPUTFORMAT=png

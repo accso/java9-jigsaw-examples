@@ -10,7 +10,7 @@
 #                  (which is necessary as the patched modfib now has a JUnit testcase)
 #  --add-modules   Need to add hamcrest and also modfib (which would otherwise not be found). 
 #                  For simplicity: add ALL-MODULE-PATH
-#  -m              Start the main class org.junit.runner.JUnitCore in module junit
+#  --module              Start the main class org.junit.runner.JUnitCore in module junit
 # Program arguments:
 #  pkgfib.WhiteBoxTest  Test class pkgfib.WhiteBoxTest which is then started by JUnitCore
 
