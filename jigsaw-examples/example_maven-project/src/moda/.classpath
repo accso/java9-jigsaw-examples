@@ -7,5 +7,10 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="J:/java9-jigsaw-examples/jigsaw-examples/example_maven-project/amlib/junit-4.12.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target"/>
 </classpath>
