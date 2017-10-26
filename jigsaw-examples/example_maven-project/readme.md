@@ -19,3 +19,4 @@ Dependencies have to be modelled both in the module-info and the pom!
 
 ### Maven plugins
 - maven-compiler-plugin Version >= 3.6.1 is needed 
+- Note that the JavaDoc generation shows an error for `modmain` (probably caused by [this Maven plugin bug](https://issues.apache.org/jira/browse/MJAVADOC-498))

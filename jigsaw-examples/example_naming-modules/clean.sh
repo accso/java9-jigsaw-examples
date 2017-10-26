@@ -16,3 +16,4 @@ mkdir -p amlib2
 mkdir -p amlib3
 mkdir -p amlib4
 
+rm -rf doc

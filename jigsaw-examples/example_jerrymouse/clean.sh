@@ -10,3 +10,5 @@ rm -rf apps
 
 mkdir -p mods
 mkdir -p mlib
+
+rm -rf doc

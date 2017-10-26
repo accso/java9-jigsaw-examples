@@ -31,3 +31,5 @@ Advantages:
 
 ### See also 
 Examples [example_whitebox-test-exports](../example_whitebox-test-exports), [example_patch](../example_patch)
+
+Note: No JavaDoc generation for this example

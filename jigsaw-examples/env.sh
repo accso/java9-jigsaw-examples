@@ -19,6 +19,7 @@ JAVAC_OPTIONS="-Xlint"
 # JAVA_OPTIONS="-XshowSettings:all -Xlog:module=trace -showversion --show-module-resolution"
 JAVA_OPTIONS="-showversion"
 JAR_OPTIONS=""
+JAVADOC_OPTIONS=""
 
 # ---------------------------------------------------------
 # no need to change anything beyond this line

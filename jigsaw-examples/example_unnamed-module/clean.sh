@@ -10,3 +10,4 @@ mkdir -p mlib
 mkdir -p classes
 mkdir -p cplib
 
+rm -rf doc

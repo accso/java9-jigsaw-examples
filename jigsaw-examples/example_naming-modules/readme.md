@@ -15,3 +15,4 @@ see https://github.com/accso/java9-jigsaw-examples
 ### Example shows ...
 - Naming convention for modules
 - Note: No Eclipse support for this example, just clean/compile/run via scripts
+- Note: No JavaDoc generation for this example
