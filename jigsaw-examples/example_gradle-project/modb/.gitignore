@@ -1,2 +1,3 @@
 # ignore target with compiled class files
 /build
+/target
