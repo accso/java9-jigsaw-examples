@@ -28,3 +28,5 @@ withfacade modules
 ### See also
 - https://dzone.com/articles/state-of-gradle-java-9-support?edition=334728
 - https://guides.gradle.org/building-java-9-modules/
+- https://github.com/gradle-guides/building-java-9-modules.git (Note that this is still using Gradle 4.2, you need to change `gradle-wrapper.properties` to download `gradle-4.2.1-bin.zip`)
+
