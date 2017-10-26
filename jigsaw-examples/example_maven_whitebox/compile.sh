@@ -1,7 +1,7 @@
 . ../env.sh
 
-mvn --version
+mvn --version --fail-at-end
 
 # debug mode with -X flag
-# mvn -X install
-mvn install
+# mvn -X install --fail-at-end
+mvn install --fail-at-end

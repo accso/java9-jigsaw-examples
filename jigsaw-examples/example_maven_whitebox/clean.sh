@@ -1,4 +1,4 @@
 . ../env.sh
 
-mvn --version
-mvn clean
+mvn --version --fail-at-end
+mvn clean --fail-at-end

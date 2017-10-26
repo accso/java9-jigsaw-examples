@@ -1,4 +1,4 @@
 . ../env.sh
 
-mvn --version
-mvn install
+mvn --version --fail-at-end
+mvn install --fail-at-end
