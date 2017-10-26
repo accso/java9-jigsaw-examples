@@ -15,6 +15,7 @@ public class Main {
 		System.out.println("\nCalling A.doIt(): " + myA.doIt());
 		
 		//---- calling A via reflection
+		// pkga from Unnamed Module is open to automatic moduels
 		Method m = myA.getClass().getDeclaredMethod("doItSecretly");
 		m.setAccessible(true);   // A.doItSecretly() is a private method
 		System.out.println("Calling A.doItSecretly() via reflection: " + m.invoke(myA));
