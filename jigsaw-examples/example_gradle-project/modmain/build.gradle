@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+dependencies {
+    implementation project(':moda')
+}
+
+ext.moduleName = 'modmain'
+mainClassName = 'pkgmain.Main'

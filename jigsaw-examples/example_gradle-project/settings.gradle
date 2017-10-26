@@ -1,0 +1,8 @@
+rootProject.name = "example_gradle-project"
+
+include 'modb'
+include 'modc'
+include 'moda'
+include 'modfacade'
+include 'modmain'
+include 'modmainbehindfacade'

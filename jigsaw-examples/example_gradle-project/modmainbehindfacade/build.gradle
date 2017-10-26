@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+    id 'application' 
+}
+
+dependencies {
+    implementation project(':modfacade')
+}
+
+ext.moduleName = 'modmainbehindfacade'
+mainClassName = 'pkgmainbehindfacade.MainBehindFacade'

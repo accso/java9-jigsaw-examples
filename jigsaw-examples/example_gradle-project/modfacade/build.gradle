@@ -1,0 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api project(':moda')
+
+    testImplementation 'junit:junit:4.12'
+}
+
+ext.moduleName = 'modfacade'
