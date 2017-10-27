@@ -29,10 +29,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jersey</artifactId>
-		</dependency>
+		<!-- DOES NOT WORK AT THE MOMENT, HENCE COMMENTED OUT dependency> 
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jersey</artifactId> 
+		</dependency -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -41,7 +41,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-  
+
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -64,17 +64,41 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <jvmArguments>--add-modules java.xml.bind</jvmArguments>
-                </configuration>
-            </plugin>
+				<configuration>
+					<jvmArguments>--add-modules java.xml.bind</jvmArguments>
+				</configuration>
+			</plugin>
 
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <argLine>--add-modules java.xml.bind</argLine>
-                </configuration>
-            </plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>--add-modules java.xml.bind</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<dependencies>
+				    <!-- enforce that org.ow2.asm.asm 6.0 is used instead of 6.0_BETA -->
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-java</artifactId>
+						<version>0.9.2</version>
+						<exclusions>
+							<exclusion>
+								<groupId>org.ow2.asm</groupId>
+								<artifactId>asm</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+
+					<dependency>
+						<groupId>org.ow2.asm</groupId>
+						<artifactId>asm</artifactId>
+						<version>6.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 		</plugins>
 	</build>
 
