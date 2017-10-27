@@ -2,6 +2,6 @@
 
 pushd src > /dev/null 2>&1
 
-../mvnw test
+../mvnw -e test
 
 popd >/dev/null 2>&1 

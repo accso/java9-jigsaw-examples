@@ -2,6 +2,6 @@
 
 pushd src > /dev/null 2>&1
 
-../mvnw compile
+../mvnw -e compile
 
 popd >/dev/null 2>&1 
