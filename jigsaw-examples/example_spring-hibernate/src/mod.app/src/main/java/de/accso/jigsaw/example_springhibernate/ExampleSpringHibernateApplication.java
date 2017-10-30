@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ExampleSpringHibernateApplication {
 
 	public static void main(String[] args) {
+		System.out.println("ExampleSpringHibernateApplication: Starting main class");
 		SpringApplication.run(ExampleSpringHibernateApplication.class, args);
 	}
 }
