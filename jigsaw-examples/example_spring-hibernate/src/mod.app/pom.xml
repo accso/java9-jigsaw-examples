@@ -72,6 +72,7 @@
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
+				    <!--  needed for Java 9  -->
 					<argLine>--add-modules java.xml.bind</argLine>
 				</configuration>
 			</plugin>
@@ -99,6 +100,21 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			
+			<!-- Explicit declaration of main class is needed as a work around because asm version is not
+			     detected correctly otherwise, causing a runtime exception.
+			     See https://github.com/spring-projects/spring-boot/issues/10647 
+			 -->
+			<plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <configuration>
+              	   <!-- our own main class -->
+                   <mainClass>de.accso.jigsaw.example_springhibernate.ExampleSpringHibernateApplication</mainClass>
+                   <!-- CLI args needed for java 9 -->
+                   <arguments>--add-modules java.xml.bind</arguments>
+	             </configuration>
+             </plugin>
 		</plugins>
 	</build>
 
