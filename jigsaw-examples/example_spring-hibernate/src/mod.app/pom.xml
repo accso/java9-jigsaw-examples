@@ -57,6 +57,14 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <!-- Using slightly newer version of javassist due to java 9 probkem of older version.
+             See https://github.com/jboss-javassist/javassist/issues/147-->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.22.0-GA</version>
+		</dependency>
 	</dependencies>
 
 	<build>
