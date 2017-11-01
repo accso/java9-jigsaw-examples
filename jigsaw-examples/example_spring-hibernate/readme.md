@@ -51,7 +51,6 @@ The application now compiles, tests and runs with Java 9.
 
 The application now compiles, tests and runs with Java 9 and with a `module-info.java`. Note that both tests and launch are still done on the classpath.
 
-
 ### TODOs, LOP, Backlog, Ideas, ...
 No software is ready, ever ;-) So here are some ideas left (any other feedback very welcome!):
 
@@ -59,3 +58,6 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] Run application on the module path
 - [ ] Introduce own entities for JPA persistence
 - [ ] Introduce own Spring beans
+
+### Related work
+* Nicolas Frankel's DZone article [Migrating a Spring Boot App to Java 9: Compatibility](https://dzone.com/articles/migrating-a-spring-boot-application-to-java-9-comp)
