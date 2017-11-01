@@ -5,7 +5,7 @@ depvisvis() {
     then 
         echo "###################################################################################################################################"
         echo "Creating DepVis visualization output for ${MODDIR}"
-        sh ./depvis-vis.sh
+        . ./depvis-vis.sh
     fi
     popd >/dev/null 2>&1 
     echo " "
