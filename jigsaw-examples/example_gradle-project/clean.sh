@@ -3,4 +3,4 @@
 ./gradlew clean
 
 rm -rf mlib/*.jar
-mkdir -p mlib 
+mkdir -p mlib
