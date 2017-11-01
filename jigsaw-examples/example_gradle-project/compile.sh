@@ -1,5 +1,6 @@
 . ../env.sh
 
+chmod a+x ./gradlew
 ./gradlew build
 
 # copy JAR files from Gradle build to one single folder
