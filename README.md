@@ -22,6 +22,9 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
    `allclean.sh`, `allcompile.sh`, `allcreatevis.sh` and `allrun.sh` (or `all.sh` for all in one step).
 10. Alternatively, cd to one of the examples and call one of the scripts there (again `all.sh` for all in one step).
 
+Note that all scripts have been tested with bash only. There might be minor issues with the *.sh scripts whenever they call each other.
+To be sure, you should use all of these clean, compile, run, test etc. scripts in a bash.
+
 ### Overall conventions
 1. Scripts in top level directory all*.sh call the corresponding scripts recursively
 2. Scripts in each example are all.sh, clean.sh, compile*.sh, run*.sh
