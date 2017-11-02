@@ -31,7 +31,7 @@ public class Main {
         //    note that this is caller-sensitive, needs to be done in a class from module modb
         BExportHelper.addExports("pkgbinternal", modmain);
 
-        // The following line is caller-sensitive, must be called from modb and hence produces a RuntimeException here in modmain
+        // The following line is caller-sensitive, must be called from modb and hence would produce a RuntimeException here in modmain
         //        java.lang.IllegalCallerException: module modmain != module modb
         // BExportHelper.class.getModule().addExports("pkgbinternal", modmain);
         
