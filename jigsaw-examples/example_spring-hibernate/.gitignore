@@ -1,2 +1,7 @@
-target/
+/target
 !.mvn/wrapper/maven-wrapper.jar
+/.metadata/
+/RemoteSystemsTempFiles/
+/.recommenders/
+/doc/
+/eclipse.out

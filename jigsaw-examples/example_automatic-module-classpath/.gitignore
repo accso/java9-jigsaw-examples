@@ -1,8 +1,9 @@
+/target/
 /.metadata/
 /RemoteSystemsTempFiles/
 /.recommenders/
+/doc/
+/eclipse.out
 /amlib/
 /classes/
 /cplib/
-
-

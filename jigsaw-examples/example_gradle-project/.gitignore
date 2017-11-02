@@ -1,2 +1,7 @@
-# ignore target with compiled class files
 /.gradle
+/target/
+/.metadata/
+/RemoteSystemsTempFiles/
+/.recommenders/
+/doc/
+/eclipse.out

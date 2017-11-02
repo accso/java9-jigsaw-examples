@@ -1,5 +1,7 @@
+/apps/
+/target/
 /.metadata/
 /RemoteSystemsTempFiles/
 /.recommenders/
-/apps/
 /doc/
+/eclipse.out
