@@ -3,5 +3,5 @@
 mvn --version --fail-at-end
 
 # debug mode with -X flag
-# mvn -X install --fail-at-end
-mvn install --fail-at-end
+# mvn -s mvn_settings.xml -X install --fail-at-end
+mvn -s mvn_settings.xml install --fail-at-end

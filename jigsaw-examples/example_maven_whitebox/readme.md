@@ -22,6 +22,10 @@ It finds out that the patch options are needed because there is no `module-info.
 Note: No Eclipse support for this example, just clean/compile/run via scripts
 Note: No JavaDoc generation for this example
 
+### Setup
+You might want to edit the Maven settings file `mvn_settings.xml` according to your needs (proxies, local repository path etc.) 
+The file provided here is just a copy of the original file from Maven 3.5.2 distribution.
+
 ### Maven plugins
 - A maven-compiler-plugin (version >= 3.6.2) is needed (only this version uses the new patch-Options)
 - Note that the maven-compiler-plugin (version 3.6.2) currently has a bug ("syntax error") when there are comments in the `module-info.java`

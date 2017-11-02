@@ -1,11 +1,11 @@
 . ../env.sh
 
-export JAVA_HOME
+mvn --version --fail-at-end
 
 cd src/moda
-mvn javadoc:javadoc --fail-at-end
+mvn -s ../../mvn_settings.xml javadoc:javadoc --fail-at-end
 cd - >/dev/null 2>&1
 
 cd src/modmain
-mvn javadoc:javadoc --fail-at-end
+mvn -s ../../mvn_settings.xml javadoc:javadoc --fail-at-end
 cd - >/dev/null 2>&1

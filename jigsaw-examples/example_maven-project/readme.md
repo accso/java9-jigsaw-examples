@@ -17,6 +17,10 @@ see https://github.com/accso/java9-jigsaw-examples
 
 Dependencies have to be modelled both in the module-info and the pom!
 
+### Setup
+You might want to edit the Maven settings file `mvn_settings.xml` according to your needs (proxies, local repository path etc.) 
+The file provided here is just a copy of the original file from Maven 3.5.2 distribution.
+
 ### Maven plugins
 - maven-compiler-plugin Version >= 3.6.1 is needed 
 - Note that the JavaDoc generation shows an error for `modmain` (probably caused by [this Maven plugin bug](https://issues.apache.org/jira/browse/MJAVADOC-498))
