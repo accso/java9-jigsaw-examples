@@ -1,4 +1,4 @@
 . ../env.sh
 
 chmod a+x ./gradlew
-./gradlew run
+./gradlew  --no-daemon run

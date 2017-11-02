@@ -1,7 +1,7 @@
 . ../env.sh
 
 chmod a+x ./gradlew
-./gradlew build
+./gradlew  --no-daemon build
 
 # copy JAR files from Gradle build to one single folder
 rm -rf ./mlib

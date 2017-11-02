@@ -1,7 +1,7 @@
 . ../env.sh
 
 chmod a+x ./gradlew
-./gradlew clean
+./gradlew  --no-daemon clean
 
 rm -rf mlib/*.jar
 mkdir -p mlib
