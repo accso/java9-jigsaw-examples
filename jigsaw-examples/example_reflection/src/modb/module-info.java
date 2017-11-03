@@ -1,7 +1,7 @@
 module modb {
-    // exports not enough anymore for setAccessible(true) when using reflection.
-    // opens: since b142 needed for Deep Reflection
+    // exports not enough anymore for Deep Reflection, i.e. for setAccessible(true) to allow reflection access
     exports  pkgb to modmain;
+    // opens: since b142 needed for Deep Reflection
     opens    pkgb to modmain;
     
     // exports only allows Shallow Reflection
