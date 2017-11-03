@@ -5,7 +5,7 @@
 # --patch-module modb=src: Compile as if the source files were part of modb.
 # -d patches/modb: Compile output to directory patches/modb
 
-echo $JAVA_HOME/bin/javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
+echo "javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java  2>&1
 
 pushd patches > /dev/null 2>&1 
