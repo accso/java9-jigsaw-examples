@@ -8,15 +8,14 @@ import java.lang.Module;
 public class Main {
     public static void main(String[] args) throws IOException {
         Module modb = ModuleLayer.boot().findModule("modb").get();
-        Module modc = ModuleLayer.boot().findModule("modc").get();
-        
-        System.out.println("Annotations of modb:");
+        System.out.println("Annotations of module modb:");
         for (Annotation annotation: modb.getAnnotations()) {
         	System.out.println("- " + annotation);	
         }
         
-        System.out.println("Annotations of modc:");
-        for (Annotation annotation: modc.getAnnotations()) {
+        Module mod_annotations = ModuleLayer.boot().findModule("mod.annotations").get();
+        System.out.println("\nAnnotations of module mod.annotations:");
+        for (Annotation annotation: mod_annotations.getAnnotations()) {
         	System.out.println("- " + annotation);	
         }   
     }
