@@ -9,7 +9,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ## What is this example about?
 
 ### Modules in this example
-* modb, modc, modmain
+* modb, mod.annotations, modmain
 * modmain has a Main class which is started in run.sh
 
 ### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
@@ -18,7 +18,6 @@ see https://github.com/accso/java9-jigsaw-examples
 ### Example shows modules with annotations
 see [ModuleAnnotations](http://openjdk.java.net/projects/jigsaw/spec/issues/#ModuleAnnotations)
 
-- modmain looks up modules modb and modc and prints their annotations available at runtime
-- modb has a deprecated annotation in the module-info.java. 
-- modc defines threee annotations with ElementType module, one available at runtime, two only
-    available at compile time
+- modmain looks up modules modb and mod.annotations and prints their annotations available at runtime
+- modb is deprecated via annotation in its module-info.java. 
+- mod.annotations defines three annotations with ElementType module, one available at runtime, two only available at compile time

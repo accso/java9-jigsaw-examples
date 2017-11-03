@@ -1,6 +1,6 @@
-import pkgc.RunTimeAnnotation;
+import pkgannotations.RunTimeAnnotation;
 
 @RunTimeAnnotation
-module modc {
-    exports pkgc;
+module mod.annotations {
+    exports pkgannotations;
 }

@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/modc">
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/mod.annotations">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
