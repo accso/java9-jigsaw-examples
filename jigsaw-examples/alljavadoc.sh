@@ -6,9 +6,9 @@ javadoc() {
         echo "###################################################################################################################################"
         echo "Generating JavaDoc in ${MODDIR}"
         . ./javadoc.sh
+        echo " "
     fi
     popd >/dev/null 2>&1 
-    echo " "
 }
 
 for dir in example_*/; 

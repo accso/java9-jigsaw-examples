@@ -9,9 +9,9 @@ run() {
             echo "Running ${MODDIR}: ${runscript}"
             . ${runscript}
         done
+        echo " "
     fi
     popd >/dev/null 2>&1 
-    echo " "
 }
 
 for dir in example_*/; 

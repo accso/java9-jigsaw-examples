@@ -6,9 +6,9 @@ depvisvis() {
         echo "###################################################################################################################################"
         echo "Creating DepVis visualization output for ${MODDIR}"
         . ./depvis-vis.sh
+        echo " "
     fi
     popd >/dev/null 2>&1 
-    echo " "
 }
 
 for dir in example_*/; 
