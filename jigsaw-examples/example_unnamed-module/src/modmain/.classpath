@@ -11,5 +11,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/cpb"/>
 	<classpathentry kind="output" path="target"/>
 </classpath>

@@ -3,6 +3,11 @@ package pkgcpmain;
 /**
  * This class is on the classpath, i.e. in the unnamed module.
  */
+
+/**
+ * This class cannot be compiled in Eclipse because of missing dependencies, might be an Eclipse problem
+ * as cpmain cannot access modb.
+ */
 public class Main {
     public static void main(String[] args) {
 
