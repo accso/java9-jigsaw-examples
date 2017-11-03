@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.accso.jigsaw</groupId>
-  <artifactId>maven-blackbox</artifactId>
+  <artifactId>maven-test-whitebox</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>Example requires_exports with maven compilation</name>
@@ -33,7 +33,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
+        <version>3.7.0</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
