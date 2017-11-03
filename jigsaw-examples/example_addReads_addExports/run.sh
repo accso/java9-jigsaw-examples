@@ -6,4 +6,4 @@ $JAVA_HOME/bin/java $JAVA_OPTIONS --module-path mlib  \
      --add-reads   modb=modc            \
      --add-exports modb/pkgb=modmain    \
      --add-exports modc/pkgc=modb       \
-     --module modmain/pkgmain.Main | myecho
+     --module modmain/pkgmain.Main 2>&1 | myecho

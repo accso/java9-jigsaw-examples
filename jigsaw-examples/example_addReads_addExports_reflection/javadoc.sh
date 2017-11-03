@@ -9,4 +9,5 @@ $JAVA_HOME/bin/javadoc $JAVADOC_OPTIONS  -d doc \
      --add-modules modb \
      --add-exports modb/pkgb=modmain \
     --module-path mlib \
-    --module-source-path src $(find src -name "*.java")
+    --module-source-path src $(find src -name "*.java") \
+     2>&1

@@ -4,7 +4,7 @@ mkdir -p mods
 mkdir -p mlib 
 
 echo "javac $JAVAC_OPTIONS  -d mods --module-path mlib --module-source-path src \$(find src -name \"*.java\")"
-$JAVA_HOME/bin/javac $JAVAC_OPTIONS  -d mods --module-path mlib --module-source-path src $(find src -name "*.java")
+$JAVA_HOME/bin/javac $JAVAC_OPTIONS  -d mods --module-path mlib --module-source-path src $(find src -name "*.java") 2>&1
 
 pushd mods > /dev/null 2>&1
 for dir in */; 

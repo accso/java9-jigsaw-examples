@@ -20,4 +20,5 @@ $JAVA_HOME/bin/java $JAVA_OPTIONS \
      --add-reads modfib=junit \
      --add-modules ALL-MODULE-PATH \
      --module junit/org.junit.runner.JUnitCore  \
-     pkgfib.WhiteBoxTest
+     pkgfib.WhiteBoxTest \
+      2>&1

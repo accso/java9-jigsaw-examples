@@ -12,4 +12,5 @@ $JAVA_HOME/bin/javadoc $JAVADOC_OPTIONS  -d doc \
      --add-exports modb/pkgb=modmain    \
      --add-exports modc/pkgc=modb       \
     --module-path mlib \
-    --module-source-path src $(find src -name "*.java")
+    --module-source-path src $(find src -name "*.java") \
+    2>&1 

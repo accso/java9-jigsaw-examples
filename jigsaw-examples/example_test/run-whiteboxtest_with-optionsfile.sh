@@ -19,4 +19,5 @@ $JAVA_HOME/bin/java $JAVA_OPTIONS \
      --patch-module modfib=patches/modfib \
      --module-path mlib${PATH_SEPARATOR}amlib \
      @run-whiteboxtest_optionsfile \
-     pkgfib.WhiteBoxTest
+     pkgfib.WhiteBoxTest \
+      2>&1

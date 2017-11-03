@@ -6,13 +6,13 @@
 # -d patches/modb: Compile output to directory patches/modb
 
 echo $JAVA_HOME/bin/javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
-$JAVA_HOME/bin/javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java 
+$JAVA_HOME/bin/javac $JAVAC_OPTIONS  --patch-module modb=src --module-path mods -d patches/modb src/modb-patch/pkgb/B.java  2>&1
 
 pushd patches > /dev/null 2>&1 
 for dir in */; 
 do
     MODDIR=${dir%*/}
     echo "jar $JAR_OPTIONS --create --file=../patchlib/${MODDIR}.jar -C ${MODDIR} ."
-    $JAVA_HOME/bin/jar $JAR_OPTIONS --create --file=../patchlib/${MODDIR}.jar -C ${MODDIR} .
+    $JAVA_HOME/bin/jar $JAR_OPTIONS --create --file=../patchlib/${MODDIR}.jar -C ${MODDIR} . 2>&1
 done
 popd >/dev/null 2>&1

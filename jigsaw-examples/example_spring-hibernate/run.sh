@@ -3,7 +3,7 @@
 pushd src > /dev/null 2>&1
 
 chmod a+x ../mvnw
-../mvnw -e spring-boot:run
+../mvnw -e spring-boot:run 2>&1
 
 popd >/dev/null 2>&1 
 

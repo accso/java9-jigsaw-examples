@@ -10,7 +10,8 @@ do
    echo "javadoc $JAVADOC_OPTIONS -d doc/${modx} --module-path mlib --module-source-path src \$(find src/${modx} -name \"*.java\")"
    $JAVA_HOME/bin/javadoc $JAVADOC_OPTIONS  -d doc/${modx} \
       --module-path "mlib${PATH_SEPARATOR}amlib" \
-      --module-source-path src $(find src/${modx} -name "*.java")
+      --module-source-path src $(find src/${modx} -name "*.java") \
+       2>&1
 done
 
 # generate JavaDoc
@@ -18,4 +19,5 @@ mkdir -p doc/rest
 echo "javadoc $JAVADOC_OPTIONS -d doc/rest --module-path mlib --module-source-path src $(find src -name \"*.java\" | grep -v mod.x)"
 $JAVA_HOME/bin/javadoc $JAVADOC_OPTIONS  -d doc/rest \
     --module-path "mlib${PATH_SEPARATOR}amlib" \
-    --module-source-path src $(find src -name "*.java" | grep -v mod.x)
+    --module-source-path src $(find src -name "*.java" | grep -v mod.x) \
+     2>&1

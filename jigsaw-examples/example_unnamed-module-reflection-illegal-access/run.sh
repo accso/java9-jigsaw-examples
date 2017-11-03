@@ -2,7 +2,7 @@
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-$JAVA_HOME/bin/java --versio
+$JAVA_HOME/bin/java --version
 
 #
 # Run main class, which does reflective access to a class from module java.base, package jdk.internal (a package which is new in Java9)
@@ -13,19 +13,19 @@ echo "Checking variants of reflective access to java.base/jdk.internal.math.Doub
 
 echo " "
 echo "1 - reflective call without any options"
-$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal | myecho
+$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal 2>&1 | myecho
 echo " "
 echo "2 - reflective call with --illegal-access=permit"
-$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal | myecho
+$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal 2>&1 | myecho
 echo " "
 echo "3 - reflective call with --illegal-access=warn"
-$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal | myecho
+$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal 2>&1 | myecho
 echo " "
 echo "4 - reflective call with --illegal-access=deny"
-$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal | myecho
+$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal 2>&1 | myecho
 echo " "
 echo "5 - reflective call with explicit --add-opens"
-$JAVA_HOME/bin/java --add-opens=java.base/jdk.internal.math=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal | myecho
+$JAVA_HOME/bin/java --add-opens=java.base/jdk.internal.math=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseJDKInternal 2>&1 | myecho
 
 echo " "
 
@@ -40,19 +40,19 @@ echo "Checking variants of reflective access to java.base/sun.io.Win32ErrorMode.
 
 echo " "
 echo "6 - reflective call without any options"
-$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO | myecho
+$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO 2>&1 | myecho
 echo " "
 echo "7 - reflective call with --illegal-access=permit"
-$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO | myecho
+$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO 2>&1 | myecho
 echo " "
 echo "8 - reflective call with --illegal-access=warn"
-$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO | myecho
+$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO 2>&1 | myecho
 echo " "
 echo "9 - reflective call with --illegal-access=deny"
-$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO | myecho
+$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO 2>&1 | myecho
 echo " "
 echo "10 - reflective call with explicit --add-opens"
-$JAVA_HOME/bin/java --add-opens=java.base/sun.io=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO | myecho
+$JAVA_HOME/bin/java --add-opens=java.base/sun.io=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaBaseSunIO 2>&1 | myecho
 
 echo " "
 
@@ -68,19 +68,19 @@ echo "Checking variants of reflective access to java.desktop/com.sun.java.swing.
 
 echo " "
 echo "11 - reflective call without any options"
-$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop | myecho
+$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop 2>&1 | myecho
 echo " "
 echo "12 - reflective call with --illegal-access=permit"
-$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop | myecho
+$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop 2>&1 | myecho
 echo " "
 echo "13 - reflective call with --illegal-access=warn"
-$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop | myecho
+$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop 2>&1 | myecho
 echo " "
 echo "14 - reflective call with --illegal-access=deny"
-$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop | myecho
+$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop 2>&1 | myecho
 echo " "
 echo "15 - reflective call with explicit --add-opens"
-$JAVA_HOME/bin/java --add-opens=java.desktop/com.sun.java.swing.plaf.nimbus=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop | myecho
+$JAVA_HOME/bin/java --add-opens=java.desktop/com.sun.java.swing.plaf.nimbus=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar pkgcpmain.MainCallingJavaDesktop 2>&1 | myecho
 
 echo " "
 
@@ -99,16 +99,16 @@ echo "    class pkgbexportedqualified.BFromModuleButExportedQualified is exporte
 
 echo " "
 echo "16 - reflective call without any options"
-$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB | myecho
+$JAVA_HOME/bin/java                         --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB 2>&1 | myecho
 echo " "
 echo "17 - reflective call with --illegal-access=permit"
-$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB | myecho
+$JAVA_HOME/bin/java --illegal-access=permit --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB 2>&1 | myecho
 echo " "
 echo "18 - reflective call with --illegal-access=warn"
-$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB | myecho
+$JAVA_HOME/bin/java --illegal-access=warn   --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB 2>&1 | myecho
 echo " "
 echo "19 - reflective call with --illegal-access=deny"
-$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB | myecho
+$JAVA_HOME/bin/java --illegal-access=deny   --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB 2>&1 | myecho
 echo " "
 echo "20 - reflective call with explicit --add-opens"
-$JAVA_HOME/bin/java --add-opens=modb/pkgbinternal=ALL-UNNAMED --add-opens modb/pkgbexportedqualified=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB | myecho
+$JAVA_HOME/bin/java --add-opens=modb/pkgbinternal=ALL-UNNAMED --add-opens modb/pkgbexportedqualified=ALL-UNNAMED --module-path mlib -cp cplib/cpmain.jar --add-modules modb pkgcpmain.MainCallingModB 2>&1 | myecho
