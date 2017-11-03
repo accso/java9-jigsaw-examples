@@ -9,5 +9,5 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pkgmain.Main"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmain"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--module-path ../../mlib&#13;&#10;--add-exports java.base/jdk.internal.misc=modmain&#13;&#10;--add-exports moda/pkgainternal=modmain&#13;&#10;--module modmain/pkgmain.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--module-path ../../mlib&#13;&#10;--add-modules moda&#13;&#10;-jar ../../mlib/modmain.jar"/>
 </launchConfiguration>
