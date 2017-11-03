@@ -50,6 +50,20 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 
 ### Latest Changes
 
+#### Cleanup
+All kinds of scripts, code, environment settings etc. were checked and lots of cleanup was done. Nothing critical but looks "fresher" now.
+Some changes:
+- Maven 3.7.0 compiler plugin used now in all maven projects
+- Refactoring of the maven test examples: New name is now `example_maven-test-blackbox` and `example_maven-test-whitebox`
+- Maven settings template file checked to all maven projects
+- Gradle build without the daemon
+- Gradle environment variable GRADLE_USER_HOME introduced, as $HOME is not handled correctly on cygwin systems
+- Refactoring of the example which shows that automatic modules can access the classpath, now in `example_unnamed-module_access-from-automatic-module`
+- All scripts' calls to java, javac, jar etc. now redirected STDERR to STDOUT to make sure that both standard and error output are printed in order (otherwise some exception output is printed very early and now below the call as expected)
+- Cleanup of Eclipse dependencies and Build paths whereever possible (not easy when e.g. a mixture of explicit modules and/or automatic modules and/or classpath code has to be built in Eclipse)
+- Cleanup of Eclipse launch files (and also renamed them not to have any whitespace in their .launch file name)
+- All kind of cleanup like better comments, a bit more separating whitespaces or separating lines in the output
+
 #### Migration to Java 9.0.1 (Release)
 No changes necessary
 
