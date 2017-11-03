@@ -3,11 +3,10 @@ package pkga;
 public class A {
 	
 	public String doIt() {
-		return "From A from classpath";
+		return "From A, which is on the classpath";
 	}
 
-	private String doItSecretly() {
-		return "From A, secretly";
-	}
-	
+	private String doItPrivate() {
+		return "From A, private method";
+	}	
 }

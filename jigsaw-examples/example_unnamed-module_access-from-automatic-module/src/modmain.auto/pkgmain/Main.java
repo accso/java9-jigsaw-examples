@@ -11,8 +11,8 @@ public class Main {
 		System.out.println("\nCalling A.doIt(): " + myA.doIt());
 		
 		// 2. calling A via reflection
-		Method m = myA.getClass().getDeclaredMethod("doItSecretly");
-		m.setAccessible(true);   // A.doItSecretly() is a private method
-		System.out.println("Calling A.doItSecretly() via reflection: " + m.invoke(myA));
+		Method m = myA.getClass().getDeclaredMethod("doItPrivate");
+		m.setAccessible(true);
+		System.out.println("Calling A.doItPrivate() via reflection: " + m.invoke(myA));
 	}
 }

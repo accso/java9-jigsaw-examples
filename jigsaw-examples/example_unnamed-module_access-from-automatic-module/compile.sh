@@ -6,7 +6,7 @@ mkdir -p cplib
 
 pushd src > /dev/null 2>&1
 
-# create non-modular jar cpa to be put onto the classpath
+# create non-modular JAR cpa.jar to be put onto the classpath
 export dir=cpa
 echo "$JAVA_HOME/bin/javac $JAVAC_OPTIONS   -d ../classes/${dir}   \$(find ${dir} -name \"*.java\")"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS   -d ../classes/${dir}   $(find ${dir} -name "*.java")
@@ -14,8 +14,10 @@ $JAVA_HOME/bin/javac $JAVAC_OPTIONS   -d ../classes/${dir}   $(find ${dir} -name
 echo "jar $JAR_OPTIONS --create --file=../cplib/${dir}.jar -C ../classes/${dir} ."
 $JAVA_HOME/bin/jar $JAR_OPTIONS --create --file=../cplib/${dir}.jar -C ../classes/${dir} .
 
-# compile automodmain as automatic module, i.e create an ordinary jar file
-export dir=automodmain
+# --------------------------------------------------------------------------------------------------------------
+
+# compile modmain.auto as automatic module, i.e create an ordinary JAR file
+export dir=modmain.auto
 echo "$JAVA_HOME/bin/javac $JAVAC_OPTIONS   -d ../classes/${dir}   \$(find ${dir} -name \"*.java\")"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS  -cp ../cplib/* -d ../classes/${dir}   $(find ${dir} -name "*.java")
 
