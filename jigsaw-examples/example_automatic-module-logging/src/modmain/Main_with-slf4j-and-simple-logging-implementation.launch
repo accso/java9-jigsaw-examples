@@ -12,8 +12,7 @@
     <listAttribute key="org.eclipse.jdt.launching.MODULEPATH">
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry path=&quot;4&quot; projectName=&quot;modmain&quot; type=&quot;1&quot;/&gt;&#13;&#10;"/>
         <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry path=&quot;4&quot; projectName=&quot;modb&quot; type=&quot;1&quot;/&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;J:/github-java9-jigsaw-examples/jigsaw-examples/example_automatic-module-logging/amlib-api/slf4j-api-1.7.12.jar&quot; path=&quot;4&quot; type=&quot;2&quot;/&gt;&#13;&#10;"/>
-        <listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;J:/github-java9-jigsaw-examples/jigsaw-examples/example_automatic-module-logging/amlib-jdk14/slf4j-jdk14-1.7.12.jar&quot; path=&quot;4&quot; type=&quot;2&quot;/&gt;&#13;&#10;"/>
     </listAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="modmain"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--module-path ../../mlib;../../amlib-api;../../amlib-simple&#13;&#10;--add-modules slf4j.simple&#13;&#10;--module modmain/pkgmain.Main"/>
 </launchConfiguration>

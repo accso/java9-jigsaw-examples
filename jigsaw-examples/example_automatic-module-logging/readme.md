@@ -9,7 +9,7 @@ see https://github.com/accso/java9-jigsaw-examples
 ## What is this example about?
 
 ### Modules in this example
-* modb, modmain 
+* modmain 
 * slf4j*.jar as automatic modules
 * modmain has a Main class which is started in run.sh
 
