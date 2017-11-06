@@ -7,4 +7,7 @@ echo "# ------------------------------------------------------------------------
 
 echo "# -------------------------------------------------------------------------------------------------------------------------------"
 . ./run-test.sh
-. ./run.sh
+
+# Commented out as otherwise the server starts and stays open, waiting to get closed (which is not ideal is used inside the 
+# example suite)
+# . ./run.sh
