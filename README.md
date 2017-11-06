@@ -63,6 +63,8 @@ Some changes:
 - Cleanup of Eclipse dependencies and Build paths whereever possible (not easy when e.g. a mixture of explicit modules and/or automatic modules and/or classpath code has to be built in Eclipse)
 - Cleanup of Eclipse launch files (and also renamed them not to have any whitespace in their .launch file name)
 - All kind of cleanup like better comments, a bit more separating whitespaces or separating lines in the output
+- Deleted `example_example_requires-transitive_exports` (obsolete as all of its contents is covered by `example_requires_exports_requires-transitive_exports-to` already)
+
 
 #### Migration to Java 9.0.1 (Release)
 No changes necessary
