@@ -1,0 +1,6 @@
+# Created by depvis.JigsawDepVisualizer on Wed Nov 08 15:22:17 CET 2017
+digraph Java9_Dependency_Visualizer {
+modb[fontname="Consolas",shape="ellipse",label="modb"];
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modb -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+}
