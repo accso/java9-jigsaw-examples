@@ -5,11 +5,12 @@ mkdir -p mlib
 mkdir -p classes/cpb
 mkdir -p cplib
 
-echo "javac $JAVAC_OPTIONS  -d mods --module-path mlib${PATH_SEPARATOR}cplib --module-source-path src \$(find src -name \"*.java\"| grep -v cp)"
+echo "javac $JAVAC_OPTIONS  -d mods --add-reads modmain=ALL-UNNAMED --class-path cplib/cpb.jar --module-path mlib${PATH_SEPARATOR}cplib --module-source-path src \$(find src -name \"*.java\"| grep -v cp)"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS \
       -d mods \
+	  --add-reads modmain=ALL-UNNAMED \
       --class-path cplib/cpb.jar \
-      --module-path mlib${PATH_SEPARATOR}cplib \
+	  --module-path mlib${PATH_SEPARATOR}cplib \
       --module-source-path src $(find src -name "*.java"| grep -v cp) \
       2>&1
 
