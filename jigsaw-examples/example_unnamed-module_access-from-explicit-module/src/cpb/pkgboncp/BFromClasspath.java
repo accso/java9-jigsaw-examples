@@ -2,6 +2,6 @@ package pkgboncp;
 
 public class BFromClasspath {
     public String doIt() {
-        return "from pkgboncp.BFromClasspath";
+        return "from pkgboncp.BFromClasspath (in cpb)";
     }
 }
