@@ -17,6 +17,10 @@ export DEPVIS_HOME=TODO/path/to/depvis/goes/here
 # \; on Windows (even when in bash), : on Un*x
 PATH_SEPARATOR=TODO
 
+# only needed in example_compile-target-jdk8
+export JAVA_HOME_JDK8=TODO/path/to/jdk1.8/goes/here
+
+
 # ---------------------------------------------------------
 
 # export HOME=$HOME
