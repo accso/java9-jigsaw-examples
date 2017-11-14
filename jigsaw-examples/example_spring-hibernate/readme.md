@@ -60,4 +60,4 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] Introduce own Spring beans
 
 ### Related work
-* Nicolas Frankel's DZone article [Migrating a Spring Boot App to Java 9: Compatibility](https://dzone.com/articles/migrating-a-spring-boot-application-to-java-9-comp)
+* Nicolas Frankel's DZone articles [Migrating a Spring Boot App to Java 9: Compatibility](https://dzone.com/articles/migrating-a-spring-boot-application-to-java-9-comp) and [Migrating a Spring Boot App to Java 9 (Part 2): Modules](https://dzone.com/articles/migrating-a-spring-boot-app-to-java-9-modules)
