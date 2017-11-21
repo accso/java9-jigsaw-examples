@@ -4,9 +4,7 @@ function compileandjar() {
 
 pushd src > /dev/null 2>&1
 
-  export dir=modauto1
-  
-  # compile modmain.auto as automatic module, i.e create an ordinary JAR file
+  # compile as automatic module, i.e create an ordinary JAR file
   rm -rf ../classes
   mkdir -p ../classes
   
