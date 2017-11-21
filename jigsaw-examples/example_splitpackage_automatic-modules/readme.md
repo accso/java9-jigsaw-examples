@@ -14,6 +14,9 @@ This example shows that automatic modules might cause an unwanted and surprising
 - `modauto1` is a automatic module. It has a package `pkgsplitted`.
 - `modauto2` is a automatic module. It has a package `pkgsplitted`, too.
 
+### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+![Example's Module Dependency Graph](moduledependencies.png)
+
 ### Example shows ...
 As soon as one automatic module `modauto1` is required (by `modmain`), it is added to the runtime configuration.
 All works fine, when only the module path `amlib1` with `modauto1` is added to the java launcher's module path, see `run.sh`.
