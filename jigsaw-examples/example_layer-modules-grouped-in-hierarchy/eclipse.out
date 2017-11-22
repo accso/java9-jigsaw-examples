@@ -1,0 +1,9 @@
+WARNING: Using incubator modules: jdk.incubator.httpclient
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: J:\github-java9-jigsaw-examples\jigsaw-examples\example_layer-modules-grouped-in-hierarchy\.metadata\.plugins\org.eclipse.m2e.logback.configuration\logback.1.8.2.20171007-0217.xml
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.emf.ecore.xmi.impl.XMLHandler (file:/A:/Eclipse/eclipse-SDK-4.7.1a-win32-x86_64/plugins/org.eclipse.emf.ecore.xmi_2.13.0.v20170609-0707.jar) to method com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser$LocatorProxy.getEncoding()
+WARNING: Please consider reporting this to the maintainers of org.eclipse.emf.ecore.xmi.impl.XMLHandler
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+org.eclipse.m2e.logback.configuration: Initializing logback
