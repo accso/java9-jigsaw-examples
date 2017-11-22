@@ -41,4 +41,4 @@ The interesting parts are all done in [`modmain/pkgmain.Main` here in this examp
 - ... how to call functionality in child layers
 
 You might also want to look at the differences between [`modmain/pkgmain.Main` here in this example](src/modmain/pkgmain/Main.java) and
-[`modmain/pkgmain.Main` in this example example_layer-all-modules-in-boot-layer](../example_layer-all-modules-in-boot-layer/src/modmain/pkgmain/Main.java).
+[`modmain/pkgmain.Main` in this example example_layer-all-modules-in-boot-layer](https://github.com/accso/java9-jigsaw-examples/blob/master/jigsaw-examples/example_layer-modules-all-in-boot-layer/src/modmain/pkgmain/Main.java).
