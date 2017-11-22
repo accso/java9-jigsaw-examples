@@ -5,7 +5,7 @@ function compileandjar() {
 pushd src > /dev/null 2>&1
   
   # compile as automatic module, i.e create an ordinary JAR file
-  rm -rf ../classes
+  rm -rf ../classes/modauto*
   mkdir -p ../classes
   
   echo "javac $JAVAC_OPTIONS   -d ../classes/${1}   \$(find ${1} -name \"*.java\")"

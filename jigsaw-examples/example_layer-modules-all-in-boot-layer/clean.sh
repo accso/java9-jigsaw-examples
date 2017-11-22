@@ -9,5 +9,3 @@ mkdir -p mods
 mkdir -p mlib
 mkdir -p amlib1
 mkdir -p classes 
-
-rm -rf doc
