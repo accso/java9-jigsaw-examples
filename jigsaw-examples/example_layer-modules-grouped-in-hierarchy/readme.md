@@ -7,7 +7,7 @@ Written by [Martin Lehmann](https://github.com/MartinLehmann1971), [Kristine Sch
 see https://github.com/accso/java9-jigsaw-examples
 
 ## What is this example about?
-This example is the same as [this example](https://github.com/accso/java9-jigsaw-examples/example_layer-all-modules-in-boot-layer).
+This example is the same as [this example](https://github.com/accso/java9-jigsaw-examples/tree/master/jigsaw-examples/example_layer-modules-all-in-boot-layer).
 The main difference is, that the modules are not all in the boot layer but distributed over a layer hierarchy of the boot layers and 3 child layers.
 
 ### Layers in this example
@@ -36,7 +36,7 @@ More remarks:
 - The child layers do not have a split package problem, though in `bar layer #1` and `bar layer #2` the same module `modbar` is resolved.
 - Also `modbar` and `modfoo` can use different version of the automatic module `modauto1|2`. No split package problem.
 
-The interesting parts are all done in [`modmain/pkgmain.Main` here in this example](https://github.com/accso/java9-jigsaw-examples/example_layer-modules-grouped-in-hierarchy/src/modmain/pkgmain/Main.java). See its functionality on
+The interesting parts are all done in [`modmain/pkgmain.Main` here in this example](src/modmain/pkgmain/Main.java). See its functionality on
 - ... how to create child layers and add modules
 - ... how to call functionality in child layers
 
