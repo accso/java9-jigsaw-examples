@@ -3,6 +3,7 @@
 pushd src > /dev/null 2>&1
 
 chmod a+x ../mvnw
-../mvnw -e test 2>&1
+../mvnw -s ../mvn_settings.xml --version --fail-at-end 2>&1
+../mvnw -s ../mvn_settings.xml -e test 2>&1
 
 popd >/dev/null 2>&1 
