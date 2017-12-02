@@ -50,9 +50,9 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for Java agents
 
 # Example Overview
-| |Examples|Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Related Examples|
+| |Examples|Description | Related Examples|
 |--|--|--|--|
-| **Examples on the declaration of modules**| example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+| **Examples on the declaration of modules**| example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed? | 
 || example_annotations                                             | How can one specify annotations and deprecation for modules? |
 | **Examples on basic module reads and exports attributes**| example_requires_exports_requires-transitive_exports-to         | How does requires, requires transitive and qualified exports look like? | all other examples in this section
 || example_requires-static                                         | How does requires static look like? | all other examples in this section
