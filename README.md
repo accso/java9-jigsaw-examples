@@ -59,7 +59,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 | example_requires-static                                         | How does requires static look like? | all other examples in this section
 | example_requires_exports                                        | How does requires and exports look like? | all other examples in this section
 | example_requires_exports-to                                     | How does requires and qualified exports look like? | all other examples in this section
-| example_reflection                                              | How does reflection calls look like? | all other examples in this section
+| example_reflection                                              | How do reflection calls look like? | all other examples in this section
 | **Examples on accessibility and (non) exported packages**|**Description**| **Related Examples**|
 | example_derived_private-package-protected                       | What happens, when classes / packages in a module are exported, but their sub/super classes are not? | all other examples in this section
 | example_exceptions                                              | What happens, when exceptions are thrown to classes outside the module but their package is not exported? | all other examples in this section
@@ -75,7 +75,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 | **Examples on the split package problem**|**Description**| **Related Examples**|
 | example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
 | example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
-| **Examples on resolution of modules, layers and visibility of modules between layers**
+| **Examples on resolution of modules, layers and visibility of modules between layers**|**Description**| **Related Examples**|
 | example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
 | example_resolved-modules                                        | Which modules are resolved? Usage of jlink | all other examples in this section
 | example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (via naming conventions)? | all other examples in this section
@@ -94,7 +94,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 | example_unnamed-module_access-from-explicit-module-reflection   | Can a Explicit Module access the classpath (i.e. the unnamed module) via reflection? | all other examples in this section
 | example_unnamed-module-reflection-illegal-access                | Can the classpath (i.e. the unnamed module) access concealed packages in the JDK and what happens when the JDK "kill switch" is activated? |all other examples in this section
 | example_unnamed-module_accessing-module-path                    | Can the classpath (i.e. the unnamed module) access modules on the module path? | all other examples in this section
-| **Examples on build systems**
+| **Examples on build systems**|**Description**| **Related Examples**|
 | example_gradle-project                                          | How can one use Gradle 4.2.1 for building a modularized project? | all other examples in this section
 | example_maven-project                                           | How can one use Maven 3.5.2 for building a modularized project? | all other examples in this section
 | **Examples on porting applications from Java8 to Java9**|**Description**| **Related Examples**|
