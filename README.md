@@ -50,7 +50,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for Java agents
 
 # Example Overview
-| |Examples|Description| Related Examples|
+| |Examples|Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Related Examples|
 |--|--|--|--|
 | **Examples on the declaration of modules**| example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed? | 
 || example_annotations                                             | How can one specify annotations and deprecation for modules? |
@@ -66,8 +66,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 || example_addReads_addExports                                     | How can we use --add-reads and --add-exports for Javac compiler and Java launcher | all other examples in this section
 || example_addReads_addExports_reflection                          | How can we use --add-reads and --add-exports for reflection calls? |all other examples in this section
 | **Examples on automatic modules**| example_automatic-module-logging                                | How to automatic modules (for logging) look like? | example_splitpackage_automatic-modules | example_splitpackage_automatic-modules
-| **Examples on restricting the access to resources in other modules**|**Description**| **Related Examples**|
-|| example_resources                                               | Which resources in modules are accessible, which are not? | 
+| **Examples on restricting the access to resources in other modules**| example_resources                                               | Which resources in modules are accessible, which are not? | 
 | **Examples on the split package problem**| example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
 || example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
 | **Examples on resolution of modules, layers and visibility of modules between layers**| example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
