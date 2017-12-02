@@ -51,6 +51,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 
 # Example Overview
 | **Examples on the declaration of modules**|**Description**| **Related Examples**|
+|--|--|--|
 | example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed? | 
 | example_annotations                                             | How can one specify annotations and deprecation for modules? |
 | **Examples on basic module reads and exports attributes**|**Description**| **Related Examples**|
