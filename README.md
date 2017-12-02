@@ -50,56 +50,45 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 - [ ] example for Java agents
 
 # Example Overview
-| **Examples on the declaration of modules**|**Description**| **Related Examples**|
-|--|--|--|
-| example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed? | 
-| example_annotations                                             | How can one specify annotations and deprecation for modules? |
-| **Examples on basic module reads and exports attributes**|**Description**| **Related Examples**|
-| example_requires_exports_requires-transitive_exports-to         | How does requires, requires transitive and qualified exports look like? | all other examples in this section
-| example_requires-static                                         | How does requires static look like? | all other examples in this section
-| example_requires_exports                                        | How does requires and exports look like? | all other examples in this section
-| example_requires_exports-to                                     | How does requires and qualified exports look like? | all other examples in this section
-| example_reflection                                              | How do reflection calls look like? | all other examples in this section
-| **Examples on accessibility and (non) exported packages**|**Description**| **Related Examples**|
-| example_derived_private-package-protected                       | What happens, when classes / packages in a module are exported, but their sub/super classes are not? | all other examples in this section
-| example_exceptions                                              | What happens, when exceptions are thrown to classes outside the module but their package is not exported? | all other examples in this section
-| example_interface-callback                                      | What happens, when outside the module a callback implementation is called which package is not exported? | all other examples in this section
-| **Examples on specificing add\* options**|**Description**| **Related Examples**|
-| example_addExports_manifest                                     | How can we use --add-exports in a manifest file for the Java launcher? | all other examples in this section
-| example_addReads_addExports                                     | How can we use --add-reads and --add-exports for Javac compiler and Java launcher | all other examples in this section
-| example_addReads_addExports_reflection                          | How can we use --add-reads and --add-exports for reflection calls? |all other examples in this section
-| **Examples on automatic modules**|**Description**| **Related Examples**|
-| example_automatic-module-logging                                | How to automatic modules (for logging) look like? | example_splitpackage_automatic-modules | example_splitpackage_automatic-modules
+| **Examples**|**Description**| **Related Examples**|
+|--|--|--|--|
+| **Examples on the declaration of modules**| example_naming-modules                                          | Which naming conventions exist for modules? Which names are not allowed? | 
+|| example_annotations                                             | How can one specify annotations and deprecation for modules? |
+| **Examples on basic module reads and exports attributes**| example_requires_exports_requires-transitive_exports-to         | How does requires, requires transitive and qualified exports look like? | all other examples in this section
+|| example_requires-static                                         | How does requires static look like? | all other examples in this section
+|| example_requires_exports                                        | How does requires and exports look like? | all other examples in this section
+|| example_requires_exports-to                                     | How does requires and qualified exports look like? | all other examples in this section
+|| example_reflection                                              | How do reflection calls look like? | all other examples in this section
+| **Examples on accessibility and (non) exported packages**| example_derived_private-package-protected                       | What happens, when classes / packages in a module are exported, but their sub/super classes are not? | all other examples in this section
+|| example_exceptions                                              | What happens, when exceptions are thrown to classes outside the module but their package is not exported? | all other examples in this section
+|| example_interface-callback                                      | What happens, when outside the module a callback implementation is called which package is not exported? | all other examples in this section
+| **Examples on specificing add\* options**| example_addExports_manifest                                     | How can we use --add-exports in a manifest file for the Java launcher? | all other examples in this section
+|| example_addReads_addExports                                     | How can we use --add-reads and --add-exports for Javac compiler and Java launcher | all other examples in this section
+|| example_addReads_addExports_reflection                          | How can we use --add-reads and --add-exports for reflection calls? |all other examples in this section
+| **Examples on automatic modules**| example_automatic-module-logging                                | How to automatic modules (for logging) look like? | example_splitpackage_automatic-modules | example_splitpackage_automatic-modules
 | **Examples on restricting the access to resources in other modules**|**Description**| **Related Examples**|
-| example_resources                                               | Which resources in modules are accessible, which are not? | 
-| **Examples on the split package problem**|**Description**| **Related Examples**|
-| example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
-| example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
-| **Examples on resolution of modules, layers and visibility of modules between layers**|**Description**| **Related Examples**|
-| example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
-| example_resolved-modules                                        | Which modules are resolved? Usage of jlink | all other examples in this section
-| example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (via naming conventions)? | all other examples in this section
-| example_layer-modules-all-in-boot-layer                         | How does the boot layer look like containing a bunch of modules? | all other examples in this section
-| example_layer-modules-grouped-in-hierarchy                      | How does a small hiearchy of layers look like when one explicitely distributes a bunch of modules to these layers? | all other examples in this section
-| **Examples on testing**|**Description**| **Related Examples**|
-| example_test                                                    | How can one achieve blackbox and whitebox testing? | all other examples in this section
-| example_maven-test-blackbox                                     | How can one achieve blackbox testing with Maven? | all other examples in this section
-| example_maven-test-whitebox                                     | How can one achieve whitebox testing with Maven? | all other examples in this section
-| example_patch                                                   | How can we patch a module at compile / runtime? | all other examples in this section
-| **Examples on Main classes**|**Description**| **Related Examples**|
-| example_hiddenmain                                              | Is it possible that one can call a Main class which is in a non-exported package? | 
-| **Examples on access from and to the classpath (i.e. the unnamed module)**|**Description**| **Related Examples**|
-| example_unnamed-module_access-from-automatic-module             | Can a Automatic Module access the classpath (i.e. the unnamed module)? | all other examples in this section
-| example_unnamed-module_access-from-explicit-module              | Can a Explicit Module access the classpath (i.e. the unnamed module)? | all other examples in this section
-| example_unnamed-module_access-from-explicit-module-reflection   | Can a Explicit Module access the classpath (i.e. the unnamed module) via reflection? | all other examples in this section
-| example_unnamed-module-reflection-illegal-access                | Can the classpath (i.e. the unnamed module) access concealed packages in the JDK and what happens when the JDK "kill switch" is activated? |all other examples in this section
-| example_unnamed-module_accessing-module-path                    | Can the classpath (i.e. the unnamed module) access modules on the module path? | all other examples in this section
-| **Examples on build systems**|**Description**| **Related Examples**|
-| example_gradle-project                                          | How can one use Gradle 4.2.1 for building a modularized project? | all other examples in this section
-| example_maven-project                                           | How can one use Maven 3.5.2 for building a modularized project? | all other examples in this section
-| **Examples on porting applications from Java8 to Java9**|**Description**| **Related Examples**|
-| example_spring-hibernate                                        | How does the migration of a Spring Boot application with a bunch of Maven plugins look like and where do we have to tweak / change in comparison to Java 8? |
-| example_compile-target-jdk8                                     | What happens when one compiles with JDK9 with or without targeting a Java release 9 or 8? |
+|| example_resources                                               | Which resources in modules are accessible, which are not? | 
+| **Examples on the split package problem**| example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
+|| example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
+| **Examples on resolution of modules, layers and visibility of modules between layers**| example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
+|| example_resolved-modules                                        | Which modules are resolved? Usage of jlink | all other examples in this section
+|| example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (via naming conventions)? | all other examples in this section
+|| example_layer-modules-all-in-boot-layer                         | How does the boot layer look like containing a bunch of modules? | all other examples in this section
+|| example_layer-modules-grouped-in-hierarchy                      | How does a small hiearchy of layers look like when one explicitely distributes a bunch of modules to these layers? | all other examples in this section
+| **Examples on testing**| example_test                                                    | How can one achieve blackbox and whitebox testing? | all other examples in this section
+|| example_maven-test-blackbox                                     | How can one achieve blackbox testing with Maven? | all other examples in this section
+|| example_maven-test-whitebox                                     | How can one achieve whitebox testing with Maven? | all other examples in this section
+|| example_patch                                                   | How can we patch a module at compile / runtime? | all other examples in this section
+| **Examples on Main classes**| example_hiddenmain                                              | Is it possible that one can call a Main class which is in a non-exported package? | 
+| **Examples on access from and to the classpath (i.e. the unnamed module)**| example_unnamed-module_access-from-automatic-module             | Can a Automatic Module access the classpath (i.e. the unnamed module)? | all other examples in this section
+|| example_unnamed-module_access-from-explicit-module              | Can a Explicit Module access the classpath (i.e. the unnamed module)? | all other examples in this section
+|| example_unnamed-module_access-from-explicit-module-reflection   | Can a Explicit Module access the classpath (i.e. the unnamed module) via reflection? | all other examples in this section
+|| example_unnamed-module-reflection-illegal-access                | Can the classpath (i.e. the unnamed module) access concealed packages in the JDK and what happens when the JDK "kill switch" is activated? |all other examples in this section
+|| example_unnamed-module_accessing-module-path                    | Can the classpath (i.e. the unnamed module) access modules on the module path? | all other examples in this section
+| **Examples on build systems**| example_gradle-project                                          | How can one use Gradle 4.2.1 for building a modularized project? | all other examples in this section
+|| example_maven-project                                           | How can one use Maven 3.5.2 for building a modularized project? | all other examples in this section
+| **Examples on porting applications from Java8 to Java9**| example_spring-hibernate                                        | How does the migration of a Spring Boot application with a bunch of Maven plugins look like and where do we have to tweak / change in comparison to Java 8? |
+|| example_compile-target-jdk8                                     | What happens when one compiles with JDK9 with or without targeting a Java release 9 or 8? |
  
 
 # Latest Changes
