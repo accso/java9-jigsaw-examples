@@ -70,7 +70,7 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 | example_addReads_addExports_reflection                          | How can we use --add-reads and --add-exports for reflection calls? |all other examples in this section
 | **Examples on automatic modules**|**Description**| **Related Examples**|
 | example_automatic-module-logging                                | How to automatic modules (for logging) look like? | example_splitpackage_automatic-modules | example_splitpackage_automatic-modules
-| **Examples on restricting the access to resources in other modules**
+| **Examples on restricting the access to resources in other modules**|**Description**| **Related Examples**|
 | example_resources                                               | Which resources in modules are accessible, which are not? | 
 | **Examples on the split package problem**|**Description**| **Related Examples**|
 | example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
