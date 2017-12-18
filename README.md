@@ -146,3 +146,6 @@ Now with print and visualization output like printing uses and provides, printin
 
 # Related projects
 DepVis, see https://github.com/accso/java9-jigsaw-depvis : Visualization tool for Jigsaw modules
+
+# License
+This work has been published under Apache License 2.0. Please refer to file 'LICENSE' for further details.
