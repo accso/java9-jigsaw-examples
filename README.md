@@ -16,19 +16,20 @@ The three Maven examples need Maven 3.5.2 and the Gradle example needs Gradle 4.
 1. Clone this repo.
 2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181 and also with 9.0.1-11 (both on Windows 10, x64) 
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
-4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven`, `example_maven_blackbox` and `example_maven_whitebox` only.
-5. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
-6. To generate the GraphViz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
-7. Edit file `env.sh` to configure `JAVA_HOME` and `JAVA_HOME_JDK8` and `GRAPHVIZ_HOME` and `MAVEN_HOME` and `GRADLE_HOME` and `DEPVIS_HOME` (see TODO markers)
-8. Also edit file `env.sh` to configure the path separator. If run on Windows, use \; (a blackslash quoting a ;). If you run all stuff on *nix, use a colon : .
-9. Call one of the scripts on the top level, i.e. one of 
+4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
+5. Install [Gradle 4.2.1](https://github.com/gradle/gradle). Note that this is needed for `example_gradle` only.
+6. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
+7. To generate the GraphViz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
+8. Edit file `env.sh` to configure `JAVA_HOME` and `JAVA_HOME_JDK8` and `GRAPHVIZ_HOME` and `MAVEN_HOME` and `GRADLE_HOME` and `DEPVIS_HOME` (see TODO markers)
+9. Also edit file `env.sh` to configure the path separator. If run on Windows, use \; (a blackslash quoting a ;). If you run all stuff on *nix, use a colon : .
+10. Call one of the scripts on the top level, i.e. one of 
    `allclean.sh`, `allcompile.sh`, `allcreatevis.sh` and `allrun.sh` (or `all.sh` for all in one step).
-10. Alternatively, cd to one of the examples and call one of the scripts there (again `all.sh` for all in one step).
+11. Alternatively, cd to one of the examples and call one of the scripts there (again `all.sh` for all in one step).
 
 Note that all scripts have been tested with bash only. There might be minor issues with the *.sh scripts whenever they call each other.
 To be sure, you should use all of these clean, compile, run, test etc. scripts in a bash.
 
-## Overall conventions
+# Overall conventions
 1. Scripts in top level directory all*.sh call the corresponding scripts recursively
 2. Scripts in each example are all.sh, clean.sh, compile*.sh, run*.sh
 3. Script createvis.sh in each example creates a GraphViz visualiation, see https://github.com/accso/java9-jigsaw-depvis
@@ -88,7 +89,21 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 || example_maven-project                                           | How can one use Maven 3.5.2 for building a modularized project? | all other examples in this section
 | **Examples on porting applications from Java8 to Java9**| example_spring-hibernate                                        | How does the migration of a Spring Boot application with a bunch of Maven plugins look like and where do we have to tweak / change in comparison to Java 8? |
 || example_compile-target-jdk8                                     | What happens when one compiles with JDK9 with or without targeting a Java release 9 or 8? |
- 
+
+# Overview on Tools and Libs
+The examples have been used and tested with these tools and libraries (on Windows 10, Linux, MacOSX):
+
+|Tool|Version|Used for|Remark|Link|
+|--|--|--|--|--|
+|JDK|9.0.1|all examples at compile and runtime||http://jdk.java.net/9/|
+|JDK|1.8.0_144|only in `example_compile-target-jdk8`||http://jdk.java.net/8/|
+|Maven|3.5.2|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
+|Gradle|4.2.1|Gradle example||https://github.com/gradle/gradle|
+|Eclipse|4.7.1 (Oxygen.1)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
+|Junit|4.12|all test examples|together with Hamcrest 1.3||
+|Spring Boot, various libs|various|only in `example_spring-hibernate`|refer to POM.xml in this example||
+|GraphViz|2.38|visualizing the module graph||http://www.graphviz.org/|
+|DepVis|0.3|visualizing the module graph, provides the .dot file as input for GraphViz||https://github.com/accso/java9-jigsaw-depvis|
 
 # Latest Changes
 
