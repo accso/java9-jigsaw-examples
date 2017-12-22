@@ -17,7 +17,7 @@ The three Maven examples need Maven 3.5.2 and the Gradle example needs Gradle 4.
 2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181 and also with 9.0.1-11 (both on Windows 10, x64) 
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
-5. Install [Gradle 4.2.1](https://github.com/gradle/gradle). Note that this is needed for `example_gradle` only.
+5. Install [Gradle 4.2.1](https://github.com/gradle/gradle). Note that this is needed for `example_gradle-project` only.
 6. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
 7. To generate the GraphViz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
 8. Edit file `env.sh` to configure `JAVA_HOME` and `JAVA_HOME_JDK8` and `GRAPHVIZ_HOME` and `MAVEN_HOME` and `GRADLE_HOME` and `DEPVIS_HOME` (see TODO markers)
