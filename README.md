@@ -60,6 +60,8 @@ No software is ready, ever ;-) So here are some ideas left (any other feedback v
 || example_requires_exports                                        | How does requires and exports look like? | all other examples in this section
 || example_requires_exports-to                                     | How does requires and qualified exports look like? | all other examples in this section
 || example_reflection                                              | How do reflection calls look like? | all other examples in this section
+| **Examples on dynamic binding with uses/provides**| example_uses-provides | How does uses-provides look like? | all other examples in this section
+|| example_uses-provides_uses-in-client | How does uses-provides look like, when uses is separated from the interface? | all other examples in this section
 | **Examples on accessibility and (non) exported packages**| example_derived_private-package-protected                       | What happens, when classes / packages in a module are exported, but their sub/super classes are not? | all other examples in this section
 || example_exceptions                                              | What happens, when exceptions are thrown to classes outside the module but their package is not exported? | all other examples in this section
 || example_interface-callback                                      | What happens, when outside the module a callback implementation is called which package is not exported? | all other examples in this section
