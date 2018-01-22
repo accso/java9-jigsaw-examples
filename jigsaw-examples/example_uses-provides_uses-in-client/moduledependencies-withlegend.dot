@@ -1,0 +1,44 @@
+# Created by depvis.JigsawDepVisualizer on Wed Dec 20 17:16:52 CET 2017
+digraph Java9_Dependency_Visualizer {
+modservice_impl_net[fontname="Consolas",shape="ellipse",label="modservice.impl.net"];
+modservicedefinition[fontname="Consolas",shape="ellipse",label="modservicedefinition"];
+java_base[fontname="Consolas",shape="ellipse",label="java.base"];
+modservice_impl_com[fontname="Consolas",shape="ellipse",label="modservice.impl.com"];
+modmain[fontname="Consolas",shape="octagon",label="modmain"];
+modservice_impl_net -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modservice_impl_net -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservice_impl_com -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modservice_impl_com -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modservicedefinition -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+modmain -> modservicedefinition[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",weight="8"]
+modmain -> java_base[color="#0000ff",fontname="Consolas",fontcolor="#0000ff",style="dashed",weight="16"]
+rankdir=LR
+node [shape=plaintext]
+subgraph cluster_01 { 
+  label = "Java 9, Jigsaw, example_uses-provides
+Wed Dec 20 17:16:52 CET 2017"
+  fontname="Consolas"
+  key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+    <tr><td align="right" port="i1">requires</td></tr>
+    <tr><td align="right" port="i2">requires (mandated)</td></tr>
+    <tr><td align="right" port="i3">requires static</td></tr>
+    <tr><td align="right" port="i4">requires transitive</td></tr>
+    <tr><td align="right" port="i5">exports to</td></tr>
+    <tr><td align="right" port="i6">opens to</td></tr>
+    </table>>,fontname="Consolas"]
+  key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+    <tr><td port="i1">&nbsp;</td></tr>
+    <tr><td port="i2">&nbsp;</td></tr>
+    <tr><td port="i3">&nbsp;</td></tr>
+    <tr><td port="i4">&nbsp;</td></tr>
+    <tr><td port="i5">&nbsp;</td></tr>
+    <tr><td port="i6">&nbsp;</td></tr>
+    </table>>,fontname="Consolas"]
+  key:i1:e -> key2:i1:w [color=BLUE]
+  key:i2:e -> key2:i2:w [color=BLUE, style=dashed]
+  key:i3:e -> key2:i3:w [color=BLUE, style=dotted]
+  key:i4:e -> key2:i4:w [color=GREEN]
+  key:i5:e -> key2:i5:w [color=RED]
+  key:i6:e -> key2:i6:w [color=ORANGE]
+}
+}
