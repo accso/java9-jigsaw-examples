@@ -100,7 +100,7 @@ The examples have been used and tested with these tools and libraries (on Window
 |JDK|9.0.4|all examples at compile and runtime||http://jdk.java.net/9/|
 |JDK|1.8.0_144|only in `example_compile-target-jdk8`||http://jdk.java.net/8/|
 |Maven|3.5.2|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
-|Gradle|4.6 with JDK10+43 is used, otherwise 4.2.1 is sufficient|Gradle example||https://github.com/gradle/gradle|
+|Gradle|4.6 when JDK10+43 is used, otherwise 4.2.1 is sufficient|Gradle example||https://github.com/gradle/gradle|
 |Eclipse|4.7.1a (Oxygen.1a)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
 |Junit|4.12|all test examples|together with Hamcrest 1.3||
 |Spring Boot, various libs|various|only in `example_spring-hibernate`|refer to POM.xml in this example||
