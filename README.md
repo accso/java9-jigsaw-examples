@@ -10,11 +10,11 @@ This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 
 [Project Jigsaw](http://openjdk.java.net/projects/jigsaw/) by [JSR 376](https://www.jcp.org/en/jsr/detail?id=376) and [JEP 261](http://openjdk.java.net/jeps/261). 
 
 All the examples have been successfully tested with Windows (64bit), Linux and MacOSX - running Java 9.01. Eclipse projects can be used with Eclipse Oxygen.1 4.7.1a.
-The three Maven examples need Maven 3.5.2 and the Gradle example needs Gradle 4.2.1.
+The three Maven examples need Maven 3.5.2. Gradle example need at least Gradle 4.2.1 (if run with JDK9, or a later version like Gradle 4.6 for compatibility with JDK10).
 
 # Setup
 1. Clone this repo.
-2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181 and also with 9.0.1-11 (both on Windows 10, x64) 
+2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181, 9.0.1+11, 9.0.4+11 and also JDK 10+43 (OpenJDK), all on Windows 10-x64
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
 5. Install [Gradle 4.2.1](https://github.com/gradle/gradle). Note that this is needed for `example_gradle-project` only.
@@ -97,17 +97,24 @@ The examples have been used and tested with these tools and libraries (on Window
 
 |Tool|Version|Used for|Remark|Link|
 |--|--|--|--|--|
-|JDK|9.0.1|all examples at compile and runtime||http://jdk.java.net/9/|
+|JDK|9.0.4|all examples at compile and runtime||http://jdk.java.net/9/|
 |JDK|1.8.0_144|only in `example_compile-target-jdk8`||http://jdk.java.net/8/|
 |Maven|3.5.2|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
-|Gradle|4.2.1|Gradle example||https://github.com/gradle/gradle|
-|Eclipse|4.7.1 (Oxygen.1)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
+|Gradle|4.6 with JDK10+43 is used, otherwise 4.2.1 is sufficient|Gradle example||https://github.com/gradle/gradle|
+|Eclipse|4.7.1a (Oxygen.1a)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
 |Junit|4.12|all test examples|together with Hamcrest 1.3||
 |Spring Boot, various libs|various|only in `example_spring-hibernate`|refer to POM.xml in this example||
 |GraphViz|2.38|visualizing the module graph||http://www.graphviz.org/|
 |DepVis|0.3|visualizing the module graph, provides the .dot file as input for GraphViz||https://github.com/accso/java9-jigsaw-depvis|
 
 # Latest Changes
+
+### Migration to JDK 10+43 (OpenJDK) (Release)
+- Gradle needed an update to 4.6 as the JDK 10 class format could not be read with Gradle 4.2.1 (see also [here](https://github.com/gradle/gradle/issues/3770)).
+- Gradle scripts in project `example_gradle-project` now also include a `--info --stacktrace` for more info and error output
+
+### Migration to Java 9.0.4 (Release)
+No changes necessary
 
 ### Cleanup
 All kinds of scripts, code, environment settings etc. were checked and lots of cleanup was done. Nothing critical but looks "fresher" now.
