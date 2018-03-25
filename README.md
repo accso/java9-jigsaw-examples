@@ -94,6 +94,7 @@ Needs probably Maven/Plugin updates, to be done soon.</span>
 || example_maven-project                                           | How can one use Maven 3.5.2 for building a modularized project? | all other examples in this section
 | **Examples on porting applications from Java8 to Java9**| example_spring-hibernate                                        | How does the migration of a Spring Boot application with a bunch of Maven plugins look like and where do we have to tweak / change in comparison to Java 8? |
 || example_compile-target-jdk8                                     | What happens when one compiles with JDK9 with or without targeting a Java release 9 or 8? |
+| **Examples on non-Jigsaw topics**| example_version                                        | How does the new Java 9 version string (cf JEP 223) look like? |
 
 # Overview on Tools and Libs
 The examples have been used and tested with these tools and libraries (on Windows 10, Linux, MacOSX):
