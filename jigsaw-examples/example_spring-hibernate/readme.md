@@ -1,10 +1,13 @@
 # Java 9 Jigsaw modules example suite
-## Example example_spring-hibernate
+## Example example_spring-hibernate 
 
 ### Info
 Written by [Martin Lehmann](https://github.com/mrtnlhmnn), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes](https://github.com/rgrammes) 
 
 see https://github.com/accso/java9-jigsaw-examples
+
+## <span style="color:red">THIS EXAMPLE IS CURRENTLY BROKEN WHEN USING JDK10</span>
+Details see end of this readme.
 
 ## What is this example about?
 * Running a Spring Boot application with Java9.

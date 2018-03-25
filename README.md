@@ -45,10 +45,13 @@ To be sure, you should use all of these clean, compile, run, test etc. scripts i
 # TODOs, LOP, Backlog, Ideas, ...
 No software is ready, ever ;-) So here are some ideas left (any other feedback very welcome!):
 
-- [ ] Add more JavaDoc gen scripts. Not trivial as JavaDoc needs *all* exports for all modules in one call!
 - [ ] Do a bit of renaming and refactoring of module names. (modmain had been moda before, so that's why most modules are called modb, modc, ...)
-- [ ] example for open modules
-- [ ] example for Java agents
+- [ ] New example for open modules
+- [ ] New example for Java agents and instrumentation
+- [ ] New example for test coverage when doing whitebox tests
+- [ ] Fix this problem: <span style="color:red">Update to JDK10 works fine except the `example_spring-hibernate` because of a compile problem. See [`readme.md`](https://github.com/accso/java9-jigsaw-examples/blob/master/jigsaw-examples/example_spring-hibernate/readme.md) there for details. 
+Needs probably Maven/Plugin updates, to be done soon.</span>
+- [ ] Update the Spring-Hibernate and Spring Boot example to use new, JDK9/10-ready libraries
 
 # Example Overview
 | |Examples|Description | Related Examples|
@@ -112,13 +115,14 @@ Note that these are the versions with with we have tested the example suite. Old
 # Changelog
 
 ### Migration to final Eclipse 4.7.3 Oxygen.3
-Eclipse 4.7.3 Oxygen.3 as of March 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name).
-Note that Eclipse only works with JDK9: Though Eclipse can be started with JDK10, one then sees compile errors when compiling the examples in Eclipse. 
+- Eclipse 4.7.3 Oxygen.3 as of March 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that Eclipse only works with JDK9: Though Eclipse can be started with JDK10, one then sees compile errors when compiling the examples in Eclipse. 
+- !!! Note that Eclipse 4.7.1a Oxygen.1a still works fine with all examples.
 
 ### Migration to final JDK 10 (Release)
 - Migrated examples to Java 10 2018-03-20, Java(TM) SE Runtime Environment 18.3 (build 10+46)
-- All works fine except the `example_spring-hibernate` because of a compile problem. See [`readme.md`](https://github.com/accso/java9-jigsaw-examples/blob/master/jigsaw-examples/example_spring-hibernate/readme.md) there for details.
-Needs probably Maven/Plugin updates, to be done soon
+- <span style="color:red">All works fine except the `example_spring-hibernate` because of a compile problem. See [`readme.md`](https://github.com/accso/java9-jigsaw-examples/blob/master/jigsaw-examples/example_spring-hibernate/readme.md) there for details. 
+Needs probably Maven/Plugin updates, to be done soon.</span>
+- !!! Note that JDK 9 (like 9.0.4) still works fine with all examples.
 
 ### Migration to JDK 10+43 (OpenJDK) (Release)
 - Gradle needed an update to 4.6 as the JDK 10 class format could not be read with Gradle 4.2.1 (see also [here](https://github.com/gradle/gradle/issues/3770)).
