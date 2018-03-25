@@ -2,18 +2,18 @@
 
 # configure paths here
 
-# Path to JDK9
-export JAVA_HOME=TODO/path/to/java9-jdk/goes/here
+# Path to JDK9 or JDK10 (9.0.1, 9.0.4 and 10_18.3_10+46 have been tested)
+export JAVA_HOME=TODO/path/to/java9-or-10-jdk/goes/here
 
 # Path to JDK8, only needed in example_compile-target-jdk8
-export JAVA8_HOME=TODO/path/to/java9-jdk/goes/here
+export JAVA8_HOME=TODO/path/to/java8-jdk/goes/here
 
-# Path to Gradle >=4.2.1
-export GRADLE_HOME=TODO/path/to/Gradle4.2.1/goes/here
+# Path to Gradle >=4.2.1 (for JDK9.0.*) or Gradle >= 4.6 (for JDK10)
+export GRADLE_HOME=TODO/path/to/Gradle/goes/here
 export GRADLE_USER_HOME=${HOME}
 
-# Path to Eclipse Oxygen.1 4.7.1a
-export ECLIPSE_HOME=TODO/path/to/eclipse4.7.1.a/goes/here
+# Path to Eclipse 4.7.3 Oxygen.3 (but 4.7.1a Oxygen.1a should still work)
+export ECLIPSE_HOME=TODO/path/to/eclipse4.7.3/goes/here
 
 # Path to Maven >=3.5.2
 export MAVEN_HOME=TODO/path/to/Maven3.5.2/goes/here

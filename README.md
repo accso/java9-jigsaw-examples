@@ -14,7 +14,7 @@ The three Maven examples need Maven 3.5.2. The Gradle example needs at least Gra
 
 # Setup
 1. Clone this repo.
-2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181, 9.0.1+11, 9.0.4+11 and also JDK 10+43 (OpenJDK), all on Windows 10-x64
+2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181, 9.0.1+11, 9.0.4+11 and also JDK 10, all on Windows 10-x64
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
 4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
 5. Install [Gradle 4.6, for JDK10 or Gradle 4.2.1 for JDK9](https://github.com/gradle/gradle). Note that this is needed for `example_gradle-project` only.
@@ -97,10 +97,10 @@ The examples have been used and tested with these tools and libraries (on Window
 
 |Tool|Version|Used for|Remark|Link|
 |--|--|--|--|--|
-|JDK|9 b181, 9.0.1, 9.0.4 and 10+43|all examples at compile and runtime||http://jdk.java.net/9/ and http://jdk.java.net/10/|
+|JDK|9 b181, 9.0.1, 9.0.4 and 10|all examples at compile and runtime||http://jdk.java.net/9/ and http://jdk.java.net/10/|
 |JDK|1.8.0_144|only needed for `example_compile-target-jdk8`||http://jdk.java.net/8/|
 |Maven|3.5.2|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
-|Gradle|4.2.1 with JDK9, 4.6 with JDK10+43|Gradle example||https://github.com/gradle/gradle|
+|Gradle|4.2.1 with JDK9, 4.6 with JDK10|Gradle example||https://github.com/gradle/gradle|
 |Eclipse|4.7.1a (Oxygen.1a)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
 |Junit|4.12|all test examples|together with Hamcrest 1.3||
 |Spring Boot, various libs|various|only in `example_spring-hibernate`|refer to POM.xml in this example||
@@ -109,7 +109,16 @@ The examples have been used and tested with these tools and libraries (on Window
 
 Note that these are the versions with with we have tested the example suite. Older or newer versions might also work but we did not try.
 
-# Latest Changes
+# Changelog
+
+### Migration to final Eclipse 4.7.3 Oxygen.3
+Eclipse 4.7.3 Oxygen.3 as of March 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name).
+Note that Eclipse only works with JDK9: Though Eclipse can be started with JDK10, one then sees compile errors when compiling the examples in Eclipse. 
+
+### Migration to final JDK 10 (Release)
+- Migrated examples to Java 10 2018-03-20, Java(TM) SE Runtime Environment 18.3 (build 10+46)
+- All works fine except the `example_spring-hibernate` because of a compile problem. See [`readme.md`](https://github.com/accso/java9-jigsaw-examples/blob/master/jigsaw-examples/example_spring-hibernate/readme.md) there for details.
+Needs probably Maven/Plugin updates, to be done soon
 
 ### Migration to JDK 10+43 (OpenJDK) (Release)
 - Gradle needed an update to 4.6 as the JDK 10 class format could not be read with Gradle 4.2.1 (see also [here](https://github.com/gradle/gradle/issues/3770)).
