@@ -16,7 +16,7 @@ Details see end of this readme.
 ### Modules in this example
 * currently only module mod.app, containing the main class (the SpringBootApplication to be startet by Spring Boot)
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 TODO
 
 ### Example shows ...

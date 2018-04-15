@@ -15,7 +15,7 @@ see https://github.com/accso/java9-jigsaw-examples
 This example has the same content like `example_requires_exports_requires-transitive_exports-to`
 The only difference is that this example here is built with Gradle.
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 without facade modules
 ![Example's Module Dependency Graph](moduledependencies.png)
 

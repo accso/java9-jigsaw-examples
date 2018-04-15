@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * No Main class, JUnit is started instead in the run scripts.
 * There are separate scripts to compile and run the whitebox and blackbox tests.
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...

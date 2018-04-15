@@ -18,7 +18,7 @@ Only the standard boot layer, which has all modules.
 - `modfoo` which requires automatic module `modauto1`
 - `modmain` which does reflective calls to `modbar` and `modfoo`
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png) 
 
 ### Example shows ...

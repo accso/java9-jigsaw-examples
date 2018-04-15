@@ -12,7 +12,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * modb, and also classes for the unnamed module (cpb, cpmain)
 * cpmain contains a Main class which are started in run.sh
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...

@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * modmain has a Main class which is started in run.sh
 * Note the explicit --add-modules option to make sure that modb and modc are available (otherwise you will see: `Exception in thread "main" java.lang.NoClassDefFoundError: pkgb/B`)
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...

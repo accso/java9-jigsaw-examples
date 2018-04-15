@@ -77,7 +77,7 @@ Needs probably Maven/Plugin updates, to be done soon.</span>
 || example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
 | **Examples on resolution of modules, layers and visibility of modules between layers**| example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
 || example_resolved-modules                                        | Which modules are resolved? Usage of jlink | all other examples in this section
-|| example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (via naming conventions)? | all other examples in this section
+|| example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (d naming conventions)? | all other examples in this section
 || example_layer-modules-all-in-boot-layer                         | How does the boot layer look like containing a bunch of modules? | all other examples in this section
 || example_layer-modules-grouped-in-hierarchy                      | How does a small hiearchy of layers look like when one explicitely distributes a bunch of modules to these layers? | all other examples in this section
 | **Examples on testing**| example_test                                                    | How can one achieve blackbox and whitebox testing? | all other examples in this section
@@ -115,11 +115,11 @@ Note that these are the versions with with we have tested the example suite. Old
 
 # Changelog
 
-### Migration to final Eclipse 4.7.3a Oxygen.3a
+### Migration to Eclipse 4.7.3a Oxygen.3a
 - Eclipse 4.7.3a Oxygen.3a as of April 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that from 4.7.3a on, Eclipse is supposed to work with JDK10.
 - !!! Note that Eclipse 4.7.1a Oxygen.1a still works fine with all examples.
 
-### Migration to final Eclipse 4.7.3 Oxygen.3
+### Migration to Eclipse 4.7.3 Oxygen.3
 - Eclipse 4.7.3 Oxygen.3 as of March 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that Eclipse only works with JDK9: Though Eclipse can be started with JDK10, one then sees compile errors when compiling the examples in Eclipse. 
 - !!! Note that Eclipse 4.7.1a Oxygen.1a still works fine with all examples.
 

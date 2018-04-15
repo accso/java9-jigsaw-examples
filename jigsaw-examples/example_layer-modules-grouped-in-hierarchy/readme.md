@@ -20,7 +20,7 @@ The boot layer contains these modules
 - `modcommon` which has standard functionality used by all other modules
 - `modmain` which does reflective calls to `modbar` and `modfoo`
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png) 
 
 Note that this graph has been changed manually as [DepVis](https://github.com/accso/java9-jigsaw-depvis) cannot deal with layers for now.

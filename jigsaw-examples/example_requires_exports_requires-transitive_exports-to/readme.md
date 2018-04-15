@@ -12,7 +12,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * moda, modb, modc, modfacade, modmain, modmainbehindfacade
 * modmain has a Main class which is started in run.sh
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 without facade modules
 ![Example's Module Dependency Graph](moduledependencies.png)
 

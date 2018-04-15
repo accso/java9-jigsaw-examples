@@ -14,7 +14,7 @@ This example shows that automatic modules might cause an unwanted and surprising
 - `modauto1` is a automatic module. It has a package `pkgsplitted`.
 - `modauto2` is a automatic module. It has a package `pkgsplitted`, too.
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...

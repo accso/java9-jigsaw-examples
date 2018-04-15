@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 - modb is accesses from the unnamed module. 
 - modc is not really relevant but only needed to allow a class in modb to be exported-to only to modc.
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...

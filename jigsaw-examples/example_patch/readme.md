@@ -13,7 +13,7 @@ see https://github.com/accso/java9-jigsaw-examples
 * In addition, a directory modb-patch
 * modmain has a Main class which is started in run.sh (without patch) or run-patch.sh (with patch)
 
-### Module Dependency Graph, created via [DepVis](https://github.com/accso/java9-jigsaw-depvis)
+### Module Dependency Graph, created with [DepVis](https://github.com/accso/java9-jigsaw-depvis)
 ![Example's Module Dependency Graph](moduledependencies.png)
 
 ### Example shows ...
