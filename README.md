@@ -105,7 +105,7 @@ The examples have been used and tested with these tools and libraries (on Window
 |JDK|1.8.0_144|only needed for `example_compile-target-jdk8`||http://jdk.java.net/8/|
 |Maven|3.5.2|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
 |Gradle|4.2.1 with JDK9, 4.6 with JDK10|Gradle example||https://github.com/gradle/gradle|
-|Eclipse|4.7.1a (Oxygen.1a)|all examples||https://www.eclipse.org/eclipse/news/4.7.1a/|
+|Eclipse|4.7.1a (Oxygen.1a) and 4.7.3a (Oxygen.3a)|all examples||https://www.eclipse.org/|
 |Junit|4.12|all test examples|together with Hamcrest 1.3||
 |Spring Boot, various libs|various|only in `example_spring-hibernate`|refer to POM.xml in this example||
 |GraphViz|2.38|visualizing the module graph||http://www.graphviz.org/|
@@ -114,6 +114,10 @@ The examples have been used and tested with these tools and libraries (on Window
 Note that these are the versions with with we have tested the example suite. Older or newer versions might also work but we did not try.
 
 # Changelog
+
+### Migration to final Eclipse 4.7.3a Oxygen.3a
+- Eclipse 4.7.3a Oxygen.3a as of April 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that from 4.7.3a on, Eclipse is supposed to work with JDK10.
+- !!! Note that Eclipse 4.7.1a Oxygen.1a still works fine with all examples.
 
 ### Migration to final Eclipse 4.7.3 Oxygen.3
 - Eclipse 4.7.3 Oxygen.3 as of March 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that Eclipse only works with JDK9: Though Eclipse can be started with JDK10, one then sees compile errors when compiling the examples in Eclipse. 
