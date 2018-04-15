@@ -12,8 +12,8 @@ export JAVA8_HOME=TODO/path/to/java8-jdk/goes/here
 export GRADLE_HOME=TODO/path/to/Gradle/goes/here
 export GRADLE_USER_HOME=${HOME}
 
-# Path to Eclipse 4.7.3 Oxygen.3 (but 4.7.1a Oxygen.1a should still work)
-export ECLIPSE_HOME=TODO/path/to/eclipse4.7.3/goes/here
+# Path to Eclipse 4.7.3a Oxygen.3a (but 4.7.1a Oxygen.1a should still work)
+export ECLIPSE_HOME=TODO/path/to/eclipse4.7.3a/goes/here
 
 # Path to Maven >=3.5.2
 export MAVEN_HOME=TODO/path/to/Maven3.5.2/goes/here
