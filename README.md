@@ -3,7 +3,7 @@
 # Info
 Written by [Martin Lehmann](https://github.com/mrtnlhmnn), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes](https://github.com/rgrammes) 
 
-see https://github.com/accso/java9-jigsaw-examples
+see https://github.com/accso/java9-jigsaw-examples 
 
 ## What is this about?
 This is a example suite for Java 9 jigsaw modules. Many aspects of the new Java 9 Jigsaw modules as defined in 
