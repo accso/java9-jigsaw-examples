@@ -4,17 +4,18 @@ mkdir -p mods
 mkdir -p mlib
 
 # compile modb
-echo "javac $JAVAC_OPTIONS  -d mods --module-path mlib --module-source-path src \$(find src/modb -name \"*.java\")"
+echo "javac $JAVAC_OPTIONS  -d mods --module-source-path src \$(find src/modb -name \"*.java\")"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS  -d mods \
     --module-path mlib --module-source-path src $(find src/modb -name "*.java") \
      2>&1
 
 # compile modmain (add-export of modb/pkgb -> modmain)
-echo "javac $JAVAC_OPTIONS  -d mods --add-modules modb --add-exports modb/pkgb=modmain --module-path mlib --module-source-path src \$(find src/modmain -name \"*.java\")"
+echo "javac $JAVAC_OPTIONS  -d mods --add-modules modb --add-exports modb/pkgb=modmain --add-reads modmain=modb --module-source-path src \$(find src/modmain -name \"*.java\")"
 $JAVA_HOME/bin/javac $JAVAC_OPTIONS  -d mods \
     --add-modules modb \
     --add-exports modb/pkgb=modmain \
-    --module-path mlib --module-source-path src $(find src/modmain -name "*.java") \
+	--add-reads modmain=modb \
+    --module-source-path src $(find src/modmain -name "*.java") \
      2>&1
 
 pushd mods > /dev/null 2>&1
