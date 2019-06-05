@@ -16,9 +16,9 @@ The three Maven examples need Maven 3.5.2 (if run with Java 9 or 10), Maven 3.6.
 1. Clone this repo.
 2. Install a Java 9 JDK with Jigsaw support. All examples have been tested with Java 9 build 181, 9.0.1+11, 9.0.4+11 and also JDK 10, JDK 11 all on Windows 10-x64
 3. Install [GraphViz 2.38](http://www.graphviz.org/).
-4. Install [Maven 3.5.2](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
+4. Install [Maven 3.6.1, for JDK 11, Maven 3.5.2 for JDK 10, 9](https://maven.apache.org/download.cgi). Note that this is needed for `example_maven-project`, `example_maven_blackbox` and `example_maven_whitebox` only.
 5. Install [Gradle 5.4.1, for JDK 11, Gradle 4.6, for JDK10 or Gradle 4.2.1 for JDK9](https://github.com/gradle/gradle). Note that this is needed for `example_gradle-project` only.
-6. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/)
+6. If running on Windows, install a bash, like for example [Babun](https://babun.github.io/) or [git bash](https://gitforwindows.org/)
 7. To generate the GraphViz graphs, you also need to clone and compile [depvis](https://github.com/accso/java9-jigsaw-depvis).
 8. Edit file `env.sh` to configure `JAVA_HOME` and `JAVA_HOME_JDK8` and `GRAPHVIZ_HOME` and `MAVEN_HOME` and `GRADLE_HOME` and `DEPVIS_HOME` (see TODO markers)
 9. Also edit file `env.sh` to configure the path separator. If run on Windows, use \; (a blackslash quoting a ;). If you run all stuff on *nix, use a colon : .
@@ -101,7 +101,7 @@ The examples have been used and tested with these tools and libraries (on Window
 
 |Tool|Version|Used for|Remark|Link|
 |--|--|--|--|--|
-|JDK|9 b181, 9.0.1, 9.0.4, 10 and 11|all examples at compile and runtime||http://jdk.java.net/9/ and http://jdk.java.net/10/ and Java 11. All open jdks should work. Tested with coretto https://aws.amazon.com/de/corretto/|
+|JDK|9 b181, 9.0.1, 9.0.4, 10 and 11|all examples at compile and runtime||http://jdk.java.net/9/ and http://jdk.java.net/10/ and Java 11. All open jdks should work. Tested with corretto https://aws.amazon.com/de/corretto/|
 |JDK|1.8.0_144|only needed for `example_compile-target-jdk8`||http://jdk.java.net/8/|
 |Maven|3.5.2, 3.6.1 with JDK11|Maven examples|Note that we use Maven compiler plugin 3.7.0|https://maven.apache.org/download.cgi|
 |Gradle|4.2.1 with JDK9, 4.6 with JDK10, 5.4.1 with JDK11|Gradle example||https://github.com/gradle/gradle|
@@ -118,6 +118,7 @@ Note that these are the versions with with we have tested the example suite. Old
 ### Migration to JDK 11
 - Migrated examples to Java 11.0.3.
 - Tested with OpenJDK Runtime Environment Corretto-11.0.3.7.1, 64-Bit Server VM Corretto-11.0.3.7.1 (build 11.0.3+7-LTS, mixed mode)
+- Currently example_spring-hibernate is not working.
 
 ### Migration to Eclipse 4.7.3a Oxygen.3a
 - Eclipse 4.7.3a Oxygen.3a as of April 2018 has been tested, all start*.sh scripts have hence be renamed. Eclipse 4.7.1a Oxygen.1a should still work (despite the script name). Note that from 4.7.3a on, Eclipse is supposed to work with JDK10.
