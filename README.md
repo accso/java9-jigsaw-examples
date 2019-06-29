@@ -75,11 +75,12 @@ Needs probably Maven/Plugin updates, to be done soon.</span>
 | **Examples on restricting the access to resources in other modules**| example_resources                                               | Which resources in modules are accessible, which are not? | 
 | **Examples on the split package problem**| example_splitpackage                                            | What happens when one has a split package problem at compile / at runtime? | all other examples in this section
 || example_splitpackage_automatic-modules                          | What happens when one Automatic Module automatically reads all other Automatic Modules on the module path and hence creates an unwanted split package problem? | example_automatic-module-logging, all other examples in this section
-| **Examples on resolution of modules, layers and visibility of modules between layers**| example_jerrymouse                                              | How can a "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
+| **Examples on resolution of modules, layers and visibility of modules between layers**| example_jerrymouse                                              | How can an "app server" JerryMouse (sic!) load and start modules, as a kind of module starter/container? | all other examples in this section
 || example_resolved-modules                                        | Which modules are resolved? Usage of jlink | all other examples in this section
 || example_layer-hierarchy                                         | How can one create a hiearchy of layers automatically and add modules (d naming conventions)? | all other examples in this section
 || example_layer-modules-all-in-boot-layer                         | How does the boot layer look like containing a bunch of modules? | all other examples in this section
 || example_layer-modules-grouped-in-hierarchy                      | How does a small hiearchy of layers look like when one explicitely distributes a bunch of modules to these layers? | all other examples in this section
+|| example_layer-modules-module-resolution                         | How are different versions of a module resolved depending on the setup of the layer? | all other examples in this section
 | **Examples on testing**| example_test                                                    | How can one achieve blackbox and whitebox testing? | all other examples in this section
 || example_maven-test-blackbox                                     | How can one achieve blackbox testing with Maven? | all other examples in this section
 || example_maven-test-whitebox                                     | How can one achieve whitebox testing with Maven? | all other examples in this section
@@ -114,6 +115,9 @@ The examples have been used and tested with these tools and libraries (on Window
 Note that these are the versions with with we have tested the example suite. Older or newer versions might also work but we did not try.
 
 # Changelog
+
+### Example for layer module resolution
+- Example demonstrating the resolution of modules across layers added
 
 ### Migration to JDK 11
 - Migrated examples to Java 11.0.3.
