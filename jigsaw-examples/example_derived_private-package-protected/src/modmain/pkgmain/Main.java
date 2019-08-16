@@ -17,7 +17,8 @@ public class Main {
         System.out.println("Main: " + mymain.toString() + ", B: " + myb.doIt_delegateToInternalSuperClass());
 
 // calling a protected method (only possible in derived class)
-        new SubClassFromB(mymain);
+        SubClassFromB subClassFromB = new SubClassFromB(mymain);
+        subClassFromB.callInternalSuper();
 
         // ---------------------------------------------------------------------------------
 
@@ -33,7 +34,9 @@ public class Main {
                 myDataFactory.createInternalData2());
 
 // does not compile. error: toString() in Object is defined in an inaccessible class or interface
-// TODO suprise! why is the statement above ok when adding toString() is not?
+// suprise! why is the statement above ok when adding toString() is not?
+// Solution: Concatenation with + uses String.valueOf(Object obj) to turn InternalData into a String
+//           This is allowed as it uses the type Object and Object.toString().
 //        System.out.println("Main: " + mymain.toString() + ", Factory.createInternalData2().toString(): " + 
 //                myDataFactory.createInternalData2().toString());
 
@@ -47,5 +50,11 @@ public class Main {
 class SubClassFromB extends B {
     SubClassFromB(Main mymain) {
         System.out.println("Main: " + mymain.toString() + ", B: " + this.doIt_protected());
+    }
+    
+	// This works despite doItNotOverwritten being defined only in
+	// InternalBSuperClass, without being overwritten in B. 
+    public void callInternalSuper() {
+        System.out.println(doItNotOverwritten());
     }
 }
