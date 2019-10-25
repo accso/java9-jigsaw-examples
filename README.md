@@ -1,4 +1,4 @@
-﻿# Java 9 Jigsaw modules example suite
+﻿# Java 9 Jigsaw modules - example suite
 
 # Info
 Written by [Martin Lehmann](https://github.com/mrtnlhmnn), [Kristine Schaal](https://github.com/kristines) and [Rüdiger Grammes](https://github.com/rgrammes) 
